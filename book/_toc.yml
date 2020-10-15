@@ -1,6 +1,5 @@
-# - file: README
-- file: docs/index
+- file: intro
 
 - part: Case Studies
   chapters:
-    - file: docs/mnist
+  - file: docs/mnist
