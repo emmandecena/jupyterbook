@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
-(content:references)=
-## Cross-references and labels
+
 # # Classifier on CIFAR10
 
-# ### Using 3-Layer MLP
+# ## Using 3-Layer MLP
 
-# In[10]:
+# In[1]:
 
 
 import tensorflow as tf
@@ -22,7 +21,7 @@ from keras.utils import to_categorical, plot_model
 
 
 
-# In[11]:
+# In[2]:
 
 
 # load dataset
@@ -41,16 +40,16 @@ x_test = np.reshape(x_test, [-1, input_size])
 x_test = x_test.astype('float32') / 255
 
 
-# In[20]:
+# In[3]:
 
 
 # hyper-parameters
 batch_size = 256
 n_units = 256
-epochs = 5
+epochs = 3
 
 
-# In[13]:
+# In[4]:
 
 
 # model is a 3-layer MLP
@@ -61,7 +60,7 @@ model.add(Dense(num_labels, activation='softmax', name='output_layer'))
 model.summary()
 
 
-# In[15]:
+# In[5]:
 
 
 model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accuracy"])
@@ -72,7 +71,7 @@ history = model.fit(
     validation_data=(x_test, y_test),
     epochs=epochs,
     batch_size=batch_size,
-    verbose=0
+    verbose=1
 )
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
@@ -80,16 +79,16 @@ loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 
 
-# ### Using 3-Layer CNN
+# ## Using 3-Layer CNN
 
-# In[16]:
+# In[6]:
 
 
 # load dataset
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()
 
 
-# In[17]:
+# In[7]:
 
 
 # input image dimensions
@@ -108,7 +107,7 @@ pool_size = 3
 filters = 32
 
 
-# In[18]:
+# In[8]:
 
 
 model = Sequential()
@@ -127,30 +126,24 @@ model.add(Dense(10, activation='softmax',name='output_layer'))
 model.summary()
 
 
-# In[19]:
+# In[9]:
 
 
 model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accuracy"])
 # train the network
-model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=0)
+model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=1)
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 
 
-# ### Conclusion
+# ## Conclusion
 # 
 # The MLP model was outperformed by the CNN model using the same epochs and layers. 
 # The MLP's accuracy of ~48% was lower compared to the CNN accuracy of ~55%.
 # The MLP also used more parameters at 855,050 compared to the CNN using only 32,906. Thus, the CNN model was more parameter efficient and has higher accuracy. Using the CNN model is more suitable for this dataset.
 
-# In[ ]:
-
-
-
-
-
-# In[21]:
+# In[10]:
 
 
 import matplotlib.pyplot as plt
@@ -164,10 +157,4 @@ plt.ylabel('Cross-Entropy')
 plt.xlabel('Epochs')
 plt.legend(loc="upper right")
 plt.show()
-
-
-# In[ ]:
-
-
-
 

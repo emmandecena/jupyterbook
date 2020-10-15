@@ -34,7 +34,7 @@ Also, I love photography and hiking. On the side, I work in web development  (HT
 
 This section illustrates my typical workflow in an analytics project. We refer to figure {numref}`workflow` {cite}`wickham2016r` which focuses on the tools and techniques in data science. We assume that we have completely defined our problem statement beforehand.
 
-```{figure} //images/workflow.png
+```{figure} ../images/workflow.png
 :name: workflow
 
 Project workflow

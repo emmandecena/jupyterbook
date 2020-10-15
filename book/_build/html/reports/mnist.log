@@ -34,7 +34,7 @@ Here is a preview of the cell contents:
 -------------------
 model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accuracy"])
 # train the network
-model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=0)
+model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=1)
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
