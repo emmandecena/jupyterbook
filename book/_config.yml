@@ -36,3 +36,9 @@ latex:
   latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
+#######################################################################################
+# For Plotly
+sphinx:
+  config:
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js

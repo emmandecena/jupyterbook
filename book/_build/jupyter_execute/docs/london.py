@@ -76,18 +76,13 @@ g1.head()
 
 import plotly.express as px
 
-fig = px.line(g1, x='TIME', y='kWH', color='ACORN',line_group="ACORN_GROUPED")
-fig
-
-
-# In[9]:
-
-
 fig = px.line(g1, x='TIME', y='kWH', color='ACORN_GROUPED',line_group="ACORN")
-fig
+fig.show()
 
 
 # ## Bibliography
 # 
 # ```{bibliography} ../_bibliography/references.bib
+# :style: plain
+# :filter: docname in docnames
 # ```

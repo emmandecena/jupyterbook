@@ -57,7 +57,7 @@ Finally, through **Report** we provide the stakeholders with the results of the 
 
 ## Case Studies
 
-* [](./mnist.ipynb)
+* [](./cifar10.ipynb)
 * [](./london.ipynb)
 
 ---
@@ -65,4 +65,6 @@ Finally, through **Report** we provide the stakeholders with the results of the 
 ## Bibliography
 
 ```{bibliography} ../_bibliography/references.bib
+:filter: docname in docnames
+:style: plain
 ```

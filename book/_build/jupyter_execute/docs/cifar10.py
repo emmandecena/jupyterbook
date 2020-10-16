@@ -71,7 +71,7 @@ history = model.fit(
     validation_data=(x_test, y_test),
     epochs=epochs,
     batch_size=batch_size,
-    verbose=1
+    verbose=0
 )
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
@@ -131,7 +131,7 @@ model.summary()
 
 model.compile(loss="categorical_crossentropy", optimizer="sgd", metrics=["accuracy"])
 # train the network
-model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=1)
+model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,verbose=0)
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
