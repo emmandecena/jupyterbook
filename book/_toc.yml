@@ -3,3 +3,4 @@
 - part: Case Studies
   chapters:
   - file: docs/mnist
+  - file: docs/london

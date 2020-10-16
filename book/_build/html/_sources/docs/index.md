@@ -15,7 +15,7 @@ By having a T-shaped professional profile, I provide data-driven solutions to bu
 --
 
 
-I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my [**resume**](cv/resume-emmanuel-decena.pdf) . If you have a **part-time project** I can help with, please get in touch.
+I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my [**resume**](www.ecdecena.com/cv/resume-emmanuel-decena.pdf) . If you have a **part-time project** I can help with, please get in touch.
 
 I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference.
 
@@ -56,8 +56,7 @@ Finally, through **Report** we provide the stakeholders with the results of the 
 ## Case Studies
 
 * [](./mnist.ipynb)
-* [](./mnist.ipynb)
-* [](./mnist.ipynb)
+* [](./london.ipynb)
 
 ---
 

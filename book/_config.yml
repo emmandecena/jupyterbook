@@ -1,6 +1,6 @@
 #######################################################################################
 # Book settings
-title : Machine Learning Engineer
+title : Data Scientist | Energy
 author: Emmanuel Decena
 logo: 'images/neural.png'
 
@@ -19,7 +19,7 @@ html:
   home_page_in_navbar         : false
   favicon                     : 'images/favicon.png'
   extra_navbar                : ""
-  #google_analytics_id       : ""
+  google_analytics_id       : "UA-175171081-1"
   #use_repository_button: true
 
 # #######################################################################################
