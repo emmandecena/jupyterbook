@@ -9,7 +9,7 @@ on:
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
 # Deploy the book's HTML to gh-pages branch
-     - name: Deploy
+  #   - name: Deploy
        uses: peaceiris/actions-gh-pages@v3
        with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
