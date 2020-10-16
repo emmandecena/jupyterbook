@@ -14,7 +14,8 @@ By having a T-shaped professional profile, I provide data-driven solutions to bu
 
 --
 
-I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my [**resume**](https://www.ecdecena.com/cv/resume-emmanuel-decena.pdf). If you have a **part-time project** I can help with, please get in touch.
+
+I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my [**resume**](cv/resume-emmanuel-decena.pdf) . If you have a **part-time project** I can help with, please get in touch.
 
 I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference.
 
@@ -32,7 +33,7 @@ Also, I love photography and hiking. On the side, I work in web development  (HT
 
 ## Workflow
 
-This section illustrates my typical workflow in an analytics project. We refer to figure {numref}`workflow` {cite}`wickham2016r` which focuses on the tools and techniques in data science. We assume that we have completely defined our problem statement beforehand.
+This section illustrates my typical workflow in an analytics project. We refer to figure {numref}`workflow` which focuses on the tools and techniques in data science {cite}`wickham2016r`. We assume that we have completely defined our problem statement beforehand.
 
 ```{figure} ../images/workflow.png
 :name: workflow
