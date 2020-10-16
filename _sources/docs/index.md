@@ -15,7 +15,9 @@ By having a T-shaped professional profile, I provide data-driven solutions to bu
 --
 
 
-I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my [**resume**](www.ecdecena.com/cv/resume-emmanuel-decena.pdf) . If you have a **part-time project** I can help with, please get in touch.
+I am seeking for **full-time data science or machine learning roles**. Please feel free to contact me through the information in my <a href="https://www.ecdecena.com/cv/resume-emmanuel-decena.pdf" target="_blank">**resume**</a>. If you have a **part-time project** I can help with, please get in touch.
+
+
 
 I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference.
 
@@ -27,7 +29,7 @@ I wrote this website to demonstrate my domain knowledge, technology tools, and l
 
 --
 
-Also, I love photography and hiking. On the side, I work in web development  (HTML, CSS) and have built a portfolio site to showcase my adventures and photos. [www.dcnaphotos.com](https://dcnaphotos.netlify.app)
+Also, I love photography and hiking. On the side, I work in web development  (HTML, CSS) and have built a portfolio site to showcase my adventures and photos. <a href="https://dcnaphotos.netlify.app" target="_blank">www.dcnaphotos.com</a>
 
 ---
 
