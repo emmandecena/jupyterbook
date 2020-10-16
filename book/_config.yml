@@ -1,6 +1,6 @@
 #######################################################################################
 # Book settings
-title : Data Scientist | Energy
+title : Machine Learning Engineer
 author: Emmanuel Decena
 logo: 'images/neural.png'
 
@@ -12,13 +12,15 @@ logo: 'images/neural.png'
 # Execution settings
 execute:
   execute_notebooks           : cache
-
-execute:
-  timeout: -1
+  timeout                     : -1
 #######################################################################################
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
+  favicon                     : 'images/favicon.png'
+  extra_navbar                : ""
+  #google_analytics_id       : ""
+  #use_repository_button: true
 
 # #######################################################################################
 # Interact link settings
@@ -29,10 +31,6 @@ notebook_interface            : "notebook"
 repository:
   url                         : https://github.com/emmandecena/jupyterbook
   path_to_book                : "book"
-
-binder:
-  binderhub_url               : "https://mybinder.org"
-  text                        : "Launch binder"
 
 latex:
   latex_engine                : "xelatex"
