@@ -4,3 +4,4 @@
   chapters:
   - file: docs/cifar10
   - file: docs/london
+  - file: docs/energymarket
