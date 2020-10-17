@@ -190,6 +190,37 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-import">
+   Data Import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wholesale-electricity-spot-market">
+     Wholesale Electricity Spot Market
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#retail-market">
+     Retail Market
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -200,23 +231,304 @@
   <div class="section" id="philippine-electricity-market">
 <h1>Philippine electricity market<a class="headerlink" href="#philippine-electricity-market" title="Permalink to this headline">¶</a></h1>
 <p>In this article we explore the current structure of the Philippine electricity market based on the data provided by IEMOP and DOE.</p>
+<div class="section" id="data-import">
+<h2>Data Import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h2>
+<p>The data comes from the published market participants list by IEMOP, the electricity market operator of the Philippines.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">normalize</span>
 
 <span class="n">html_wesm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;http://www.iemop.ph/the-market/participants/wesm-members/&#39;</span><span class="p">)</span>
 <span class="n">html_retail</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;http://www.iemop.ph/the-market/participants/rcoa-tp/&#39;</span><span class="p">)</span>
+<span class="n">df_wesm</span> <span class="o">=</span> <span class="n">html_wesm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df_retail</span> <span class="o">=</span> <span class="n">html_retail</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-data-analysis">
+<h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<p>We explore the dataset by looking at each column; looking at unique values, calculating summaries, and plotting distributions.</p>
+<div class="section" id="wholesale-electricity-spot-market">
+<h3>Wholesale Electricity Spot Market<a class="headerlink" href="#wholesale-electricity-spot-market" title="Permalink to this headline">¶</a></h3>
+<p>This section discusses the Wholesale Electricity Spot Market participants.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;PARTICIPANT NAME&#39;, &#39;SHORT NAME&#39;, &#39;REGION&#39;, &#39;CATEGORY&#39;, &#39;MEMBERSHIP&#39;,
+       &#39;RESOURCE&#39;, &#39;EFFECTIVE DATE&#39;, &#39;STATUS&#39;],
+      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span> <span class="o">=</span> <span class="n">html_wesm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">df_wesm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PARTICIPANT NAME    307
+SHORT NAME          319
+REGION                4
+CATEGORY              5
+MEMBERSHIP            2
+RESOURCE            436
+EFFECTIVE DATE      242
+STATUS                4
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PARTICIPANT NAME    307
+SHORT NAME          319
+REGION                4
+CATEGORY              5
+MEMBERSHIP            2
+RESOURCE            436
+EFFECTIVE DATE      242
+STATUS                4
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cross</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;SHORT NAME&#39;</span><span class="p">],</span> <span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;PARTICIPANT NAME&#39;</span><span class="p">],</span><span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_cross</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>PARTICIPANT NAME</th>
+      <th>1590 Energy Corporation</th>
+      <th>AC Energy Philippines, Inc.</th>
+      <th>AES Philippines Inc.</th>
+      <th>AP Renewables Inc.</th>
+      <th>AP Renewables Inc. (APRI-Unocal Philippines)</th>
+      <th>Aboitiz Energy Solution Inc.</th>
+      <th>Abra Electric Cooperative Inc.</th>
+      <th>Absolut Distillers Inc.</th>
+      <th>Aklan Electric Cooperative Inc.</th>
+      <th>Albay Electric Cooperative Inc.</th>
+      <th>...</th>
+      <th>Visayan Oil Mills Inc.</th>
+      <th>Vivant Sta. Clara Northern Renewables Generation Corporation</th>
+      <th>Waterfront Mactan Casino Hotel Inc.</th>
+      <th>Western Mindanao Power Corporation</th>
+      <th>YH Green Energy Inc.</th>
+      <th>Zambales I Electric Cooperative Inc.</th>
+      <th>Zambales II Electric Cooperative Inc.</th>
+      <th>nv vogt Philippines Solar Energy Four Inc.</th>
+      <th>nv vogt Philippines Solar Energy Three Inc.</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>SHORT NAME</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1590EC</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>ABRECO</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>ABSOLUTDI</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>ACNPC</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>ADGI</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 308 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_cross</span><span class="o">.</span><span class="n">All</span><span class="p">[(</span><span class="n">df_cross</span><span class="o">.</span><span class="n">All</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHORT NAME
+AFAB     2
+AHC      2
+APRI    10
+BGI      2
+CEDC     3
+Name: All, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="p">[</span><span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;SHORT NAME&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;APRI&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -251,58 +563,113 @@
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>GNPower Kauswagan Ltd. Co.</td>
-      <td>GNPKLCO</td>
-      <td>MINDANAO</td>
-      <td>GENERATOR</td>
-      <td>DIRECT</td>
-      <td>GNPK Coal Fired Power Plant Unit 4</td>
-      <td>08/07/2020</td>
-      <td>REGISTERED</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>GNPower Kauswagan Ltd. Co.</td>
-      <td>GNPKLCO</td>
-      <td>MINDANAO</td>
-      <td>GENERATOR</td>
-      <td>DIRECT</td>
-      <td>GNPK Coal Fired Power Plant Unit 3</td>
-      <td>08/07/2020</td>
-      <td>REGISTERED</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>FGP Corporation</td>
-      <td>FGP - San Lorenzo</td>
+      <th>57</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
       <td>LUZON</td>
       <td>GENERATOR</td>
       <td>DIRECT</td>
-      <td>San Lorenzo Natural Gas Power Plant 5</td>
-      <td>06/26/2006</td>
+      <td>Tiwi Geothermal Power Plant</td>
+      <td>05/26/2009</td>
       <td>REGISTERED</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>FGP Corporation</td>
-      <td>FGP - San Lorenzo</td>
+      <th>58</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
       <td>LUZON</td>
       <td>GENERATOR</td>
       <td>DIRECT</td>
-      <td>San Lorenzo Natural Gas Power Plant 6</td>
-      <td>06/26/2006</td>
+      <td>Makban Geothermal Power Plant A</td>
+      <td>05/26/2009</td>
       <td>REGISTERED</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>First Gas Power Corporation</td>
-      <td>FGPCSTRA</td>
+      <th>59</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
       <td>LUZON</td>
       <td>GENERATOR</td>
       <td>DIRECT</td>
-      <td>Sta. Rita Natural Gas Power Plant 1</td>
-      <td>06/26/2006</td>
+      <td>Makban Geothermal Power Plant D</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Makban Geothermal Power Plant C</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Ormat-Makban Binary Geothermal Power Plant</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Tiwi Geothermal Power Plant A</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Tiwi Geothermal Power Plant B</td>
+      <td>06/15/2019</td>
+      <td>DEREGISTERED</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Makban Geothermal Power Plant E</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Tiwi Geothermal Power Plant C</td>
+      <td>05/26/2009</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>395</th>
+      <td>AP Renewables Inc.</td>
+      <td>APRI</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Makban Geothermal Power Plant B</td>
+      <td>06/15/2019</td>
       <td>REGISTERED</td>
     </tr>
   </tbody>
@@ -311,8 +678,251 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_retail</span> <span class="o">=</span> <span class="n">html_retail</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">df_retail</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="p">[</span><span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;SHORT NAME&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;AHC&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PARTICIPANT NAME</th>
+      <th>SHORT NAME</th>
+      <th>REGION</th>
+      <th>CATEGORY</th>
+      <th>MEMBERSHIP</th>
+      <th>RESOURCE</th>
+      <th>EFFECTIVE DATE</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>268</th>
+      <td>Angat Hydropower Corporation</td>
+      <td>AHC</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Angat Hydro Electric Power Plant Unit A</td>
+      <td>10/31/2014</td>
+      <td>REGISTERED</td>
+    </tr>
+    <tr>
+      <th>269</th>
+      <td>Angat Hydropower Corporation</td>
+      <td>AHC</td>
+      <td>LUZON</td>
+      <td>GENERATOR</td>
+      <td>DIRECT</td>
+      <td>Angat Hydro Electric Power Plant Unit M</td>
+      <td>10/31/2014</td>
+      <td>REGISTERED</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;REGION&#39;</span><span class="p">)[</span><span class="s1">&#39;RESOURCE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>REGION
+LUZON              267
+LUZON / VISAYAS      9
+MINDANAO            33
+VISAYAS            128
+Name: RESOURCE, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;CATEGORY&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;GENERATOR&#39;, &#39;PRIVATE DISTRIBUTION UTILITY&#39;,
+       &#39;ELECTRIC COOPERATIVE&#39;, &#39;BULK USER&#39;, &#39;WAG&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wesm</span><span class="p">[</span><span class="n">df_wesm</span><span class="p">[</span><span class="s1">&#39;CATEGORY&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;WAG&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PARTICIPANT NAME</th>
+      <th>SHORT NAME</th>
+      <th>REGION</th>
+      <th>CATEGORY</th>
+      <th>MEMBERSHIP</th>
+      <th>RESOURCE</th>
+      <th>EFFECTIVE DATE</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>42</th>
+      <td>Aboitiz Energy Solution Inc.</td>
+      <td>AESI</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>Aboitiz Energy Solution Inc.</td>
+      <td>02/26/2016</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Team (Philippines) Energy Corporation</td>
+      <td>TPEC</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>Team (Philippines) Energy Corporation</td>
+      <td>03/26/2018</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>AES Philippines Inc.</td>
+      <td>AESPI</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>AES Philippines Inc.</td>
+      <td>03/26/2016</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>First Gen Energy Solutions</td>
+      <td>FGES</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>First Gen Energy Solutions</td>
+      <td>09/06/2020</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>428</th>
+      <td>Manta Energy Inc.</td>
+      <td>MEI</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>Manta Energy Inc.</td>
+      <td>01/26/2020</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>429</th>
+      <td>Trans-Asia Oil and Development Corporation</td>
+      <td>TAO</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>Trans-Asia Oil and Development Corporation</td>
+      <td>01/26/2020</td>
+      <td>CEASED</td>
+    </tr>
+    <tr>
+      <th>431</th>
+      <td>Angeles Power Inc.</td>
+      <td>API</td>
+      <td>LUZON / VISAYAS</td>
+      <td>WAG</td>
+      <td>DIRECT</td>
+      <td>Angeles Power Inc.</td>
+      <td>02/26/2020</td>
+      <td>CEASED</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="retail-market">
+<h3>Retail Market<a class="headerlink" href="#retail-market" title="Permalink to this headline">¶</a></h3>
+<p>This section discusses the Retail Market participants.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_retail</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;NAME&#39;, &#39;SHORT NAME&#39;, &#39;REGION&#39;, &#39;CATEGORY&#39;, &#39;MEMBERSHIP&#39;,
+       &#39;EFFECTIVE DATE&#39;, &#39;STATUS&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df_retail[df_retail[&#39;CATEGORY&#39;] ==&#39;WAG&#39;]</span>
+<span class="n">df_retail</span><span class="p">[</span><span class="s1">&#39;CATEGORY&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Contestable Customer&#39;, &#39;Retail Metering Services Provider&#39;,
+       &#39;Local Retail Electricity Supplier&#39;, &#39;Supplier of Last Resort&#39;,
+       &#39;Directly Connected Contestable Customer&#39;,
+       &#39;Retail Electricity Supplier&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_retail</span><span class="p">[</span><span class="n">df_retail</span><span class="p">[</span><span class="s1">&#39;CATEGORY&#39;</span><span class="p">]</span> <span class="o">==</span><span class="s1">&#39;Retail Electricity Supplier&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -346,58 +956,350 @@
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>Styrotech Corporation</td>
-      <td>STYR01R</td>
-      <td>Luzon</td>
-      <td>Contestable Customer</td>
-      <td>Indirect</td>
-      <td>26-Jun-13</td>
+      <th>101</th>
+      <td>GNPower Ltd. Co.</td>
+      <td>GNPLCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>15-Apr-14</td>
       <td>Registered</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>Analog Devices Gen. Trias Inc.</td>
-      <td>ADGT01R</td>
-      <td>Luzon</td>
-      <td>Contestable Customer</td>
-      <td>Indirect</td>
-      <td>26-Jun-13</td>
+      <th>171</th>
+      <td>Waterfront Mactan Casino Hotel Inc.</td>
+      <td>WAHCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>26-Oct-15</td>
       <td>Registered</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Analog Devices Gen. Trias Inc.</td>
-      <td>ADGT02R</td>
-      <td>Luzon</td>
-      <td>Contestable Customer</td>
-      <td>Indirect</td>
-      <td>26-Jun-13</td>
+      <th>179</th>
+      <td>GNPower Mariveles Coal Plant Ltd. Co.</td>
+      <td>GNPRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>15-Mar-16</td>
+      <td>Ceased</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>Millennium Power RES Inc.</td>
+      <td>MPRIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>18-Aug-16</td>
       <td>Registered</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>Ascott Makati Inc.</td>
-      <td>ATMK01R</td>
-      <td>Luzon</td>
-      <td>Contestable Customer</td>
-      <td>Indirect</td>
-      <td>26-Jun-13</td>
+      <th>253</th>
+      <td>FDC Retail Electricity Sales Corporation</td>
+      <td>FDCRESC</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>04-Oct-16</td>
       <td>Registered</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>Marina Square Properties Inc.</td>
-      <td>MSPI01R</td>
-      <td>Luzon</td>
-      <td>Contestable Customer</td>
-      <td>Indirect</td>
-      <td>26-Jun-13</td>
+      <th>254</th>
+      <td>AC Energy Inc. (formerly AC Energy Holdings Inc.)</td>
+      <td>ACERES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>21-Oct-16</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>298</th>
+      <td>Manta Energy Inc.</td>
+      <td>MANTARES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>02-Dec-16</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>299</th>
+      <td>SMC Consolidated Power Corporation</td>
+      <td>SMCCPCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>02-Dec-16</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>300</th>
+      <td>Corenergy Inc.</td>
+      <td>CORERES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>23-Dec-16</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td>KEPCO SPC Power Corporation</td>
+      <td>KSPCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>02-Feb-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>371</th>
+      <td>Citicore Energy Solutions Inc.</td>
+      <td>CESIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>04-Feb-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>373</th>
+      <td>Vantage Energy Solutions and Management Inc.</td>
+      <td>VESMIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>10-Feb-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>383</th>
+      <td>Mazzaraty Energy Corporation</td>
+      <td>MACRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>21-Feb-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>393</th>
+      <td>Solvre Inc.</td>
+      <td>SOLVRERES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>24-Feb-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>705</th>
+      <td>Bac-Man Geothermal Inc.</td>
+      <td>BGIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>25-Jul-17</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>813</th>
+      <td>Anda Power Corporation RES</td>
+      <td>ANDARES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>20-Feb-18</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>914</th>
+      <td>SEM-CALACA RES CORPORATION</td>
+      <td>SCRCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>07-Jun-18</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1103</th>
+      <td>MeridianX Inc.</td>
+      <td>MERXRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>04-Mar-19</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1312</th>
+      <td>Mabuhay Energy Corporation</td>
+      <td>MECORES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>07-Jan-20</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1323</th>
+      <td>Solar Philippines Retail Electricity Inc.</td>
+      <td>SPREIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>18-Feb-20</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1394</th>
+      <td>Premier Energy Resources Corporation</td>
+      <td>PERCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>14-Feb-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1395</th>
+      <td>TeaM (Philippines) Energy Corporation</td>
+      <td>TPECRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>14-Feb-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1396</th>
+      <td>PHINMA Energy Corporation-RES</td>
+      <td>PHENRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>19-Feb-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1398</th>
+      <td>Masinloc Power Partners Company Limited</td>
+      <td>MPPCLRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>27-Feb-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1399</th>
+      <td>Kratos RES Inc.</td>
+      <td>KRATOSRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>27-Feb-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1402</th>
+      <td>Aboitiz Energy Solutions Inc.</td>
+      <td>AESIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>15-Mar-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1403</th>
+      <td>AdventEnergy Inc.</td>
+      <td>ADVENTRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>15-Mar-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1404</th>
+      <td>Prism Energy Inc.</td>
+      <td>PRISMRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>15-Mar-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1416</th>
+      <td>San Miguel Electric Corporation</td>
+      <td>SMELCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>08-Jun-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1417</th>
+      <td>SN Aboitiz Power-RES Inc.</td>
+      <td>SNAPRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>08-Jun-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1418</th>
+      <td>DirectPower Services Inc.</td>
+      <td>DIRPOWRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>08-Jun-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1419</th>
+      <td>First Gen Energy Solutions Inc.</td>
+      <td>FGESRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>08-Jun-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1423</th>
+      <td>Ecozone Power Management Inc.</td>
+      <td>EPMIRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>17-Jun-13</td>
+      <td>Registered</td>
+    </tr>
+    <tr>
+      <th>1424</th>
+      <td>Global Energy Supply Corporation</td>
+      <td>GESCRES</td>
+      <td>Luzon/Visayas</td>
+      <td>Retail Electricity Supplier</td>
+      <td>Direct</td>
+      <td>17-Jun-13</td>
       <td>Registered</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
+</div>
+</div>
 </div>
 </div>
 

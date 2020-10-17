@@ -2,11 +2,9 @@
 
 Hello! I'm Emmanuel.
 
-An energy market analyst with experience in trading operations of geothermal power plants and in electrical systems design of gas processing plants.
-
 I provide solutions to product improvement and process optimization problems by setting up analytical tools, creating and maintaining models, and streamlining new data sets.
 
-My career has made me wear many hats, such as in engineering, systems design, mathematical modelling, product marketing and research.
+My career has made me wear many hats, such as in engineering, systems design, mathematical modeling, product marketing and research.
 
 This makes me a data scientist with broad technical skills, and specific domain knowledge in the electric power industry.
 
