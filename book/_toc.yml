@@ -2,6 +2,9 @@
 
 - part: Case Studies
   chapters:
-  - file: docs/cifar10
   - file: docs/london
   - file: docs/energymarket
+
+- part: Machine Learning Papers
+  chapters:
+  - file: docs/cifar10
