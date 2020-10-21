@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Preface &#8212; Data Scientist | Energy</title>
+    <title>&lt;no title&gt; &#8212; Data Scientist | Energy</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -58,7 +58,6 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Philippine electricity market" href="energymarket.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -181,9 +180,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/webscraper.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -201,6 +200,23 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/emmandecena/jupyterbook/master?urlpath=tree/book/docs/webscraper.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -210,24 +226,7 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#workflow">
-   Workflow
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#case-studies">
-   Case Studies
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliography">
-   Bibliography
-  </a>
-  <ul class="nav section-nav flex-column">
-  </ul>
- </li>
+            <ul class="simple nav section-nav flex-column">
 </ul>
 
         </nav>
@@ -239,63 +238,100 @@
         
               <div>
                 
-  <div class="section" id="preface">
-<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
-<p>Hello! I’m Emmanuel.</p>
-<p>An energy market analyst with experience in trading operations of geothermal power plants and in electrical systems design of gas processing plants.</p>
-<p>I provide solutions to product improvement and process optimization problems by setting up analytical tools, creating and maintaining models, and streamlining new data sets.</p>
-<p>My career has made me wear many hats, such as in engineering, systems design, mathematical modeling, product marketing and research.</p>
-<p>This makes me a data scientist with broad technical skills, and specific domain knowledge in the electric power industry.</p>
-<p>By having a T-shaped professional profile, I provide data-driven solutions to business problems in energy and related industries.</p>
-<p>–</p>
-<p>I am seeking for <strong>full-time data science or energy analyst roles</strong>. Please feel free to contact me through the information in my <a href="https://www.ecdecena.com/resume-emmanuel-decena.pdf" target="_blank"><strong>resume</strong></a>. If you have a <strong>part-time project</strong> I can help with, please get in touch.</p>
-<p>I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference.</p>
-<p>–</p>
-<p><strong>Specialties</strong>: energy markets, electric power industry, mathematical optimization, statistics, data analysis, system modeling, business intelligence, and research</p>
-<p><strong>Competencies</strong>: R, Python, Excel, Matlab, Julia, SQL, Linux</p>
-<p>–</p>
-<p>Also, I love photography and hiking. On the side, I work in web development  (HTML, CSS) and have built a portfolio site to showcase my adventures and photos. <a href="https://dcnaphotos.netlify.app" target="_blank">www.dcnaphotos.com</a></p>
-<hr class="docutils" />
-<div class="section" id="workflow">
-<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<p>This section illustrates my typical workflow in an analytics project. We refer to figure <a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1</span></a> which focuses on the tools and techniques in data science <a class="bibtex reference internal" href="#wickham2016r" id="id1">[1]</a>. We assume that we have completely defined our problem statement beforehand.</p>
-<div class="figure align-default" id="id2">
-<img alt="../_images/workflow.png" src="../_images/workflow.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Project workflow</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
 </div>
-<p>The first step, <strong>Import</strong>, falls under the domain of Data Engineering. Data in the real world does not come in tidy little csv files. Instead, it comes in messy, incomplete, and from various sources that sometimes require developing a separate infrastructure to import.</p>
-<p>The next steps, <strong>Transform</strong>, <strong>Visualize</strong>, and <strong>Model</strong>, are the main processes and are iterative. We begin by transforming the data: selecting, mutating, filtering, interpolating, etc, to gain better insight into its structure.</p>
-<p>We visualize the results, looking at different dimensions to uncover patterns and find correlations. We then develop models that attempt to emulate the system behavior and do tests to see if our hypothesis about the relationships between variables hold.</p>
-<p>Domain knowledge and experience play a key role in choosing the modeling and visualization techniques suitable for the data.</p>
-<p>Finally, through <strong>Report</strong> we provide the stakeholders with the results of the analysis for decision-making. To do this, we develop communication tools such as beautiful reports, online dashboards, and full-on applications that present the data with fresh insights.</p>
 </div>
-<hr class="docutils" />
-<div class="section" id="case-studies">
-<h2>Case Studies<a class="headerlink" href="#case-studies" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="cifar10.html"><span class="doc std std-doc">Classifier on CIFAR10</span></a></p></li>
-<li><p><a class="reference internal" href="london.html"><span class="doc std std-doc">Residential load profile analysis</span></a></p></li>
-<li><p><a class="reference internal" href="energymarket.html"><span class="doc std std-doc">Philippine electricity market</span></a></p></li>
-<li><p><a class="reference internal" href="stat.html"><span class="doc std std-doc">Iris</span></a></p></li>
-<li><p><a class="reference internal" href="opti.html"><span class="doc std std-doc">Simple Optimization</span></a></p></li>
-</ul>
 </div>
-<hr class="docutils" />
-<div class="section" id="bibliography">
-<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-bibliography-docs/index-0"><dl class="citation">
-<dt class="bibtex label" id="wickham2016r"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Hadley Wickham and Garrett Grolemund. <em>R for data science: import, tidy, transform, visualize, and model data</em>. ” O’Reilly Media, Inc.”, 2016.</p>
-</dd>
-</dl>
-</p>
-<div class="toctree-wrapper compound">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span>  <span class="o">=</span> <span class="s2">&quot;/Volumes/data/projects/web-driver/chromedriver&quot;</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">option</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+
+<span class="n">option</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--disable-infobars&quot;</span><span class="p">)</span>
+<span class="n">option</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;start-maximized&quot;</span><span class="p">)</span>
+<span class="n">option</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--disable-extensions&quot;</span><span class="p">)</span>
+<span class="c1">#option.add_argument(&#39;--headless&#39;)</span>
+
+<span class="n">option</span><span class="o">.</span><span class="n">add_experimental_option</span> <span class="p">(</span><span class="s1">&#39;excludeSwitches&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;enable-automation&#39;</span><span class="p">])</span>
+<span class="n">option</span><span class="o">.</span><span class="n">add_experimental_option</span><span class="p">(</span><span class="s1">&#39;useAutomationExtension&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+
+
+<span class="c1"># Pass the argument 1 to allow and 2 to block</span>
+<span class="n">option</span><span class="o">.</span><span class="n">add_experimental_option</span><span class="p">(</span><span class="s2">&quot;prefs&quot;</span><span class="p">,</span> <span class="p">{</span> 
+    <span class="s2">&quot;profile.default_content_setting_values.notifications&quot;</span><span class="p">:</span> <span class="mi">1</span> 
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">chrome_options</span><span class="o">=</span><span class="n">option</span><span class="p">,</span> <span class="n">executable_path</span><span class="o">=</span><span class="n">PATH</span><span class="p">)</span>
+
+<span class="n">keyword</span> <span class="o">=</span> <span class="s2">&quot;electrical&quot;</span>
+
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.seek.co.nz/&quot;</span> <span class="o">+</span> <span class="n">keyword</span> <span class="o">+</span> <span class="s2">&quot;-jobs/&quot;</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="n">jobs</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s1">&#39;_3MPUOLE&#39;</span><span class="p">)</span>
+
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">job_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">job</span> <span class="ow">in</span> <span class="n">jobs</span><span class="p">:</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;app&quot;]/div/div[4]/div/div[2]/section/div[2]/div/div[2]/div[1]/div/div[2]/div/div[2]/div[1]/article/span[2]/span/h1/a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> 
+    <span class="c1">#company = job.find_element_by_xpath(&#39;//*[@id=&quot;app&quot;]/div/div[4]/div/div[2]/section/div[2]/div/div[2]/div[1]/div/div[2]/div/div[2]/div[3]/article/span[5]&#39;).text</span>
+    <span class="c1">#location = job.find_element_by_xpath(&#39;//*[@id=&quot;app&quot;]/div/div[4]/div/div[2]/section/div[2]/div/div[2]/div[1]/div/div[2]/div/div[2]/div[1]/article/div[1]/span[2]/span/strong/span/a&#39;).text</span>
+    <span class="n">job_item</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="n">position</span><span class="p">,</span>
+     <span class="c1">#   &#39;company&#39;: company,</span>
+     <span class="c1">#   &#39;location&#39;: location,</span>
+    <span class="p">}</span>
+    <span class="n">job_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">job_item</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">job_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Emman/opt/anaconda3/envs/env-jupyterbook/lib/python3.7/site-packages/ipykernel_launcher.py:1: DeprecationWarning: use options instead of chrome_options
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      position
+0  Electrician
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -309,16 +345,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "env-jupyterbook"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "env-jupyterbook",
             path: "./docs"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'env-jupyterbook'</script>
 
               </div>
               
@@ -328,7 +364,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="energymarket.html" title="next page">Philippine electricity market</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -2,9 +2,17 @@
 
 - part: Case Studies
   chapters:
-  - file: docs/london
   - file: docs/energymarket
+  - file: docs/london
 
-- part: Machine Learning Papers
+- part: Machine Learning
   chapters:
   - file: docs/cifar10
+
+- part: Optimization
+  chapters:
+  - file: docs/opti
+
+- part: Statistics
+  chapters:
+  - file: docs/stat

@@ -3,7 +3,10 @@
 
 # # Philippine electricity market
 # 
-# In this article we explore the current structure of the Philippine electricity market based on the data provided by IEMOP and DOE. 
+# 
+# **Summary**
+# 
+# This article provides an **exploratory data analysis** on the Philippine electricity market by comparing the data provided by IEMOP and DOE on their websites.
 
 # ## Data Import
 # 
@@ -145,6 +148,7 @@ df_wesm['MEMBERSHIP'].unique()
 
 
 df_wesm = df_wesm.astype({'EFFECTIVE DATE': 'datetime64'})
+df_wesm
 
 
 # In[16]:
@@ -166,28 +170,92 @@ fig.update_xaxes(rangeslider_visible=False)
 fig.show()
 
 
+# In[18]:
+
+
+names = df_wesm.apply(lambda col: str(col['PARTICIPANT NAME']) + ' ' + str(col['RESOURCE']), axis=1)
+
+
+# In[19]:
+
+
+import os
+import gmaps
+import googlemaps
+
+#gmaps.configure(api_key=["GOOGLE_API_KEY"])
+
+gmaps = googlemaps.Client(key=os.getenv('GOOGLE_API_KEY'))
+
+
+# In[20]:
+
+
+# Geocoding an address
+df_wesm_coded = pd.DataFrame({"PLACE":names[0:450]})
+df_wesm_coded["LAT"] = None
+df_wesm_coded["LON"] = None
+geocode_result = []
+
+for i in range(0, len(names[0:450]),1):
+    geocode_result = gmaps.geocode(names[i])
+    try:
+        lat = geocode_result[0]["geometry"]["location"]["lat"]
+        lon = geocode_result[0]["geometry"]["location"]["lng"]
+        df_wesm_coded.iat[i,df_wesm_coded.columns.get_loc("LAT")] = lat
+        df_wesm_coded.iat[i,df_wesm_coded.columns.get_loc("LON")] = lon
+    except Exception as e:
+        lat = None
+        lon = None
+        #print('Error, skipping address...', e)
+
+
+# In[21]:
+
+
+df_wesm_coded = df_wesm_coded[df_wesm_coded['LON'].notnull()]
+
+
+# In[22]:
+
+
+import gmaps.datasets
+
+gmaps.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+
+
+starbucks_df = df_wesm_coded[['LAT','LON']]
+
+starbucks_layer = gmaps.symbol_layer(
+    starbucks_df, fill_color='green', stroke_color='green', scale=2
+)
+fig = gmaps.figure(zoom_level=5, center=(12.8797, 121.7740))
+fig.add_layer(starbucks_layer)
+fig
+
+
 # ---
 
 # ### Retail Market
 # 
 # This section discusses the Retail Market participants.
 
-# In[18]:
+# In[23]:
 
 
 df_retail.columns
 
 
-# In[19]:
+# In[24]:
 
 
 df_retail['CATEGORY'].unique()
 
 
-# In[20]:
+# In[25]:
 
 
-df_retail[df_retail['CATEGORY'] =='Retail Electricity Supplier'].head()
+df_retail[df_retail['CATEGORY'] =='Contestable Customer'].head(n=20)
 
 
 # In[ ]:
