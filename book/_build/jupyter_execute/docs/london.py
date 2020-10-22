@@ -2,7 +2,9 @@
 # coding: utf-8
 
 # # Residential load profile analysis
-# 
+
+# {badge}`python3,badge-success` {badge}`case study,badge-secondary` {badge}`load profiles,badge-warning` 
+
 # In this article we explore the electricity load profiles of residential households in the London area. The data comes from the public data release of the UK’s dynamic time-of-use electricity pricing trial {cite}`schofield2015low`. It was a part of the Low Carbon London project which involved subjecting 5,478 anonymised households in the London area to an experimental dynamic time-of-use tariff for 2013.
 
 # ## Exploratory data analysis

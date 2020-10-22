@@ -3,6 +3,8 @@
 
 # # Classifier on CIFAR10
 
+# {badge}`python3,badge-success` {badge}`machine learning,badge-secondary` {badge}`image classification,badge-warning` 
+
 # ## Using 3-Layer MLP
 
 # In[1]:

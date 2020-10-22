@@ -2,11 +2,12 @@
 # coding: utf-8
 
 # # Philippine electricity market
-# 
-# 
-# **Summary**
-# 
+
+# {badge}`python3,badge-success` {badge}`case study,badge-secondary` {badge}`electricity market,badge-warning` 
+
 # This article provides an **exploratory data analysis** on the Philippine electricity market by comparing the data provided by IEMOP and DOE on their websites.
+# 
+# The first part explores the **Wholesale Electricity Spot Market** while second part explores the **Retail Electricity Spot Market**. Finally, we compare the published data from the DOE, IEMOP and WESM.
 
 # ## Data Import
 # 
@@ -23,19 +24,32 @@ import matplotlib.pyplot as plt
 # In[2]:
 
 
+t_props = [
+  ('font-size', '80%')
+  ]
+   
+styles = [
+  dict(selector="th", props=t_props),
+  dict(selector="td", props=t_props)
+  ]
+
+
+# In[3]:
+
+
 def get_data(url):
     html_data = pd.read_html(url)
     data = html_data[0]
     return data
 
 
-# In[3]:
+# In[4]:
 
 
 df_wesm = get_data('http://www.iemop.ph/the-market/participants/wesm-members/')
 
 
-# In[4]:
+# In[5]:
 
 
 df_retail = get_data('http://www.iemop.ph/the-market/participants/rcoa-tp/')
@@ -49,15 +63,7 @@ df_retail = get_data('http://www.iemop.ph/the-market/participants/rcoa-tp/')
 # 
 # This section discusses the data on Wholesale Electricity Spot Market participants.
 
-# First, we look at the column names to see the variables from the data.
-
-# In[5]:
-
-
-df_wesm.columns
-
-
-# We get the counts of the unique values in each column.
+# First, we look at the column names to see the variables from the data. We get the counts of the unique values in each column.
 
 # In[6]:
 
@@ -73,7 +79,7 @@ df_wesm.nunique()
 
 
 df_cross = pd.crosstab(df_wesm['SHORT NAME'], df_wesm['PARTICIPANT NAME'],margins=True)
-df_cross.tail()
+df_cross.tail().style.set_table_styles(styles)
 
 
 # Based on the tabulation, we can see that there are `PARTICIPANT NAME` with multiple `SHORT NAME`.
@@ -89,13 +95,13 @@ df_cross.All[(df_cross.All > 1)].head(n=10)
 # In[9]:
 
 
-df_wesm[df_wesm['SHORT NAME'] =='APRI']
+df_wesm[df_wesm['SHORT NAME'] =='APRI'].tail().style.set_table_styles(styles)
 
 
 # In[10]:
 
 
-df_wesm[df_wesm['SHORT NAME'] =='AHC']
+df_wesm[df_wesm['SHORT NAME'] =='AHC'].tail().style.set_table_styles(styles)
 
 
 # We can see that each `PARTICIPANT NAME` has multiple `RESOURCE` entries. From the inspected data above, we can infer that membership in the spot market is a disaggregation of the power plant units of each participating company.
@@ -115,7 +121,7 @@ df_wesm.groupby('REGION')['RESOURCE'].nunique()
 # In[12]:
 
 
-df_wesm[df_wesm['REGION'] =='LUZON / VISAYAS']
+df_wesm[df_wesm['REGION'] =='LUZON / VISAYAS'].tail().style.set_table_styles(styles)
 
 
 # Except for the NGCP, which is a transmission company and NPC, all the participants with dual regions are Aggregators (WAG) with 'ceased' status. ERC has issued a circular to stop the operation of all WAGs.
@@ -148,7 +154,6 @@ df_wesm['MEMBERSHIP'].unique()
 
 
 df_wesm = df_wesm.astype({'EFFECTIVE DATE': 'datetime64'})
-df_wesm
 
 
 # In[16]:
@@ -180,25 +185,23 @@ names = df_wesm.apply(lambda col: str(col['PARTICIPANT NAME']) + ' ' + str(col['
 
 
 import os
-import gmaps
+
 import googlemaps
 
-#gmaps.configure(api_key=["GOOGLE_API_KEY"])
-
-gmaps = googlemaps.Client(key=os.getenv('GOOGLE_API_KEY'))
+gmap = googlemaps.Client(key=os.getenv('GOOGLE_API_KEY'))
 
 
 # In[20]:
 
 
 # Geocoding an address
-df_wesm_coded = pd.DataFrame({"PLACE":names[0:450]})
+df_wesm_coded = pd.DataFrame({"PLACE":names[0:400]})
 df_wesm_coded["LAT"] = None
 df_wesm_coded["LON"] = None
 geocode_result = []
 
-for i in range(0, len(names[0:450]),1):
-    geocode_result = gmaps.geocode(names[i])
+for i in range(0, len(names[0:400]),1):
+    geocode_result = gmap.geocode(names[i])
     try:
         lat = geocode_result[0]["geometry"]["location"]["lat"]
         lon = geocode_result[0]["geometry"]["location"]["lng"]
@@ -219,18 +222,27 @@ df_wesm_coded = df_wesm_coded[df_wesm_coded['LON'].notnull()]
 # In[22]:
 
 
-import gmaps.datasets
+import gmaps
+
+
+# In[23]:
+
 
 gmaps.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 
-starbucks_df = df_wesm_coded[['LAT','LON']]
+map_df = df_wesm_coded[['LAT','LON']]
 
-starbucks_layer = gmaps.symbol_layer(
-    starbucks_df, fill_color='green', stroke_color='green', scale=2
+scatter_layer = gmaps.symbol_layer(
+    map_df, fill_color='green', stroke_color='green', scale=2
 )
 fig = gmaps.figure(zoom_level=5, center=(12.8797, 121.7740))
-fig.add_layer(starbucks_layer)
+fig.add_layer(scatter_layer)
+
+
+# In[24]:
+
+
 fig
 
 
@@ -240,22 +252,34 @@ fig
 # 
 # This section discusses the Retail Market participants.
 
-# In[23]:
+# In[25]:
 
 
 df_retail.columns
 
 
-# In[24]:
+# In[26]:
 
 
 df_retail['CATEGORY'].unique()
 
 
-# In[25]:
+# In[27]:
 
 
-df_retail[df_retail['CATEGORY'] =='Contestable Customer'].head(n=20)
+df_retail[df_retail['CATEGORY'] =='Contestable Customer'].head().style.set_table_styles(styles)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:

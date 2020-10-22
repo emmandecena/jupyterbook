@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[47]:
 
 
 from selenium import webdriver
@@ -13,13 +13,13 @@ import time
 import pandas as pd
 
 
-# In[2]:
+# In[51]:
 
 
 PATH  = "/Volumes/data/projects/web-driver/chromedriver"
 
 
-# In[3]:
+# In[62]:
 
 
 option = Options()
@@ -40,7 +40,7 @@ option.add_experimental_option("prefs", {
 })
 
 
-# In[4]:
+# In[64]:
 
 
 driver = webdriver.Chrome(chrome_options=option, executable_path=PATH)
@@ -77,7 +77,7 @@ time.sleep(5)
 driver.quit()
 
 
-# In[5]:
+# In[65]:
 
 
 driver.quit()

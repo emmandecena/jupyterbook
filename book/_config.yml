@@ -13,6 +13,8 @@ logo: 'images/neural.png'
 execute:
   execute_notebooks           : cache
   timeout                     : -1
+  exclude_patterns:
+    - "docs/draft-*.ipynb"
 #######################################################################################
 # HTML-specific settings
 html:
