@@ -2,9 +2,9 @@
 
 Hello! I'm Emmanuel.
 
-An energy market analyst with experience in trading operations of geothermal power plants and in electrical systems design of gas processing plants.
+An energy market analyst with experience in electricity trading operations of thermal power plants and in electrical systems design of gas processing plants.
 
-I provide solutions to product improvement and process optimization problems by setting up analytical tools, creating and maintaining models, and streamlining new data sets.
+I provide solutions to business process analytics and optimization problems by streamlining new datasets, setting up the tools, and creating predictive models.
 
 My career has made me wear many hats, such as in engineering, systems design, mathematical modeling, product marketing and research.
 
@@ -15,19 +15,19 @@ By having a T-shaped professional profile, I provide data-driven solutions to bu
 --
 
 
-I am seeking for **full-time data science or energy analyst roles**. Please feel free to contact me through the information in my <a href="https://www.ecdecena.com/resume-emmanuel-decena.pdf" target="_blank">**resume**</a>. If you have a **part-time project** I can help with, please get in touch.
+Feel free to contact me through the information in my <a href="https://www.ecdecena.com/resume-emmanuel-decena.pdf" target="_blank">**resume**</a>. If you have a **part-time project** I can help with, please get in touch.
 
-I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference.
-
---
-
-**Specialties**: energy markets, electric power industry, mathematical optimization, statistics, data analysis, system modeling, business intelligence, and research
-
-**Competencies**: R, Python, Excel, Matlab, Julia, SQL, Linux
+<!-- I wrote this website to demonstrate my domain knowledge, technology tools, and lessons learned throughout my career. My goal is to document the systems I use and to serve as my personal reference. -->
 
 --
 
-Also, I love photography and hiking. On the side, I work in web development  (HTML, CSS) and have built a portfolio site to showcase my adventures and photos. <a href="https://dcnaphotos.netlify.app" target="_blank">www.dcnaphotos.com</a>
+**Specialties**: mathematical optimization, statistics, data analysis, system modeling, business intelligence, and research
+
+**Tools**: R, Python, Excel, Julia, Linux
+
+--
+
+Also, I love photography and hiking. On the side, I work in web development and have built a portfolio site to showcase my adventures and photos. <a href="https://dcnaphotos.netlify.app" target="_blank">www.dcnaphotos.com</a>
 
 ---
 
@@ -55,11 +55,10 @@ Finally, through **Report** we provide the stakeholders with the results of the 
 
 ## Case Studies
 
-* [](./cifar10.ipynb)
 * [](./london.ipynb)
 * [](./energymarket.ipynb)
-* [](./stat.ipynb)
-* [](./opti.ipynb)
+* [](./usgrid.ipynb)
+* [](./hrdatasetv14.ipynb)
 
 ---
 
