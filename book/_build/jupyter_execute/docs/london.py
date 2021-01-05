@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Residential load profile analysis
+# # Residential Electricity Consumption
 
 # {badge}`python3,badge-success` {badge}`case study,badge-secondary` {badge}`load profiles,badge-warning` 
 

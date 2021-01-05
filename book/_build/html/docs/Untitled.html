@@ -1,0 +1,2729 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tasks &#8212; Data Scientist | Energy</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/neural.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Scientist | Energy</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Case Studies
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="energymarket.html">
+   Philippine electricity market
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="london.html">
+   Residential load profile analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cifar10.html">
+   Classifier on CIFAR10
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="opti.html">
+   Simple Optimization
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Statistics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat.html">
+   Iris
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualisations.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Untitled.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/emmandecena/jupyterbook/master?urlpath=tree/book/docs/Untitled.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">from</span> <span class="nn">vega_datasets</span> <span class="kn">import</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Volumes/data/work/picnichealth/tasks.csv&quot;</span><span class="p">)</span>
+<span class="n">tasks_group</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Volumes/data/work/picnichealth/task_group.csv&quot;</span><span class="p">)</span>
+<span class="n">records</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Volumes/data/work/picnichealth/records.csv&quot;</span><span class="p">)</span>
+<span class="n">timesheet</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Volumes/data/work/picnichealth/timesheet_entries.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tasks">
+<h1>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>created_at</th>
+      <th>completed_at</th>
+      <th>task_type</th>
+      <th>previous_task_task_id</th>
+      <th>completer_user_id</th>
+      <th>patient_user_id</th>
+      <th>record_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>00032409-3e0d-4670-9ba4-94922ef010fa</td>
+      <td>2019-05-07T02:23:50.721Z</td>
+      <td>2019-05-07T02:23:50.757Z</td>
+      <td>FINISH_LABELLING</td>
+      <td>df6000d7-6ac9-40b4-bff9-b53f84f30ead</td>
+      <td>NaN</td>
+      <td>d4a59370-08c0-4516-b77e-bc21ae9bb352</td>
+      <td>d05e40df-2725-487d-86ba-c3825c47c01c</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>00036503-7dee-421c-9b4f-3fefe1884d5a</td>
+      <td>2019-05-07T02:27:53.191Z</td>
+      <td>2019-05-16T19:27:35.351Z</td>
+      <td>CHECK_RECORD_STATUS</td>
+      <td>f6713596-39ba-43e7-b722-6330bc137a89</td>
+      <td>3d1b6796-c0b2-4df3-8c45-c70e7986117d</td>
+      <td>f463eac3-5acb-402c-ae59-1da3fcc82918</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0007a86c-e593-4d31-856a-53694b0df491</td>
+      <td>2019-05-13T18:03:06.895Z</td>
+      <td>2019-05-13T18:50:16.846Z</td>
+      <td>ASSIGN_INBOUND_RECORD</td>
+      <td>9963dabc-2262-470b-8188-22fcc4daef79</td>
+      <td>9eccd74f-0885-41c3-be93-f9a826470c48</td>
+      <td>fe20e53c-79b3-4ab3-9f9b-397f24bacd6e</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0008d0c1-7c4a-4e8f-adfe-29015e4dc225</td>
+      <td>2019-05-13T23:15:42.159Z</td>
+      <td>2019-05-13T23:15:42.188Z</td>
+      <td>FINISH_LABELLING</td>
+      <td>ab26af2e-edc1-4794-a78e-53f210a76a44</td>
+      <td>NaN</td>
+      <td>cf073b87-f7cc-4363-9ca2-fa1395d60663</td>
+      <td>e9cc9946-e863-4e1b-8cc5-5d6d11bc6b53</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>000a5e7d-1c86-4486-a72b-afa830d42b3f</td>
+      <td>2019-05-13T14:51:47.600Z</td>
+      <td>2019-05-15T23:38:27.769Z</td>
+      <td>PROCESS_EXCERPTS</td>
+      <td>9f422db2-f12f-4bed-9d96-de0b78c7db2e</td>
+      <td>2554c0ae-a994-4b4a-b7e4-594908dab447</td>
+      <td>a0e0df3f-f193-4a91-8898-5c4d8079a355</td>
+      <td>0502ac1f-c322-4e55-9524-37bd6bac8102</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime64&#39;</span><span class="p">})</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s1">&#39;completed_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime64&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                       19900
+created_at               19594
+completed_at             11024
+task_type                   43
+previous_task_task_id    11904
+completer_user_id           90
+patient_user_id           2228
+record_id                 3669
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="o">.</span><span class="n">task_type</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;FINISH_LABELLING&#39;, &#39;CHECK_RECORD_STATUS&#39;, &#39;ASSIGN_INBOUND_RECORD&#39;,
+       &#39;PROCESS_EXCERPTS&#39;, &#39;ANONYMIZE_DICOM&#39;, &#39;PROCESS_RACE&#39;,
+       &#39;MESSAGE_USER_FOR_ONBOARDING_INFO&#39;,
+       &#39;MESSAGE_USER_ABOUT_RECORDS_ADDED&#39;, &#39;REVIEW_PROCESSING_COMMENTS&#39;,
+       &#39;CORRECT_OCR&#39;, &#39;PREPARE_INFORMATION_FOR_RECORD_REQUEST&#39;,
+       &#39;QUALITY_CHECK_OTHER_EXCERPTS&#39;, &#39;PROCESS_GLOBAL_LABELLING&#39;,
+       &#39;CORRECT_EXCERPT_OCR&#39;, &#39;QUALITY_CHECK_LABS&#39;, &#39;SEND_REQUEST&#39;,
+       &#39;QUALITY_CHECK_SEGMENTATION&#39;, &#39;PROCESS_DICOMS&#39;, &#39;SEGMENT_RECORDS&#39;,
+       &#39;QUALITY_CHECK_GLOBAL_LABELLING&#39;, &#39;CALL_FOR_FAX_NUMBER&#39;,
+       &#39;MESSAGE_USER_FOR_ORGANIZATION_SPECIFICS&#39;,
+       &#39;MESSAGE_USER_FOR_COLLECTION_APPROVAL&#39;, &#39;REVIEW_SIGNATURE&#39;,
+       &#39;ANSWER_INBOUND_CALL&#39;, &#39;AUDIT_CORRECT_EXCERPT_OCR&#39;, &#39;AD_HOC&#39;,
+       &#39;REVIEW_INVOICE&#39;, &#39;PAY_INVOICE&#39;,
+       &#39;MESSAGE_USER_ABOUT_UNAVAILABLE_RECORDS&#39;,
+       &#39;MESSAGE_USER_FOR_SIGNATURE&#39;,
+       &#39;MESSAGE_USER_ABOUT_DESTROYED_RECORDS&#39;,
+       &#39;MESSAGE_USER_ABOUT_CARD_FAILURE&#39;, &#39;SEND_DICOMS_TO_ICOMETRIX&#39;,
+       &#39;MESSAGE_USER_ABOUT_SIGNATURE_MISMATCH&#39;, &#39;REVIEW_RECORD_REQUEST&#39;,
+       &#39;CHECK_ANONYMIZED_DICOM&#39;, &#39;MESSAGE_USER_TO_SIGN_ADDITIONAL_FORMS&#39;,
+       &#39;CALL_ABOUT_FAX_FAILURE&#39;, &#39;REVIEW_ISSUE&#39;,
+       &#39;MESSAGE_USER_TO_UPDATE_INFO&#39;, &#39;CONFIRM_RECORDS_RECEIVED&#39;,
+       &#39;SHARE_WITH_DOCTOR&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                           0
+created_at                   0
+completed_at              8427
+task_type                    0
+previous_task_task_id     3359
+completer_user_id        10368
+patient_user_id            139
+record_id                 7541
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;duration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;completed_at&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;created_at&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;total_sec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">duration</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+<span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;total_hr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tasks</span><span class="p">[</span><span class="s2">&quot;total_sec&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">3600</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>created_at</th>
+      <th>completed_at</th>
+      <th>task_type</th>
+      <th>previous_task_task_id</th>
+      <th>completer_user_id</th>
+      <th>patient_user_id</th>
+      <th>record_id</th>
+      <th>duration</th>
+      <th>total_sec</th>
+      <th>total_hr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>00032409-3e0d-4670-9ba4-94922ef010fa</td>
+      <td>2019-05-07 02:23:50.721</td>
+      <td>2019-05-07 02:23:50.757</td>
+      <td>FINISH_LABELLING</td>
+      <td>df6000d7-6ac9-40b4-bff9-b53f84f30ead</td>
+      <td>NaN</td>
+      <td>d4a59370-08c0-4516-b77e-bc21ae9bb352</td>
+      <td>d05e40df-2725-487d-86ba-c3825c47c01c</td>
+      <td>0 days 00:00:00.036000</td>
+      <td>0.036</td>
+      <td>0.000010</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>00036503-7dee-421c-9b4f-3fefe1884d5a</td>
+      <td>2019-05-07 02:27:53.191</td>
+      <td>2019-05-16 19:27:35.351</td>
+      <td>CHECK_RECORD_STATUS</td>
+      <td>f6713596-39ba-43e7-b722-6330bc137a89</td>
+      <td>3d1b6796-c0b2-4df3-8c45-c70e7986117d</td>
+      <td>f463eac3-5acb-402c-ae59-1da3fcc82918</td>
+      <td>NaN</td>
+      <td>9 days 16:59:42.160000</td>
+      <td>838782.160</td>
+      <td>232.995044</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0007a86c-e593-4d31-856a-53694b0df491</td>
+      <td>2019-05-13 18:03:06.895</td>
+      <td>2019-05-13 18:50:16.846</td>
+      <td>ASSIGN_INBOUND_RECORD</td>
+      <td>9963dabc-2262-470b-8188-22fcc4daef79</td>
+      <td>9eccd74f-0885-41c3-be93-f9a826470c48</td>
+      <td>fe20e53c-79b3-4ab3-9f9b-397f24bacd6e</td>
+      <td>NaN</td>
+      <td>0 days 00:47:09.951000</td>
+      <td>2829.951</td>
+      <td>0.786098</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0008d0c1-7c4a-4e8f-adfe-29015e4dc225</td>
+      <td>2019-05-13 23:15:42.159</td>
+      <td>2019-05-13 23:15:42.188</td>
+      <td>FINISH_LABELLING</td>
+      <td>ab26af2e-edc1-4794-a78e-53f210a76a44</td>
+      <td>NaN</td>
+      <td>cf073b87-f7cc-4363-9ca2-fa1395d60663</td>
+      <td>e9cc9946-e863-4e1b-8cc5-5d6d11bc6b53</td>
+      <td>0 days 00:00:00.029000</td>
+      <td>0.029</td>
+      <td>0.000008</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>000a5e7d-1c86-4486-a72b-afa830d42b3f</td>
+      <td>2019-05-13 14:51:47.600</td>
+      <td>2019-05-15 23:38:27.769</td>
+      <td>PROCESS_EXCERPTS</td>
+      <td>9f422db2-f12f-4bed-9d96-de0b78c7db2e</td>
+      <td>2554c0ae-a994-4b4a-b7e4-594908dab447</td>
+      <td>a0e0df3f-f193-4a91-8898-5c4d8079a355</td>
+      <td>0502ac1f-c322-4e55-9524-37bd6bac8102</td>
+      <td>2 days 08:46:40.169000</td>
+      <td>204400.169</td>
+      <td>56.777825</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19895</th>
+      <td>ffe45191-ceca-47a8-a782-95d2a0a42159</td>
+      <td>2019-05-08 01:20:51.401</td>
+      <td>2019-05-08 13:29:50.587</td>
+      <td>CORRECT_EXCERPT_OCR</td>
+      <td>0032ab9e-d63e-465b-aee8-ea8a58d40fe8</td>
+      <td>b9db89ee-fcf4-45de-991a-a16b26fc2f2e</td>
+      <td>f90e2fba-82aa-46ec-b4a0-ba852d47821c</td>
+      <td>8e3bd5d2-97c7-42ac-ba05-e68732878c19</td>
+      <td>0 days 12:08:59.186000</td>
+      <td>43739.186</td>
+      <td>12.149774</td>
+    </tr>
+    <tr>
+      <th>19896</th>
+      <td>ffe83d09-54bc-491c-b991-b077c2007f49</td>
+      <td>2019-05-07 19:08:47.770</td>
+      <td>2019-05-07 19:08:57.198</td>
+      <td>SEND_REQUEST</td>
+      <td>0b2c2078-fe82-4287-9a56-b10fcbd78cb3</td>
+      <td>15f9a3a9-63c0-45f7-a05a-d7d6cc98c02c</td>
+      <td>4dd04557-6422-4133-a94b-b20e20543ee9</td>
+      <td>NaN</td>
+      <td>0 days 00:00:09.428000</td>
+      <td>9.428</td>
+      <td>0.002619</td>
+    </tr>
+    <tr>
+      <th>19897</th>
+      <td>fff00f3f-f898-4f0e-abe4-5553e9465a85</td>
+      <td>2019-05-11 06:00:40.670</td>
+      <td>NaT</td>
+      <td>QUALITY_CHECK_LABS</td>
+      <td>677c0b33-a400-42cb-afd9-8d7d793307a2</td>
+      <td>NaN</td>
+      <td>6d59b718-fbf7-4658-8231-9bfee41b7cbe</td>
+      <td>510014b7-0ac2-4282-9593-c8cab9c5a278</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19898</th>
+      <td>fff14e4f-d5a6-4d76-a6bb-fa38b24a2bb8</td>
+      <td>2019-05-14 00:14:46.827</td>
+      <td>NaT</td>
+      <td>QUALITY_CHECK_SEGMENTATION</td>
+      <td>0c96ac77-07e7-4507-b6ba-b35dd4b60838</td>
+      <td>NaN</td>
+      <td>ae642296-e078-4ab7-b349-99352e2037ff</td>
+      <td>aed0a425-0f0b-4b14-9e97-07afa24f9d56</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19899</th>
+      <td>fffccce5-0634-4f24-8021-c61ffc573b46</td>
+      <td>2019-05-03 23:29:32.007</td>
+      <td>NaT</td>
+      <td>PROCESS_GLOBAL_LABELLING</td>
+      <td>038379ba-6d2f-4924-b3b7-46c15c15a27c</td>
+      <td>NaN</td>
+      <td>af777b5b-fb35-46c0-8a00-7da99158eb31</td>
+      <td>142dbdd0-f66e-47fb-96e7-6e4125474ae1</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>19900 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;task_type&#39;</span><span class="p">)[</span><span class="s1">&#39;total_hr&#39;</span><span class="p">]</span>
+
+<span class="n">ave</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">maxim</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">minim</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ave</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span> <span class="s1">&#39;ave_duration&#39;</span><span class="p">]</span> 
+<span class="n">std</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span> <span class="s1">&#39;std_duration&#39;</span><span class="p">]</span> 
+<span class="n">maxim</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span> <span class="s1">&#39;max_duration&#39;</span><span class="p">]</span> 
+<span class="n">minim</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span> <span class="s1">&#39;min_duration&#39;</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">task_counts</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">value_counts</span><span class="p">([</span><span class="s2">&quot;task_type&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">task_counts</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ave_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ave</span><span class="p">)</span>
+<span class="n">std_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">std</span><span class="p">)</span>
+<span class="n">max_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">maxim</span><span class="p">)</span>
+<span class="n">min_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">minim</span><span class="p">)</span>
+<span class="n">task_counts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">task_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">max_df</span> <span class="o">=</span> <span class="n">max_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+<span class="n">min_df</span> <span class="o">=</span> <span class="n">min_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+<span class="n">ave_df</span> <span class="o">=</span> <span class="n">ave_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+<span class="n">std_df</span> <span class="o">=</span> <span class="n">std_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+<span class="n">tasks_group</span> <span class="o">=</span> <span class="n">tasks_group</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+<span class="n">task_counts_df</span> <span class="o">=</span> <span class="n">task_counts_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;task_type&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">task_stat</span> <span class="o">=</span> <span class="n">max_df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">([</span><span class="n">min_df</span><span class="p">,</span><span class="n">ave_df</span><span class="p">,</span><span class="n">std_df</span><span class="p">,</span><span class="n">task_counts_df</span><span class="p">]))</span>
+<span class="n">task_stat</span><span class="p">[</span><span class="s2">&quot;weighted_ave&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">task_stat</span><span class="p">[</span><span class="s2">&quot;ave_duration&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">task_stat</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
+<span class="n">task_stat</span><span class="p">[</span><span class="s2">&quot;log_weighted_ave&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">task_stat</span><span class="p">[</span><span class="s2">&quot;weighted_ave&quot;</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">task_stat</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;log_weighted_ave&quot;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>max_duration</th>
+      <th>min_duration</th>
+      <th>ave_duration</th>
+      <th>std_duration</th>
+      <th>count</th>
+      <th>weighted_ave</th>
+      <th>log_weighted_ave</th>
+    </tr>
+    <tr>
+      <th>task_type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PROCESS_EXCERPTS</th>
+      <td>275.761232</td>
+      <td>0.022118</td>
+      <td>84.787534</td>
+      <td>54.539336</td>
+      <td>2891</td>
+      <td>245120.761961</td>
+      <td>17.903139</td>
+    </tr>
+    <tr>
+      <th>QUALITY_CHECK_SEGMENTATION</th>
+      <td>261.809441</td>
+      <td>0.001708</td>
+      <td>152.568381</td>
+      <td>72.023035</td>
+      <td>966</td>
+      <td>147381.055825</td>
+      <td>17.169201</td>
+    </tr>
+    <tr>
+      <th>QUALITY_CHECK_LABS</th>
+      <td>262.356393</td>
+      <td>0.078529</td>
+      <td>143.408671</td>
+      <td>66.142139</td>
+      <td>706</td>
+      <td>101246.521381</td>
+      <td>16.627527</td>
+    </tr>
+    <tr>
+      <th>CHECK_RECORD_STATUS</th>
+      <td>318.403790</td>
+      <td>0.000021</td>
+      <td>52.491248</td>
+      <td>61.411845</td>
+      <td>1817</td>
+      <td>95376.597495</td>
+      <td>16.541363</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_FOR_ONBOARDING_INFO</th>
+      <td>168.254089</td>
+      <td>0.002683</td>
+      <td>61.515292</td>
+      <td>55.886329</td>
+      <td>1452</td>
+      <td>89320.203288</td>
+      <td>16.446715</td>
+    </tr>
+    <tr>
+      <th>QUALITY_CHECK_OTHER_EXCERPTS</th>
+      <td>257.776007</td>
+      <td>0.001133</td>
+      <td>111.790683</td>
+      <td>67.689317</td>
+      <td>740</td>
+      <td>82725.105209</td>
+      <td>16.336055</td>
+    </tr>
+    <tr>
+      <th>SEGMENT_RECORDS</th>
+      <td>296.448994</td>
+      <td>0.004148</td>
+      <td>77.163035</td>
+      <td>79.218221</td>
+      <td>967</td>
+      <td>74616.654874</td>
+      <td>16.187229</td>
+    </tr>
+    <tr>
+      <th>CORRECT_OCR</th>
+      <td>128.801748</td>
+      <td>2.314482</td>
+      <td>65.558115</td>
+      <td>63.243633</td>
+      <td>551</td>
+      <td>36122.521595</td>
+      <td>15.140651</td>
+    </tr>
+    <tr>
+      <th>REVIEW_PROCESSING_COMMENTS</th>
+      <td>284.643417</td>
+      <td>0.014223</td>
+      <td>39.967863</td>
+      <td>53.335849</td>
+      <td>864</td>
+      <td>34532.233546</td>
+      <td>15.075698</td>
+    </tr>
+    <tr>
+      <th>PROCESS_DICOMS</th>
+      <td>299.911186</td>
+      <td>0.241527</td>
+      <td>171.005695</td>
+      <td>109.828155</td>
+      <td>171</td>
+      <td>29241.973818</td>
+      <td>14.835802</td>
+    </tr>
+    <tr>
+      <th>PREPARE_INFORMATION_FOR_RECORD_REQUEST</th>
+      <td>211.529257</td>
+      <td>0.001571</td>
+      <td>19.322903</td>
+      <td>33.522013</td>
+      <td>1454</td>
+      <td>28095.501073</td>
+      <td>14.778103</td>
+    </tr>
+    <tr>
+      <th>ANONYMIZE_DICOM</th>
+      <td>78.900245</td>
+      <td>29.424517</td>
+      <td>59.427146</td>
+      <td>12.715409</td>
+      <td>394</td>
+      <td>23414.295376</td>
+      <td>14.515164</td>
+    </tr>
+    <tr>
+      <th>CORRECT_EXCERPT_OCR</th>
+      <td>133.539823</td>
+      <td>0.007228</td>
+      <td>19.870233</td>
+      <td>21.543655</td>
+      <td>785</td>
+      <td>15598.132841</td>
+      <td>13.929178</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_ABOUT_RECORDS_ADDED</th>
+      <td>166.597317</td>
+      <td>0.728942</td>
+      <td>23.165283</td>
+      <td>22.147787</td>
+      <td>483</td>
+      <td>11188.831719</td>
+      <td>13.449901</td>
+    </tr>
+    <tr>
+      <th>PROCESS_RACE</th>
+      <td>223.406941</td>
+      <td>0.000054</td>
+      <td>21.680700</td>
+      <td>45.749935</td>
+      <td>515</td>
+      <td>11165.560399</td>
+      <td>13.446897</td>
+    </tr>
+    <tr>
+      <th>ASSIGN_INBOUND_RECORD</th>
+      <td>114.680801</td>
+      <td>0.016687</td>
+      <td>7.436162</td>
+      <td>15.302912</td>
+      <td>892</td>
+      <td>6633.056196</td>
+      <td>12.695676</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_FOR_SIGNATURE</th>
+      <td>250.893704</td>
+      <td>0.002444</td>
+      <td>74.030394</td>
+      <td>88.244478</td>
+      <td>75</td>
+      <td>5552.279587</td>
+      <td>12.439124</td>
+    </tr>
+    <tr>
+      <th>CALL_FOR_FAX_NUMBER</th>
+      <td>294.247028</td>
+      <td>4.186998</td>
+      <td>52.532286</td>
+      <td>63.853958</td>
+      <td>62</td>
+      <td>3257.001743</td>
+      <td>11.669772</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_FOR_COLLECTION_APPROVAL</th>
+      <td>30.645323</td>
+      <td>0.001996</td>
+      <td>15.323659</td>
+      <td>15.321663</td>
+      <td>162</td>
+      <td>2482.432808</td>
+      <td>11.278120</td>
+    </tr>
+    <tr>
+      <th>REVIEW_SIGNATURE</th>
+      <td>158.421040</td>
+      <td>0.036862</td>
+      <td>24.645466</td>
+      <td>24.214523</td>
+      <td>88</td>
+      <td>2168.800988</td>
+      <td>11.083347</td>
+    </tr>
+    <tr>
+      <th>CHECK_ANONYMIZED_DICOM</th>
+      <td>90.652900</td>
+      <td>1.548773</td>
+      <td>58.147720</td>
+      <td>30.255695</td>
+      <td>31</td>
+      <td>1802.579325</td>
+      <td>10.816647</td>
+    </tr>
+    <tr>
+      <th>REVIEW_RECORD_REQUEST</th>
+      <td>78.499962</td>
+      <td>1.431776</td>
+      <td>47.748265</td>
+      <td>31.304290</td>
+      <td>24</td>
+      <td>1145.958368</td>
+      <td>10.163597</td>
+    </tr>
+    <tr>
+      <th>AUDIT_CORRECT_EXCERPT_OCR</th>
+      <td>98.406887</td>
+      <td>0.302824</td>
+      <td>17.031121</td>
+      <td>26.618993</td>
+      <td>44</td>
+      <td>749.369344</td>
+      <td>9.551457</td>
+    </tr>
+    <tr>
+      <th>ANSWER_INBOUND_CALL</th>
+      <td>147.441263</td>
+      <td>0.018421</td>
+      <td>10.515132</td>
+      <td>31.843341</td>
+      <td>66</td>
+      <td>693.998724</td>
+      <td>9.440867</td>
+    </tr>
+    <tr>
+      <th>SEND_REQUEST</th>
+      <td>194.709434</td>
+      <td>0.000751</td>
+      <td>0.842248</td>
+      <td>9.747041</td>
+      <td>810</td>
+      <td>682.220966</td>
+      <td>9.416208</td>
+    </tr>
+    <tr>
+      <th>AD_HOC</th>
+      <td>73.523333</td>
+      <td>0.005658</td>
+      <td>4.092320</td>
+      <td>13.244541</td>
+      <td>149</td>
+      <td>609.755650</td>
+      <td>9.254451</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_ABOUT_SIGNATURE_MISMATCH</th>
+      <td>151.240974</td>
+      <td>0.010681</td>
+      <td>50.421345</td>
+      <td>71.290243</td>
+      <td>12</td>
+      <td>605.056143</td>
+      <td>9.243308</td>
+    </tr>
+    <tr>
+      <th>PROCESS_GLOBAL_LABELLING</th>
+      <td>97.688176</td>
+      <td>0.001079</td>
+      <td>0.489699</td>
+      <td>5.470326</td>
+      <td>1065</td>
+      <td>521.529278</td>
+      <td>9.029368</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_ABOUT_CARD_FAILURE</th>
+      <td>168.286421</td>
+      <td>0.000436</td>
+      <td>57.455591</td>
+      <td>53.411993</td>
+      <td>8</td>
+      <td>459.644727</td>
+      <td>8.847511</td>
+    </tr>
+    <tr>
+      <th>SHARE_WITH_DOCTOR</th>
+      <td>220.908193</td>
+      <td>220.908193</td>
+      <td>220.908193</td>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>220.908193</td>
+      <td>7.793819</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_TO_SIGN_ADDITIONAL_FORMS</th>
+      <td>7.219168</td>
+      <td>4.604723</td>
+      <td>5.911946</td>
+      <td>1.307223</td>
+      <td>9</td>
+      <td>53.207513</td>
+      <td>5.760421</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_FOR_ORGANIZATION_SPECIFICS</th>
+      <td>25.148515</td>
+      <td>0.009722</td>
+      <td>2.120906</td>
+      <td>6.450043</td>
+      <td>25</td>
+      <td>53.022653</td>
+      <td>5.755493</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_ABOUT_UNAVAILABLE_RECORDS</th>
+      <td>24.947877</td>
+      <td>0.003188</td>
+      <td>4.999646</td>
+      <td>9.974119</td>
+      <td>7</td>
+      <td>34.997524</td>
+      <td>5.169826</td>
+    </tr>
+    <tr>
+      <th>SEND_DICOMS_TO_ICOMETRIX</th>
+      <td>4.968641</td>
+      <td>0.006416</td>
+      <td>1.123808</td>
+      <td>1.451155</td>
+      <td>11</td>
+      <td>12.361891</td>
+      <td>3.740052</td>
+    </tr>
+    <tr>
+      <th>QUALITY_CHECK_GLOBAL_LABELLING</th>
+      <td>0.122369</td>
+      <td>0.001392</td>
+      <td>0.024986</td>
+      <td>0.028149</td>
+      <td>425</td>
+      <td>10.618920</td>
+      <td>3.538404</td>
+    </tr>
+    <tr>
+      <th>REVIEW_INVOICE</th>
+      <td>0.038812</td>
+      <td>0.002708</td>
+      <td>0.020760</td>
+      <td>0.018052</td>
+      <td>17</td>
+      <td>0.352920</td>
+      <td>0.436077</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_ABOUT_DESTROYED_RECORDS</th>
+      <td>0.056331</td>
+      <td>0.001841</td>
+      <td>0.015942</td>
+      <td>0.017845</td>
+      <td>15</td>
+      <td>0.239124</td>
+      <td>0.309320</td>
+    </tr>
+    <tr>
+      <th>PAY_INVOICE</th>
+      <td>0.018759</td>
+      <td>0.003630</td>
+      <td>0.009602</td>
+      <td>0.006575</td>
+      <td>6</td>
+      <td>0.057609</td>
+      <td>0.080807</td>
+    </tr>
+    <tr>
+      <th>MESSAGE_USER_TO_UPDATE_INFO</th>
+      <td>0.017201</td>
+      <td>0.017201</td>
+      <td>0.017201</td>
+      <td>0.000000</td>
+      <td>3</td>
+      <td>0.051604</td>
+      <td>0.072592</td>
+    </tr>
+    <tr>
+      <th>FINISH_LABELLING</th>
+      <td>0.000177</td>
+      <td>0.000006</td>
+      <td>0.000011</td>
+      <td>0.000014</td>
+      <td>1122</td>
+      <td>0.011902</td>
+      <td>0.017069</td>
+    </tr>
+    <tr>
+      <th>CALL_ABOUT_FAX_FAILURE</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>CONFIRM_RECORDS_RECEIVED</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>REVIEW_ISSUE</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">task_stat</span> <span class="o">=</span> <span class="n">task_stat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks_group</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;task_group&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#task_stat = task_stat.join(tasks_group)</span>
+
+<span class="n">task_stat</span> <span class="o">=</span> <span class="n">task_stat</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">tasks_group</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;task_type&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">task_stat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>task_type</th>
+      <th>max_duration</th>
+      <th>min_duration</th>
+      <th>ave_duration</th>
+      <th>std_duration</th>
+      <th>count</th>
+      <th>weighted_ave</th>
+      <th>log_weighted_ave</th>
+      <th>task_group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AD_HOC</td>
+      <td>4411.400000</td>
+      <td>0.339500</td>
+      <td>245.539188</td>
+      <td>794.672483</td>
+      <td>149</td>
+      <td>3.658534e+04</td>
+      <td>15.159017</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ANONYMIZE_DICOM</td>
+      <td>4734.014700</td>
+      <td>1765.471017</td>
+      <td>3565.628737</td>
+      <td>762.924531</td>
+      <td>394</td>
+      <td>1.404858e+06</td>
+      <td>20.421994</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ANSWER_INBOUND_CALL</td>
+      <td>8846.475800</td>
+      <td>1.105267</td>
+      <td>630.907931</td>
+      <td>1910.600464</td>
+      <td>66</td>
+      <td>4.163992e+04</td>
+      <td>15.345714</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ASSIGN_INBOUND_RECORD</td>
+      <td>6880.848067</td>
+      <td>1.001233</td>
+      <td>446.169699</td>
+      <td>918.174708</td>
+      <td>892</td>
+      <td>3.979834e+05</td>
+      <td>18.602352</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AUDIT_CORRECT_EXCERPT_OCR</td>
+      <td>5904.413200</td>
+      <td>18.169433</td>
+      <td>1021.867287</td>
+      <td>1597.139558</td>
+      <td>44</td>
+      <td>4.496216e+04</td>
+      <td>15.456456</td>
+      <td>OCR</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>CALL_ABOUT_FAX_FAILURE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>CALL_FOR_FAX_NUMBER</td>
+      <td>17654.821667</td>
+      <td>251.219850</td>
+      <td>3151.937171</td>
+      <td>3831.237464</td>
+      <td>62</td>
+      <td>1.954201e+05</td>
+      <td>17.576227</td>
+      <td>CALL</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>CHECK_ANONYMIZED_DICOM</td>
+      <td>5439.174017</td>
+      <td>92.926400</td>
+      <td>3488.863209</td>
+      <td>1815.341692</td>
+      <td>31</td>
+      <td>1.081548e+05</td>
+      <td>16.722751</td>
+      <td>CHECK</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>CHECK_RECORD_STATUS</td>
+      <td>19104.227417</td>
+      <td>0.001233</td>
+      <td>3149.474876</td>
+      <td>3684.710690</td>
+      <td>1817</td>
+      <td>5.722596e+06</td>
+      <td>22.448239</td>
+      <td>CHECK</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>CONFIRM_RECORDS_RECEIVED</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>CORRECT_EXCERPT_OCR</td>
+      <td>8012.389383</td>
+      <td>0.433700</td>
+      <td>1192.213975</td>
+      <td>1292.619315</td>
+      <td>785</td>
+      <td>9.358880e+05</td>
+      <td>19.835978</td>
+      <td>OCR</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>CORRECT_OCR</td>
+      <td>7728.104900</td>
+      <td>138.868950</td>
+      <td>3933.486925</td>
+      <td>3794.617975</td>
+      <td>551</td>
+      <td>2.167351e+06</td>
+      <td>21.047502</td>
+      <td>OCR</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>FINISH_LABELLING</td>
+      <td>0.010617</td>
+      <td>0.000333</td>
+      <td>0.000636</td>
+      <td>0.000812</td>
+      <td>1122</td>
+      <td>7.141000e-01</td>
+      <td>0.777451</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>MESSAGE_USER_ABOUT_CARD_FAILURE</td>
+      <td>10097.185233</td>
+      <td>0.026133</td>
+      <td>3447.335450</td>
+      <td>3204.719599</td>
+      <td>8</td>
+      <td>2.757868e+04</td>
+      <td>14.751318</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>MESSAGE_USER_ABOUT_DESTROYED_RECORDS</td>
+      <td>3.379850</td>
+      <td>0.110450</td>
+      <td>0.956494</td>
+      <td>1.070678</td>
+      <td>15</td>
+      <td>1.434742e+01</td>
+      <td>3.939924</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>MESSAGE_USER_ABOUT_RECORDS_ADDED</td>
+      <td>9995.839033</td>
+      <td>43.736500</td>
+      <td>1389.916984</td>
+      <td>1328.867232</td>
+      <td>483</td>
+      <td>6.713299e+05</td>
+      <td>19.356665</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>MESSAGE_USER_ABOUT_SIGNATURE_MISMATCH</td>
+      <td>9074.458417</td>
+      <td>0.640883</td>
+      <td>3025.280717</td>
+      <td>4277.414572</td>
+      <td>12</td>
+      <td>3.630337e+04</td>
+      <td>15.147856</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>MESSAGE_USER_ABOUT_UNAVAILABLE_RECORDS</td>
+      <td>1496.872633</td>
+      <td>0.191283</td>
+      <td>299.978780</td>
+      <td>598.447161</td>
+      <td>7</td>
+      <td>2.099851e+03</td>
+      <td>11.036758</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>MESSAGE_USER_FOR_COLLECTION_APPROVAL</td>
+      <td>1838.719367</td>
+      <td>0.119750</td>
+      <td>919.419558</td>
+      <td>919.299808</td>
+      <td>162</td>
+      <td>1.489460e+05</td>
+      <td>17.184439</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>MESSAGE_USER_FOR_ONBOARDING_INFO</td>
+      <td>10095.245333</td>
+      <td>0.161000</td>
+      <td>3690.917491</td>
+      <td>3353.179751</td>
+      <td>1452</td>
+      <td>5.359212e+06</td>
+      <td>22.353590</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>MESSAGE_USER_FOR_ORGANIZATION_SPECIFICS</td>
+      <td>1508.910900</td>
+      <td>0.583300</td>
+      <td>127.254367</td>
+      <td>387.002590</td>
+      <td>25</td>
+      <td>3.181359e+03</td>
+      <td>11.635881</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>MESSAGE_USER_FOR_SIGNATURE</td>
+      <td>15053.622233</td>
+      <td>0.146667</td>
+      <td>4441.823670</td>
+      <td>5294.668703</td>
+      <td>75</td>
+      <td>3.331368e+05</td>
+      <td>18.345759</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>MESSAGE_USER_TO_SIGN_ADDITIONAL_FORMS</td>
+      <td>433.150100</td>
+      <td>276.283400</td>
+      <td>354.716750</td>
+      <td>78.433350</td>
+      <td>9</td>
+      <td>3.192451e+03</td>
+      <td>11.640900</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>MESSAGE_USER_TO_UPDATE_INFO</td>
+      <td>1.032083</td>
+      <td>1.032083</td>
+      <td>1.032083</td>
+      <td>0.000000</td>
+      <td>3</td>
+      <td>3.096250e+00</td>
+      <td>2.034304</td>
+      <td>MESSAGE</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>PAY_INVOICE</td>
+      <td>1.125567</td>
+      <td>0.217800</td>
+      <td>0.576094</td>
+      <td>0.394480</td>
+      <td>6</td>
+      <td>3.456567e+00</td>
+      <td>2.155933</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>PREPARE_INFORMATION_FOR_RECORD_REQUEST</td>
+      <td>12691.755433</td>
+      <td>0.094233</td>
+      <td>1159.374185</td>
+      <td>2011.320766</td>
+      <td>1454</td>
+      <td>1.685730e+06</td>
+      <td>20.684943</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>PROCESS_DICOMS</td>
+      <td>17994.671183</td>
+      <td>14.491633</td>
+      <td>10260.341690</td>
+      <td>6589.689275</td>
+      <td>171</td>
+      <td>1.754518e+06</td>
+      <td>20.742644</td>
+      <td>PROCESS</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>PROCESS_EXCERPTS</td>
+      <td>16545.673900</td>
+      <td>1.327100</td>
+      <td>5087.252064</td>
+      <td>3272.360172</td>
+      <td>2891</td>
+      <td>1.470725e+07</td>
+      <td>23.810024</td>
+      <td>PROCESS</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>PROCESS_GLOBAL_LABELLING</td>
+      <td>5861.290533</td>
+      <td>0.064717</td>
+      <td>29.381931</td>
+      <td>328.219553</td>
+      <td>1065</td>
+      <td>3.129176e+04</td>
+      <td>14.933541</td>
+      <td>PROCESS</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>PROCESS_RACE</td>
+      <td>13404.416450</td>
+      <td>0.003233</td>
+      <td>1300.841988</td>
+      <td>2744.996080</td>
+      <td>515</td>
+      <td>6.699336e+05</td>
+      <td>19.353661</td>
+      <td>PROCESS</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>QUALITY_CHECK_GLOBAL_LABELLING</td>
+      <td>7.342133</td>
+      <td>0.083517</td>
+      <td>1.499142</td>
+      <td>1.688928</td>
+      <td>425</td>
+      <td>6.371352e+02</td>
+      <td>9.317718</td>
+      <td>QUALITY</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>QUALITY_CHECK_LABS</td>
+      <td>15741.383600</td>
+      <td>4.711733</td>
+      <td>8604.520231</td>
+      <td>3968.528311</td>
+      <td>706</td>
+      <td>6.074791e+06</td>
+      <td>22.534404</td>
+      <td>QUALITY</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>QUALITY_CHECK_OTHER_EXCERPTS</td>
+      <td>15466.560400</td>
+      <td>0.067950</td>
+      <td>6707.440963</td>
+      <td>4061.358995</td>
+      <td>740</td>
+      <td>4.963506e+06</td>
+      <td>22.242928</td>
+      <td>QUALITY</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>QUALITY_CHECK_SEGMENTATION</td>
+      <td>15708.566433</td>
+      <td>0.102500</td>
+      <td>9154.102846</td>
+      <td>4321.382109</td>
+      <td>966</td>
+      <td>8.842863e+06</td>
+      <td>23.076082</td>
+      <td>QUALITY</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>REVIEW_INVOICE</td>
+      <td>2.328717</td>
+      <td>0.162483</td>
+      <td>1.245600</td>
+      <td>1.083117</td>
+      <td>17</td>
+      <td>2.117520e+01</td>
+      <td>4.470875</td>
+      <td>REVIEW</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>REVIEW_ISSUE</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>REVIEW</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>REVIEW_PROCESSING_COMMENTS</td>
+      <td>17078.605033</td>
+      <td>0.853400</td>
+      <td>2398.071774</td>
+      <td>3200.150957</td>
+      <td>864</td>
+      <td>2.071934e+06</td>
+      <td>20.982547</td>
+      <td>REVIEW</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>REVIEW_RECORD_REQUEST</td>
+      <td>4709.997700</td>
+      <td>85.906550</td>
+      <td>2864.895919</td>
+      <td>1878.257396</td>
+      <td>24</td>
+      <td>6.875750e+04</td>
+      <td>16.069250</td>
+      <td>REVIEW</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>REVIEW_SIGNATURE</td>
+      <td>9505.262400</td>
+      <td>2.211733</td>
+      <td>1478.727946</td>
+      <td>1452.871369</td>
+      <td>88</td>
+      <td>1.301281e+05</td>
+      <td>16.989584</td>
+      <td>REVIEW</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>SEGMENT_RECORDS</td>
+      <td>17786.939667</td>
+      <td>0.248867</td>
+      <td>4629.782102</td>
+      <td>4753.093281</td>
+      <td>967</td>
+      <td>4.476999e+06</td>
+      <td>22.094101</td>
+      <td>MISC</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>SEND_DICOMS_TO_ICOMETRIX</td>
+      <td>298.118450</td>
+      <td>0.384983</td>
+      <td>67.428495</td>
+      <td>87.069319</td>
+      <td>11</td>
+      <td>7.417134e+02</td>
+      <td>9.536662</td>
+      <td>SEND</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>SEND_REQUEST</td>
+      <td>11682.566033</td>
+      <td>0.045033</td>
+      <td>50.534886</td>
+      <td>584.822490</td>
+      <td>810</td>
+      <td>4.093326e+04</td>
+      <td>15.321021</td>
+      <td>SEND</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>SHARE_WITH_DOCTOR</td>
+      <td>13254.491583</td>
+      <td>13254.491583</td>
+      <td>13254.491583</td>
+      <td>0.000000</td>
+      <td>1</td>
+      <td>1.325449e+04</td>
+      <td>13.694303</td>
+      <td>MISC</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">task_stat</span> <span class="o">=</span> <span class="n">task_stat</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;log_weighted_ave&quot;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">task_stat</span>
+<span class="n">task_stat</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;task_stat.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#source = data.wheat()</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">task_stat</span>
+
+<span class="n">bars</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;log_weighted_ave:O&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;task_group:N&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;task_type:N&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">bars</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span>
+    <span class="n">align</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="s1">&#39;middle&#39;</span><span class="p">,</span>
+    <span class="n">dx</span><span class="o">=</span><span class="mi">8</span>  <span class="c1"># Nudges text to right so it doesn&#39;t appear on top of the bar</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;log_weighted_ave&#39;</span>
+<span class="p">)</span>
+
+
+
+
+<span class="p">(</span><span class="n">bars</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-a9be6071e21d40ef8fdaab145e6aac26"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-a9be6071e21d40ef8fdaab145e6aac26") {
+      outputDiv = document.getElementById("altair-viz-a9be6071e21d40ef8fdaab145e6aac26");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "task_group"}, "x": {"type": "ordinal", "field": "log_weighted_ave"}, "y": {"type": "nominal", "field": "task_type"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 8}, "encoding": {"color": {"type": "nominal", "field": "task_group"}, "text": {"type": "quantitative", "field": "log_weighted_ave"}, "x": {"type": "ordinal", "field": "log_weighted_ave"}, "y": {"type": "nominal", "field": "task_type"}}}], "data": {"name": "data-fffa5aae4a16ee9f807b6fc44d7ba4fa"}, "height": 900, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-fffa5aae4a16ee9f807b6fc44d7ba4fa": [{"task_type": "PROCESS_EXCERPTS", "max_duration": 16545.6739, "min_duration": 1.3271000000000002, "ave_duration": 5087.252064227836, "std_duration": 3272.3601716259886, "count": 2891, "weighted_ave": 14707245.717682675, "log_weighted_ave": 23.810023855160047, "task_group": "PROCESS"}, {"task_type": "QUALITY_CHECK_SEGMENTATION", "max_duration": 15708.566433333333, "min_duration": 0.10250000000000001, "ave_duration": 9154.102846296297, "std_duration": 4321.382108828967, "count": 966, "weighted_ave": 8842863.349522222, "log_weighted_ave": 23.076082327346462, "task_group": "QUALITY"}, {"task_type": "QUALITY_CHECK_LABS", "max_duration": 15741.383600000001, "min_duration": 4.711733333333333, "ave_duration": 8604.520230715812, "std_duration": 3968.5283114665717, "count": 706, "weighted_ave": 6074791.282885363, "log_weighted_ave": 22.534403648400694, "task_group": "QUALITY"}, {"task_type": "CHECK_RECORD_STATUS", "max_duration": 19104.22741666667, "min_duration": 0.0012333333333333335, "ave_duration": 3149.4748760101015, "std_duration": 3684.710690457671, "count": 1817, "weighted_ave": 5722595.849710355, "log_weighted_ave": 22.448238543603953, "task_group": "CHECK"}, {"task_type": "MESSAGE_USER_FOR_ONBOARDING_INFO", "max_duration": 10095.245333333334, "min_duration": 0.161, "ave_duration": 3690.9174912429385, "std_duration": 3353.1797505990735, "count": 1452, "weighted_ave": 5359212.197284747, "log_weighted_ave": 22.353589779019096, "task_group": "MESSAGE"}, {"task_type": "QUALITY_CHECK_OTHER_EXCERPTS", "max_duration": 15466.5604, "min_duration": 0.06795, "ave_duration": 6707.440962864964, "std_duration": 4061.3589952303723, "count": 740, "weighted_ave": 4963506.312520073, "log_weighted_ave": 22.242928487157386, "task_group": "QUALITY"}, {"task_type": "SEGMENT_RECORDS", "max_duration": 17786.93966666667, "min_duration": 0.24886666666666668, "ave_duration": 4629.782101777778, "std_duration": 4753.0932807229365, "count": 967, "weighted_ave": 4476999.292419111, "log_weighted_ave": 22.094100981796498, "task_group": "MISC"}, {"task_type": "CORRECT_OCR", "max_duration": 7728.104900000001, "min_duration": 138.86895, "ave_duration": 3933.4869250000006, "std_duration": 3794.6179750000006, "count": 551, "weighted_ave": 2167351.295675, "log_weighted_ave": 21.04750224694286, "task_group": "OCR"}, {"task_type": "REVIEW_PROCESSING_COMMENTS", "max_duration": 17078.605033333333, "min_duration": 0.8534, "ave_duration": 2398.071774017094, "std_duration": 3200.1509569607847, "count": 864, "weighted_ave": 2071934.0127507693, "log_weighted_ave": 20.98254732222676, "task_group": "REVIEW"}, {"task_type": "PROCESS_DICOMS", "max_duration": 17994.671183333336, "min_duration": 14.491633333333334, "ave_duration": 10260.341690476193, "std_duration": 6589.689275437657, "count": 171, "weighted_ave": 1754518.429071429, "log_weighted_ave": 20.742644493165592, "task_group": "PROCESS"}, {"task_type": "PREPARE_INFORMATION_FOR_RECORD_REQUEST", "max_duration": 12691.755433333334, "min_duration": 0.09423333333333334, "ave_duration": 1159.3741845991563, "std_duration": 2011.3207656037055, "count": 1454, "weighted_ave": 1685730.064407173, "log_weighted_ave": 20.68494296147968, "task_group": "MISC"}, {"task_type": "ANONYMIZE_DICOM", "max_duration": 4734.014700000001, "min_duration": 1765.4710166666669, "ave_duration": 3565.628737398374, "std_duration": 762.9245309745353, "count": 394, "weighted_ave": 1404857.7225349594, "log_weighted_ave": 20.421993624648454, "task_group": "MISC"}, {"task_type": "CORRECT_EXCERPT_OCR", "max_duration": 8012.389383333333, "min_duration": 0.43370000000000003, "ave_duration": 1192.213975106383, "std_duration": 1292.6193145856987, "count": 785, "weighted_ave": 935887.9704585107, "log_weighted_ave": 19.835977859726118, "task_group": "OCR"}, {"task_type": "MESSAGE_USER_ABOUT_RECORDS_ADDED", "max_duration": 9995.839033333334, "min_duration": 43.7365, "ave_duration": 1389.9169836972344, "std_duration": 1328.867232468873, "count": 483, "weighted_ave": 671329.9031257642, "log_weighted_ave": 19.356664529423256, "task_group": "MESSAGE"}, {"task_type": "PROCESS_RACE", "max_duration": 13404.41645, "min_duration": 0.0032333333333333333, "ave_duration": 1300.841988227848, "std_duration": 2744.9960796776686, "count": 515, "weighted_ave": 669933.6239373417, "log_weighted_ave": 19.35366079042025, "task_group": "PROCESS"}, {"task_type": "ASSIGN_INBOUND_RECORD", "max_duration": 6880.848066666667, "min_duration": 1.0012333333333334, "ave_duration": 446.1696992845118, "std_duration": 918.1747079643906, "count": 892, "weighted_ave": 397983.37176178454, "log_weighted_ave": 18.60235225388801, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_FOR_SIGNATURE", "max_duration": 15053.622233333333, "min_duration": 0.14666666666666667, "ave_duration": 4441.823669791667, "std_duration": 5294.668703148683, "count": 75, "weighted_ave": 333136.77523437503, "log_weighted_ave": 18.345759428128908, "task_group": "MESSAGE"}, {"task_type": "CALL_FOR_FAX_NUMBER", "max_duration": 17654.821666666667, "min_duration": 251.21985, "ave_duration": 3151.937171052632, "std_duration": 3831.2374636694453, "count": 62, "weighted_ave": 195420.1046052632, "log_weighted_ave": 17.57622675476868, "task_group": "CALL"}, {"task_type": "MESSAGE_USER_FOR_COLLECTION_APPROVAL", "max_duration": 1838.719366666667, "min_duration": 0.11975000000000001, "ave_duration": 919.4195583333335, "std_duration": 919.2998083333334, "count": 162, "weighted_ave": 148945.96845000001, "log_weighted_ave": 17.18443923483755, "task_group": "MESSAGE"}, {"task_type": "REVIEW_SIGNATURE", "max_duration": 9505.262400000001, "min_duration": 2.2117333333333336, "ave_duration": 1478.72794627193, "std_duration": 1452.8713690499096, "count": 88, "weighted_ave": 130128.05927192984, "log_weighted_ave": 16.98958364238141, "task_group": "REVIEW"}, {"task_type": "CHECK_ANONYMIZED_DICOM", "max_duration": 5439.174016666667, "min_duration": 92.92640000000002, "ave_duration": 3488.8632090277774, "std_duration": 1815.3416915705827, "count": 31, "weighted_ave": 108154.7594798611, "log_weighted_ave": 16.722750967769905, "task_group": "CHECK"}, {"task_type": "REVIEW_RECORD_REQUEST", "max_duration": 4709.997700000001, "min_duration": 85.90655, "ave_duration": 2864.895918939394, "std_duration": 1878.2573962558138, "count": 24, "weighted_ave": 68757.50205454546, "log_weighted_ave": 16.069250494725825, "task_group": "REVIEW"}, {"task_type": "AUDIT_CORRECT_EXCERPT_OCR", "max_duration": 5904.4132, "min_duration": 18.169433333333338, "ave_duration": 1021.8672875, "std_duration": 1597.139558202877, "count": 44, "weighted_ave": 44962.16065, "log_weighted_ave": 15.456455831785592, "task_group": "OCR"}, {"task_type": "ANSWER_INBOUND_CALL", "max_duration": 8846.475800000002, "min_duration": 1.1052666666666666, "ave_duration": 630.90793125, "std_duration": 1910.6004641649233, "count": 66, "weighted_ave": 41639.9234625, "log_weighted_ave": 15.34571444290331, "task_group": "MISC"}, {"task_type": "SEND_REQUEST", "max_duration": 11682.566033333334, "min_duration": 0.045033333333333335, "ave_duration": 50.534886376021795, "std_duration": 584.8224899475405, "count": 810, "weighted_ave": 40933.25796457766, "log_weighted_ave": 15.321021122677287, "task_group": "SEND"}, {"task_type": "AD_HOC", "max_duration": 4411.4, "min_duration": 0.3395, "ave_duration": 245.5391877697842, "std_duration": 794.6724827047186, "count": 149, "weighted_ave": 36585.338977697844, "log_weighted_ave": 15.159017438763744, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_ABOUT_SIGNATURE_MISMATCH", "max_duration": 9074.458416666666, "min_duration": 0.6408833333333334, "ave_duration": 3025.2807166666666, "std_duration": 4277.414572475002, "count": 12, "weighted_ave": 36303.3686, "log_weighted_ave": 15.147855541498815, "task_group": "MESSAGE"}, {"task_type": "PROCESS_GLOBAL_LABELLING", "max_duration": 5861.290533333334, "min_duration": 0.06471666666666667, "ave_duration": 29.381931168831173, "std_duration": 328.2195534406849, "count": 1065, "weighted_ave": 31291.7566948052, "log_weighted_ave": 14.933541136074663, "task_group": "PROCESS"}, {"task_type": "MESSAGE_USER_ABOUT_CARD_FAILURE", "max_duration": 10097.185233333334, "min_duration": 0.026133333333333335, "ave_duration": 3447.33545, "std_duration": 3204.7195988487256, "count": 8, "weighted_ave": 27578.6836, "log_weighted_ave": 14.751318285591724, "task_group": "MESSAGE"}, {"task_type": "SHARE_WITH_DOCTOR", "max_duration": 13254.491583333333, "min_duration": 13254.491583333333, "ave_duration": 13254.491583333333, "std_duration": 0.0, "count": 1, "weighted_ave": 13254.491583333333, "log_weighted_ave": 13.694302553465409, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_TO_SIGN_ADDITIONAL_FORMS", "max_duration": 433.1501, "min_duration": 276.28340000000003, "ave_duration": 354.71675000000005, "std_duration": 78.43334999999999, "count": 9, "weighted_ave": 3192.4507500000004, "log_weighted_ave": 11.640900485829892, "task_group": "MESSAGE"}, {"task_type": "MESSAGE_USER_FOR_ORGANIZATION_SPECIFICS", "max_duration": 1508.9109, "min_duration": 0.5833, "ave_duration": 127.25436666666667, "std_duration": 387.0025895850623, "count": 25, "weighted_ave": 3181.3591666666666, "log_weighted_ave": 11.635880954626169, "task_group": "MESSAGE"}, {"task_type": "MESSAGE_USER_ABOUT_UNAVAILABLE_RECORDS", "max_duration": 1496.8726333333334, "min_duration": 0.19128333333333333, "ave_duration": 299.97878000000003, "std_duration": 598.447161110436, "count": 7, "weighted_ave": 2099.8514600000003, "log_weighted_ave": 11.036758445008541, "task_group": "MESSAGE"}, {"task_type": "SEND_DICOMS_TO_ICOMETRIX", "max_duration": 298.11845, "min_duration": 0.38498333333333334, "ave_duration": 67.428495, "std_duration": 87.06931890225678, "count": 11, "weighted_ave": 741.713445, "log_weighted_ave": 9.53666188476638, "task_group": "SEND"}, {"task_type": "QUALITY_CHECK_GLOBAL_LABELLING", "max_duration": 7.342133333333334, "min_duration": 0.08351666666666667, "ave_duration": 1.4991416666666666, "std_duration": 1.688928497865667, "count": 425, "weighted_ave": 637.1352083333333, "log_weighted_ave": 9.317718324933157, "task_group": "QUALITY"}, {"task_type": "REVIEW_INVOICE", "max_duration": 2.3287166666666668, "min_duration": 0.16248333333333334, "ave_duration": 1.2456, "std_duration": 1.0831166666666667, "count": 17, "weighted_ave": 21.1752, "log_weighted_ave": 4.470875211260691, "task_group": "REVIEW"}, {"task_type": "MESSAGE_USER_ABOUT_DESTROYED_RECORDS", "max_duration": 3.3798500000000002, "min_duration": 0.11045, "ave_duration": 0.9564944444444445, "std_duration": 1.0706781423212322, "count": 15, "weighted_ave": 14.347416666666668, "log_weighted_ave": 3.939923931209897, "task_group": "MESSAGE"}, {"task_type": "PAY_INVOICE", "max_duration": 1.1255666666666668, "min_duration": 0.21780000000000002, "ave_duration": 0.5760944444444446, "std_duration": 0.394480069048543, "count": 6, "weighted_ave": 3.4565666666666672, "log_weighted_ave": 2.15593268761781, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_TO_UPDATE_INFO", "max_duration": 1.0320833333333335, "min_duration": 1.0320833333333335, "ave_duration": 1.0320833333333335, "std_duration": 0.0, "count": 3, "weighted_ave": 3.0962500000000004, "log_weighted_ave": 2.0343037677680353, "task_group": "MESSAGE"}, {"task_type": "FINISH_LABELLING", "max_duration": 0.010616666666666667, "min_duration": 0.0003333333333333333, "ave_duration": 0.0006364527629233511, "std_duration": 0.0008115334409890483, "count": 1122, "weighted_ave": 0.7141, "log_weighted_ave": 0.777451278234363, "task_group": "MISC"}, {"task_type": "CALL_ABOUT_FAX_FAILURE", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 9, "weighted_ave": null, "log_weighted_ave": null, "task_group": "CALL"}, {"task_type": "CONFIRM_RECORDS_RECEIVED", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 1, "weighted_ave": null, "log_weighted_ave": null, "task_group": "MISC"}, {"task_type": "REVIEW_ISSUE", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 5, "weighted_ave": null, "log_weighted_ave": null, "task_group": "REVIEW"}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#source = data.wheat()</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">task_stat</span>
+
+<span class="n">bars</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;log_weighted_ave:Q&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;task_group:N&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;task_type:N&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">bars</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span>
+    <span class="n">align</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+    <span class="n">baseline</span><span class="o">=</span><span class="s1">&#39;middle&#39;</span><span class="p">,</span>
+    <span class="n">dx</span><span class="o">=</span><span class="mi">8</span>  <span class="c1"># Nudges text to right so it doesn&#39;t appear on top of the bar</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;log_weighted_ave&#39;</span>
+<span class="p">)</span>
+
+
+
+
+<span class="p">(</span><span class="n">bars</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-1de28f0336c24018b7d5d2d7af4f3c3d"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-1de28f0336c24018b7d5d2d7af4f3c3d") {
+      outputDiv = document.getElementById("altair-viz-1de28f0336c24018b7d5d2d7af4f3c3d");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "bar", "encoding": {"color": {"type": "nominal", "field": "task_group"}, "x": {"type": "quantitative", "field": "log_weighted_ave"}, "y": {"type": "nominal", "field": "task_type"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 8}, "encoding": {"color": {"type": "nominal", "field": "task_group"}, "text": {"type": "quantitative", "field": "log_weighted_ave"}, "x": {"type": "quantitative", "field": "log_weighted_ave"}, "y": {"type": "nominal", "field": "task_type"}}}], "data": {"name": "data-fffa5aae4a16ee9f807b6fc44d7ba4fa"}, "height": 900, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-fffa5aae4a16ee9f807b6fc44d7ba4fa": [{"task_type": "PROCESS_EXCERPTS", "max_duration": 16545.6739, "min_duration": 1.3271000000000002, "ave_duration": 5087.252064227836, "std_duration": 3272.3601716259886, "count": 2891, "weighted_ave": 14707245.717682675, "log_weighted_ave": 23.810023855160047, "task_group": "PROCESS"}, {"task_type": "QUALITY_CHECK_SEGMENTATION", "max_duration": 15708.566433333333, "min_duration": 0.10250000000000001, "ave_duration": 9154.102846296297, "std_duration": 4321.382108828967, "count": 966, "weighted_ave": 8842863.349522222, "log_weighted_ave": 23.076082327346462, "task_group": "QUALITY"}, {"task_type": "QUALITY_CHECK_LABS", "max_duration": 15741.383600000001, "min_duration": 4.711733333333333, "ave_duration": 8604.520230715812, "std_duration": 3968.5283114665717, "count": 706, "weighted_ave": 6074791.282885363, "log_weighted_ave": 22.534403648400694, "task_group": "QUALITY"}, {"task_type": "CHECK_RECORD_STATUS", "max_duration": 19104.22741666667, "min_duration": 0.0012333333333333335, "ave_duration": 3149.4748760101015, "std_duration": 3684.710690457671, "count": 1817, "weighted_ave": 5722595.849710355, "log_weighted_ave": 22.448238543603953, "task_group": "CHECK"}, {"task_type": "MESSAGE_USER_FOR_ONBOARDING_INFO", "max_duration": 10095.245333333334, "min_duration": 0.161, "ave_duration": 3690.9174912429385, "std_duration": 3353.1797505990735, "count": 1452, "weighted_ave": 5359212.197284747, "log_weighted_ave": 22.353589779019096, "task_group": "MESSAGE"}, {"task_type": "QUALITY_CHECK_OTHER_EXCERPTS", "max_duration": 15466.5604, "min_duration": 0.06795, "ave_duration": 6707.440962864964, "std_duration": 4061.3589952303723, "count": 740, "weighted_ave": 4963506.312520073, "log_weighted_ave": 22.242928487157386, "task_group": "QUALITY"}, {"task_type": "SEGMENT_RECORDS", "max_duration": 17786.93966666667, "min_duration": 0.24886666666666668, "ave_duration": 4629.782101777778, "std_duration": 4753.0932807229365, "count": 967, "weighted_ave": 4476999.292419111, "log_weighted_ave": 22.094100981796498, "task_group": "MISC"}, {"task_type": "CORRECT_OCR", "max_duration": 7728.104900000001, "min_duration": 138.86895, "ave_duration": 3933.4869250000006, "std_duration": 3794.6179750000006, "count": 551, "weighted_ave": 2167351.295675, "log_weighted_ave": 21.04750224694286, "task_group": "OCR"}, {"task_type": "REVIEW_PROCESSING_COMMENTS", "max_duration": 17078.605033333333, "min_duration": 0.8534, "ave_duration": 2398.071774017094, "std_duration": 3200.1509569607847, "count": 864, "weighted_ave": 2071934.0127507693, "log_weighted_ave": 20.98254732222676, "task_group": "REVIEW"}, {"task_type": "PROCESS_DICOMS", "max_duration": 17994.671183333336, "min_duration": 14.491633333333334, "ave_duration": 10260.341690476193, "std_duration": 6589.689275437657, "count": 171, "weighted_ave": 1754518.429071429, "log_weighted_ave": 20.742644493165592, "task_group": "PROCESS"}, {"task_type": "PREPARE_INFORMATION_FOR_RECORD_REQUEST", "max_duration": 12691.755433333334, "min_duration": 0.09423333333333334, "ave_duration": 1159.3741845991563, "std_duration": 2011.3207656037055, "count": 1454, "weighted_ave": 1685730.064407173, "log_weighted_ave": 20.68494296147968, "task_group": "MISC"}, {"task_type": "ANONYMIZE_DICOM", "max_duration": 4734.014700000001, "min_duration": 1765.4710166666669, "ave_duration": 3565.628737398374, "std_duration": 762.9245309745353, "count": 394, "weighted_ave": 1404857.7225349594, "log_weighted_ave": 20.421993624648454, "task_group": "MISC"}, {"task_type": "CORRECT_EXCERPT_OCR", "max_duration": 8012.389383333333, "min_duration": 0.43370000000000003, "ave_duration": 1192.213975106383, "std_duration": 1292.6193145856987, "count": 785, "weighted_ave": 935887.9704585107, "log_weighted_ave": 19.835977859726118, "task_group": "OCR"}, {"task_type": "MESSAGE_USER_ABOUT_RECORDS_ADDED", "max_duration": 9995.839033333334, "min_duration": 43.7365, "ave_duration": 1389.9169836972344, "std_duration": 1328.867232468873, "count": 483, "weighted_ave": 671329.9031257642, "log_weighted_ave": 19.356664529423256, "task_group": "MESSAGE"}, {"task_type": "PROCESS_RACE", "max_duration": 13404.41645, "min_duration": 0.0032333333333333333, "ave_duration": 1300.841988227848, "std_duration": 2744.9960796776686, "count": 515, "weighted_ave": 669933.6239373417, "log_weighted_ave": 19.35366079042025, "task_group": "PROCESS"}, {"task_type": "ASSIGN_INBOUND_RECORD", "max_duration": 6880.848066666667, "min_duration": 1.0012333333333334, "ave_duration": 446.1696992845118, "std_duration": 918.1747079643906, "count": 892, "weighted_ave": 397983.37176178454, "log_weighted_ave": 18.60235225388801, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_FOR_SIGNATURE", "max_duration": 15053.622233333333, "min_duration": 0.14666666666666667, "ave_duration": 4441.823669791667, "std_duration": 5294.668703148683, "count": 75, "weighted_ave": 333136.77523437503, "log_weighted_ave": 18.345759428128908, "task_group": "MESSAGE"}, {"task_type": "CALL_FOR_FAX_NUMBER", "max_duration": 17654.821666666667, "min_duration": 251.21985, "ave_duration": 3151.937171052632, "std_duration": 3831.2374636694453, "count": 62, "weighted_ave": 195420.1046052632, "log_weighted_ave": 17.57622675476868, "task_group": "CALL"}, {"task_type": "MESSAGE_USER_FOR_COLLECTION_APPROVAL", "max_duration": 1838.719366666667, "min_duration": 0.11975000000000001, "ave_duration": 919.4195583333335, "std_duration": 919.2998083333334, "count": 162, "weighted_ave": 148945.96845000001, "log_weighted_ave": 17.18443923483755, "task_group": "MESSAGE"}, {"task_type": "REVIEW_SIGNATURE", "max_duration": 9505.262400000001, "min_duration": 2.2117333333333336, "ave_duration": 1478.72794627193, "std_duration": 1452.8713690499096, "count": 88, "weighted_ave": 130128.05927192984, "log_weighted_ave": 16.98958364238141, "task_group": "REVIEW"}, {"task_type": "CHECK_ANONYMIZED_DICOM", "max_duration": 5439.174016666667, "min_duration": 92.92640000000002, "ave_duration": 3488.8632090277774, "std_duration": 1815.3416915705827, "count": 31, "weighted_ave": 108154.7594798611, "log_weighted_ave": 16.722750967769905, "task_group": "CHECK"}, {"task_type": "REVIEW_RECORD_REQUEST", "max_duration": 4709.997700000001, "min_duration": 85.90655, "ave_duration": 2864.895918939394, "std_duration": 1878.2573962558138, "count": 24, "weighted_ave": 68757.50205454546, "log_weighted_ave": 16.069250494725825, "task_group": "REVIEW"}, {"task_type": "AUDIT_CORRECT_EXCERPT_OCR", "max_duration": 5904.4132, "min_duration": 18.169433333333338, "ave_duration": 1021.8672875, "std_duration": 1597.139558202877, "count": 44, "weighted_ave": 44962.16065, "log_weighted_ave": 15.456455831785592, "task_group": "OCR"}, {"task_type": "ANSWER_INBOUND_CALL", "max_duration": 8846.475800000002, "min_duration": 1.1052666666666666, "ave_duration": 630.90793125, "std_duration": 1910.6004641649233, "count": 66, "weighted_ave": 41639.9234625, "log_weighted_ave": 15.34571444290331, "task_group": "MISC"}, {"task_type": "SEND_REQUEST", "max_duration": 11682.566033333334, "min_duration": 0.045033333333333335, "ave_duration": 50.534886376021795, "std_duration": 584.8224899475405, "count": 810, "weighted_ave": 40933.25796457766, "log_weighted_ave": 15.321021122677287, "task_group": "SEND"}, {"task_type": "AD_HOC", "max_duration": 4411.4, "min_duration": 0.3395, "ave_duration": 245.5391877697842, "std_duration": 794.6724827047186, "count": 149, "weighted_ave": 36585.338977697844, "log_weighted_ave": 15.159017438763744, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_ABOUT_SIGNATURE_MISMATCH", "max_duration": 9074.458416666666, "min_duration": 0.6408833333333334, "ave_duration": 3025.2807166666666, "std_duration": 4277.414572475002, "count": 12, "weighted_ave": 36303.3686, "log_weighted_ave": 15.147855541498815, "task_group": "MESSAGE"}, {"task_type": "PROCESS_GLOBAL_LABELLING", "max_duration": 5861.290533333334, "min_duration": 0.06471666666666667, "ave_duration": 29.381931168831173, "std_duration": 328.2195534406849, "count": 1065, "weighted_ave": 31291.7566948052, "log_weighted_ave": 14.933541136074663, "task_group": "PROCESS"}, {"task_type": "MESSAGE_USER_ABOUT_CARD_FAILURE", "max_duration": 10097.185233333334, "min_duration": 0.026133333333333335, "ave_duration": 3447.33545, "std_duration": 3204.7195988487256, "count": 8, "weighted_ave": 27578.6836, "log_weighted_ave": 14.751318285591724, "task_group": "MESSAGE"}, {"task_type": "SHARE_WITH_DOCTOR", "max_duration": 13254.491583333333, "min_duration": 13254.491583333333, "ave_duration": 13254.491583333333, "std_duration": 0.0, "count": 1, "weighted_ave": 13254.491583333333, "log_weighted_ave": 13.694302553465409, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_TO_SIGN_ADDITIONAL_FORMS", "max_duration": 433.1501, "min_duration": 276.28340000000003, "ave_duration": 354.71675000000005, "std_duration": 78.43334999999999, "count": 9, "weighted_ave": 3192.4507500000004, "log_weighted_ave": 11.640900485829892, "task_group": "MESSAGE"}, {"task_type": "MESSAGE_USER_FOR_ORGANIZATION_SPECIFICS", "max_duration": 1508.9109, "min_duration": 0.5833, "ave_duration": 127.25436666666667, "std_duration": 387.0025895850623, "count": 25, "weighted_ave": 3181.3591666666666, "log_weighted_ave": 11.635880954626169, "task_group": "MESSAGE"}, {"task_type": "MESSAGE_USER_ABOUT_UNAVAILABLE_RECORDS", "max_duration": 1496.8726333333334, "min_duration": 0.19128333333333333, "ave_duration": 299.97878000000003, "std_duration": 598.447161110436, "count": 7, "weighted_ave": 2099.8514600000003, "log_weighted_ave": 11.036758445008541, "task_group": "MESSAGE"}, {"task_type": "SEND_DICOMS_TO_ICOMETRIX", "max_duration": 298.11845, "min_duration": 0.38498333333333334, "ave_duration": 67.428495, "std_duration": 87.06931890225678, "count": 11, "weighted_ave": 741.713445, "log_weighted_ave": 9.53666188476638, "task_group": "SEND"}, {"task_type": "QUALITY_CHECK_GLOBAL_LABELLING", "max_duration": 7.342133333333334, "min_duration": 0.08351666666666667, "ave_duration": 1.4991416666666666, "std_duration": 1.688928497865667, "count": 425, "weighted_ave": 637.1352083333333, "log_weighted_ave": 9.317718324933157, "task_group": "QUALITY"}, {"task_type": "REVIEW_INVOICE", "max_duration": 2.3287166666666668, "min_duration": 0.16248333333333334, "ave_duration": 1.2456, "std_duration": 1.0831166666666667, "count": 17, "weighted_ave": 21.1752, "log_weighted_ave": 4.470875211260691, "task_group": "REVIEW"}, {"task_type": "MESSAGE_USER_ABOUT_DESTROYED_RECORDS", "max_duration": 3.3798500000000002, "min_duration": 0.11045, "ave_duration": 0.9564944444444445, "std_duration": 1.0706781423212322, "count": 15, "weighted_ave": 14.347416666666668, "log_weighted_ave": 3.939923931209897, "task_group": "MESSAGE"}, {"task_type": "PAY_INVOICE", "max_duration": 1.1255666666666668, "min_duration": 0.21780000000000002, "ave_duration": 0.5760944444444446, "std_duration": 0.394480069048543, "count": 6, "weighted_ave": 3.4565666666666672, "log_weighted_ave": 2.15593268761781, "task_group": "MISC"}, {"task_type": "MESSAGE_USER_TO_UPDATE_INFO", "max_duration": 1.0320833333333335, "min_duration": 1.0320833333333335, "ave_duration": 1.0320833333333335, "std_duration": 0.0, "count": 3, "weighted_ave": 3.0962500000000004, "log_weighted_ave": 2.0343037677680353, "task_group": "MESSAGE"}, {"task_type": "FINISH_LABELLING", "max_duration": 0.010616666666666667, "min_duration": 0.0003333333333333333, "ave_duration": 0.0006364527629233511, "std_duration": 0.0008115334409890483, "count": 1122, "weighted_ave": 0.7141, "log_weighted_ave": 0.777451278234363, "task_group": "MISC"}, {"task_type": "CALL_ABOUT_FAX_FAILURE", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 9, "weighted_ave": null, "log_weighted_ave": null, "task_group": "CALL"}, {"task_type": "CONFIRM_RECORDS_RECEIVED", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 1, "weighted_ave": null, "log_weighted_ave": null, "task_group": "MISC"}, {"task_type": "REVIEW_ISSUE", "max_duration": null, "min_duration": null, "ave_duration": null, "std_duration": null, "count": 5, "weighted_ave": null, "log_weighted_ave": null, "task_group": "REVIEW"}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">records</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>uploaded_at</th>
+      <th>num_pages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b749acd6-5f45-4ce3-be2b-411ac362a67c</td>
+      <td>2019-05-17T03:03:44.631Z</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4bc36102-de20-4d21-a76e-c3ae96580f3b</td>
+      <td>2019-04-11T12:40:01.918Z</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>b7b82cd1-0d72-43e2-be7e-aec4eea4e4d0</td>
+      <td>2019-04-04T15:14:38.398Z</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34dbedb4-4ea1-48b7-88ff-ea4fd2b8cfc0</td>
+      <td>2019-05-03T17:02:36.939Z</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>38023f89-1a96-4e9a-9989-337e6cfc7944</td>
+      <td>2019-04-24T14:35:27.422Z</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">records</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;record_id&#39;</span><span class="p">,</span> <span class="s1">&#39;uploaded_at&#39;</span><span class="p">,</span><span class="s1">&#39;num_pages&#39;</span><span class="p">]</span> 
+<span class="n">records</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>record_id</th>
+      <th>uploaded_at</th>
+      <th>num_pages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b749acd6-5f45-4ce3-be2b-411ac362a67c</td>
+      <td>2019-05-17T03:03:44.631Z</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4bc36102-de20-4d21-a76e-c3ae96580f3b</td>
+      <td>2019-04-11T12:40:01.918Z</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>b7b82cd1-0d72-43e2-be7e-aec4eea4e4d0</td>
+      <td>2019-04-04T15:14:38.398Z</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34dbedb4-4ea1-48b7-88ff-ea4fd2b8cfc0</td>
+      <td>2019-05-03T17:02:36.939Z</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>38023f89-1a96-4e9a-9989-337e6cfc7944</td>
+      <td>2019-04-24T14:35:27.422Z</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3359</th>
+      <td>b59c3c95-1f51-4b7b-b786-b056a3561154</td>
+      <td>2019-05-01T19:37:11.990Z</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>3360</th>
+      <td>90738f99-e5f2-4361-ad3e-df983395a45a</td>
+      <td>2019-05-08T14:29:50.904Z</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>3361</th>
+      <td>61b6a97b-8be9-4ea0-ada0-8cdf9d367616</td>
+      <td>2019-04-22T20:46:43.884Z</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>3362</th>
+      <td>36ca384c-17de-4efd-8555-c7fdb0f56536</td>
+      <td>2019-05-01T19:37:12.944Z</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>3363</th>
+      <td>2d3e96fa-364a-4b05-8dd4-db10879c02a1</td>
+      <td>2019-05-09T17:16:12.480Z</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+<p>3364 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tasks</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">records</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;record_id&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>created_at</th>
+      <th>completed_at</th>
+      <th>task_type</th>
+      <th>previous_task_task_id</th>
+      <th>completer_user_id</th>
+      <th>patient_user_id</th>
+      <th>record_id</th>
+      <th>duration</th>
+      <th>total_sec</th>
+      <th>total_hr</th>
+      <th>uploaded_at</th>
+      <th>num_pages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>00032409-3e0d-4670-9ba4-94922ef010fa</td>
+      <td>2019-05-07 02:23:50.721</td>
+      <td>2019-05-07 02:23:50.757</td>
+      <td>FINISH_LABELLING</td>
+      <td>df6000d7-6ac9-40b4-bff9-b53f84f30ead</td>
+      <td>NaN</td>
+      <td>d4a59370-08c0-4516-b77e-bc21ae9bb352</td>
+      <td>d05e40df-2725-487d-86ba-c3825c47c01c</td>
+      <td>0 days 00:00:00.036000</td>
+      <td>0.036</td>
+      <td>0.000600</td>
+      <td>2019-04-11T01:51:30.119Z</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>00036503-7dee-421c-9b4f-3fefe1884d5a</td>
+      <td>2019-05-07 02:27:53.191</td>
+      <td>2019-05-16 19:27:35.351</td>
+      <td>CHECK_RECORD_STATUS</td>
+      <td>f6713596-39ba-43e7-b722-6330bc137a89</td>
+      <td>3d1b6796-c0b2-4df3-8c45-c70e7986117d</td>
+      <td>f463eac3-5acb-402c-ae59-1da3fcc82918</td>
+      <td>NaN</td>
+      <td>9 days 16:59:42.160000</td>
+      <td>838782.160</td>
+      <td>13979.702667</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0007a86c-e593-4d31-856a-53694b0df491</td>
+      <td>2019-05-13 18:03:06.895</td>
+      <td>2019-05-13 18:50:16.846</td>
+      <td>ASSIGN_INBOUND_RECORD</td>
+      <td>9963dabc-2262-470b-8188-22fcc4daef79</td>
+      <td>9eccd74f-0885-41c3-be93-f9a826470c48</td>
+      <td>fe20e53c-79b3-4ab3-9f9b-397f24bacd6e</td>
+      <td>NaN</td>
+      <td>0 days 00:47:09.951000</td>
+      <td>2829.951</td>
+      <td>47.165850</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0008d0c1-7c4a-4e8f-adfe-29015e4dc225</td>
+      <td>2019-05-13 23:15:42.159</td>
+      <td>2019-05-13 23:15:42.188</td>
+      <td>FINISH_LABELLING</td>
+      <td>ab26af2e-edc1-4794-a78e-53f210a76a44</td>
+      <td>NaN</td>
+      <td>cf073b87-f7cc-4363-9ca2-fa1395d60663</td>
+      <td>e9cc9946-e863-4e1b-8cc5-5d6d11bc6b53</td>
+      <td>0 days 00:00:00.029000</td>
+      <td>0.029</td>
+      <td>0.000483</td>
+      <td>2019-04-18T21:02:19.874Z</td>
+      <td>53.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>000a5e7d-1c86-4486-a72b-afa830d42b3f</td>
+      <td>2019-05-13 14:51:47.600</td>
+      <td>2019-05-15 23:38:27.769</td>
+      <td>PROCESS_EXCERPTS</td>
+      <td>9f422db2-f12f-4bed-9d96-de0b78c7db2e</td>
+      <td>2554c0ae-a994-4b4a-b7e4-594908dab447</td>
+      <td>a0e0df3f-f193-4a91-8898-5c4d8079a355</td>
+      <td>0502ac1f-c322-4e55-9524-37bd6bac8102</td>
+      <td>2 days 08:46:40.169000</td>
+      <td>204400.169</td>
+      <td>3406.669483</td>
+      <td>2019-04-25T21:43:44.708Z</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19895</th>
+      <td>ffe45191-ceca-47a8-a782-95d2a0a42159</td>
+      <td>2019-05-08 01:20:51.401</td>
+      <td>2019-05-08 13:29:50.587</td>
+      <td>CORRECT_EXCERPT_OCR</td>
+      <td>0032ab9e-d63e-465b-aee8-ea8a58d40fe8</td>
+      <td>b9db89ee-fcf4-45de-991a-a16b26fc2f2e</td>
+      <td>f90e2fba-82aa-46ec-b4a0-ba852d47821c</td>
+      <td>8e3bd5d2-97c7-42ac-ba05-e68732878c19</td>
+      <td>0 days 12:08:59.186000</td>
+      <td>43739.186</td>
+      <td>728.986433</td>
+      <td>2019-04-22T21:12:11.418Z</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>19896</th>
+      <td>ffe83d09-54bc-491c-b991-b077c2007f49</td>
+      <td>2019-05-07 19:08:47.770</td>
+      <td>2019-05-07 19:08:57.198</td>
+      <td>SEND_REQUEST</td>
+      <td>0b2c2078-fe82-4287-9a56-b10fcbd78cb3</td>
+      <td>15f9a3a9-63c0-45f7-a05a-d7d6cc98c02c</td>
+      <td>4dd04557-6422-4133-a94b-b20e20543ee9</td>
+      <td>NaN</td>
+      <td>0 days 00:00:09.428000</td>
+      <td>9.428</td>
+      <td>0.157133</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19897</th>
+      <td>fff00f3f-f898-4f0e-abe4-5553e9465a85</td>
+      <td>2019-05-11 06:00:40.670</td>
+      <td>NaT</td>
+      <td>QUALITY_CHECK_LABS</td>
+      <td>677c0b33-a400-42cb-afd9-8d7d793307a2</td>
+      <td>NaN</td>
+      <td>6d59b718-fbf7-4658-8231-9bfee41b7cbe</td>
+      <td>510014b7-0ac2-4282-9593-c8cab9c5a278</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2019-04-17T21:18:54.202Z</td>
+      <td>66.0</td>
+    </tr>
+    <tr>
+      <th>19898</th>
+      <td>fff14e4f-d5a6-4d76-a6bb-fa38b24a2bb8</td>
+      <td>2019-05-14 00:14:46.827</td>
+      <td>NaT</td>
+      <td>QUALITY_CHECK_SEGMENTATION</td>
+      <td>0c96ac77-07e7-4507-b6ba-b35dd4b60838</td>
+      <td>NaN</td>
+      <td>ae642296-e078-4ab7-b349-99352e2037ff</td>
+      <td>aed0a425-0f0b-4b14-9e97-07afa24f9d56</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2019-05-01T19:43:30.539Z</td>
+      <td>36.0</td>
+    </tr>
+    <tr>
+      <th>19899</th>
+      <td>fffccce5-0634-4f24-8021-c61ffc573b46</td>
+      <td>2019-05-03 23:29:32.007</td>
+      <td>NaT</td>
+      <td>PROCESS_GLOBAL_LABELLING</td>
+      <td>038379ba-6d2f-4924-b3b7-46c15c15a27c</td>
+      <td>NaN</td>
+      <td>af777b5b-fb35-46c0-8a00-7da99158eb31</td>
+      <td>142dbdd0-f66e-47fb-96e7-6e4125474ae1</td>
+      <td>NaT</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2019-04-25T18:57:53.538Z</td>
+      <td>26.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>19900 rows × 13 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">records</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id             3364
+uploaded_at    3276
+num_pages        70
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">records</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id             0
+uploaded_at    0
+num_pages      0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timesheet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>start</th>
+      <th>end</th>
+      <th>task_id</th>
+      <th>employee_user_id</th>
+      <th>Unnamed: 5</th>
+      <th>Unnamed: 6</th>
+      <th>Unnamed: 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bad796ee-c8db-4ce9-8dc0-b65e8ae73c8a</td>
+      <td>2019-05-10T00:13:19.453Z</td>
+      <td>2019-05-10T00:19:39.688Z</td>
+      <td>e58419a9-1bb4-4ddb-b32b-d39cb7978320</td>
+      <td>26667196-e222-46f3-b72a-6c6d5b9a7555</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3013bfa4-cfa1-471b-a6dc-ae64e8603342</td>
+      <td>2019-05-11T07:03:09.488Z</td>
+      <td>2019-05-11T07:15:46.549Z</td>
+      <td>bb291c71-0c9d-4040-9a14-df239581de69</td>
+      <td>e7219406-64f8-4413-998d-40c0712fbb06</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d864fafb-5e27-4c71-ae1b-957acb2aed4c</td>
+      <td>2019-05-16T14:14:56.899Z</td>
+      <td>2019-05-16T15:07:05.393Z</td>
+      <td>1e4f66f7-37b9-4f8a-abc1-0355e95a1021</td>
+      <td>76f27cdc-e137-4ec2-a287-ae8d5ea5b4ea</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d66a94e0-2bbf-4f8c-9af8-96d70533068a</td>
+      <td>2019-05-07T13:08:17.434Z</td>
+      <td>2019-05-07T13:11:29.743Z</td>
+      <td>375aa817-5b83-405f-8b7a-aed909dc4bae</td>
+      <td>e6aef90b-3edb-424a-a93d-f9ce9f559969</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5bbb69a1-d70e-45f3-853a-2bd100a0487e</td>
+      <td>2019-05-15T23:39:30.654Z</td>
+      <td>2019-05-15T23:39:46.603Z</td>
+      <td>1b6982c6-b3a5-45cd-b4d9-a1802a22fadd</td>
+      <td>0930c1f5-a41c-4152-8b36-948c6fdee9ff</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timesheet</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                  11897
+start               11897
+end                 11835
+task_id              7294
+employee_user_id       87
+Unnamed: 5              0
+Unnamed: 6              0
+Unnamed: 7              0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timesheet</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id                      0
+start                   0
+end                    35
+task_id                 0
+employee_user_id        0
+Unnamed: 5          11897
+Unnamed: 6          11897
+Unnamed: 7          11897
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timesheet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>start</th>
+      <th>end</th>
+      <th>task_id</th>
+      <th>employee_user_id</th>
+      <th>Unnamed: 5</th>
+      <th>Unnamed: 6</th>
+      <th>Unnamed: 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bad796ee-c8db-4ce9-8dc0-b65e8ae73c8a</td>
+      <td>2019-05-10T00:13:19.453Z</td>
+      <td>2019-05-10T00:19:39.688Z</td>
+      <td>e58419a9-1bb4-4ddb-b32b-d39cb7978320</td>
+      <td>26667196-e222-46f3-b72a-6c6d5b9a7555</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3013bfa4-cfa1-471b-a6dc-ae64e8603342</td>
+      <td>2019-05-11T07:03:09.488Z</td>
+      <td>2019-05-11T07:15:46.549Z</td>
+      <td>bb291c71-0c9d-4040-9a14-df239581de69</td>
+      <td>e7219406-64f8-4413-998d-40c0712fbb06</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d864fafb-5e27-4c71-ae1b-957acb2aed4c</td>
+      <td>2019-05-16T14:14:56.899Z</td>
+      <td>2019-05-16T15:07:05.393Z</td>
+      <td>1e4f66f7-37b9-4f8a-abc1-0355e95a1021</td>
+      <td>76f27cdc-e137-4ec2-a287-ae8d5ea5b4ea</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d66a94e0-2bbf-4f8c-9af8-96d70533068a</td>
+      <td>2019-05-07T13:08:17.434Z</td>
+      <td>2019-05-07T13:11:29.743Z</td>
+      <td>375aa817-5b83-405f-8b7a-aed909dc4bae</td>
+      <td>e6aef90b-3edb-424a-a93d-f9ce9f559969</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5bbb69a1-d70e-45f3-853a-2bd100a0487e</td>
+      <td>2019-05-15T23:39:30.654Z</td>
+      <td>2019-05-15T23:39:46.603Z</td>
+      <td>1b6982c6-b3a5-45cd-b4d9-a1802a22fadd</td>
+      <td>0930c1f5-a41c-4152-8b36-948c6fdee9ff</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timesheet</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">timesheet</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> 
+<span class="n">timesheet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>start</th>
+      <th>end</th>
+      <th>task_id</th>
+      <th>employee_user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bad796ee-c8db-4ce9-8dc0-b65e8ae73c8a</td>
+      <td>2019-05-10T00:13:19.453Z</td>
+      <td>2019-05-10T00:19:39.688Z</td>
+      <td>e58419a9-1bb4-4ddb-b32b-d39cb7978320</td>
+      <td>26667196-e222-46f3-b72a-6c6d5b9a7555</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3013bfa4-cfa1-471b-a6dc-ae64e8603342</td>
+      <td>2019-05-11T07:03:09.488Z</td>
+      <td>2019-05-11T07:15:46.549Z</td>
+      <td>bb291c71-0c9d-4040-9a14-df239581de69</td>
+      <td>e7219406-64f8-4413-998d-40c0712fbb06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d864fafb-5e27-4c71-ae1b-957acb2aed4c</td>
+      <td>2019-05-16T14:14:56.899Z</td>
+      <td>2019-05-16T15:07:05.393Z</td>
+      <td>1e4f66f7-37b9-4f8a-abc1-0355e95a1021</td>
+      <td>76f27cdc-e137-4ec2-a287-ae8d5ea5b4ea</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>d66a94e0-2bbf-4f8c-9af8-96d70533068a</td>
+      <td>2019-05-07T13:08:17.434Z</td>
+      <td>2019-05-07T13:11:29.743Z</td>
+      <td>375aa817-5b83-405f-8b7a-aed909dc4bae</td>
+      <td>e6aef90b-3edb-424a-a93d-f9ce9f559969</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5bbb69a1-d70e-45f3-853a-2bd100a0487e</td>
+      <td>2019-05-15T23:39:30.654Z</td>
+      <td>2019-05-15T23:39:46.603Z</td>
+      <td>1b6982c6-b3a5-45cd-b4d9-a1802a22fadd</td>
+      <td>0930c1f5-a41c-4152-8b36-948c6fdee9ff</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Emmanuel Decena<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-175171081-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

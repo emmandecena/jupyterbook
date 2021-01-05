@@ -1,0 +1,1839 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>HR Dataset &#8212; Data Scientist | Energy</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/neural.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Scientist | Energy</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Case Studies
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="energymarket.html">
+   Philippine electricity market
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="london.html">
+   Residential load profile analysis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="opti.html">
+   Simple Optimization
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Statistics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat.html">
+   Iris
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualisations.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/draft-hrdataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/emmandecena/jupyterbook/master?urlpath=tree/book/docs/draft-hrdataset.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="hr-dataset">
+<h1>HR Dataset<a class="headerlink" href="#hr-dataset" title="Permalink to this headline">¶</a></h1>
+<p>https://rpubs.com/rhuebner/hr_codebook_v14</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Pre</span><span class="o">-</span><span class="n">processing</span>
+<span class="mf">2.</span> <span class="n">Exploratory</span> <span class="n">Data</span> <span class="n">Analysis</span>
+<span class="mf">3.</span> <span class="n">Findings</span>
+
+<span class="c1"># employee personal view - married, gender, status, counts, age</span>
+<span class="c1"># org structure view - manager, departments, counts</span>
+<span class="c1"># salary view</span>
+<span class="c1"># FILTER ONLY NOT RESIGNED</span>
+<span class="c1"># lead measures view - performance score, engagement surve, latest date perfroamcen</span>
+<span class="c1"># lag measures - absences, late, resigned or not</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fpath</span> <span class="o">=</span> <span class="s1">&#39;/Volumes/data/projects/data/HRDataset_v14.csv&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+      <th>EmpID</th>
+      <th>MarriedID</th>
+      <th>MaritalStatusID</th>
+      <th>GenderID</th>
+      <th>EmpStatusID</th>
+      <th>DeptID</th>
+      <th>PerfScoreID</th>
+      <th>FromDiversityJobFairID</th>
+      <th>Salary</th>
+      <th>...</th>
+      <th>ManagerName</th>
+      <th>ManagerID</th>
+      <th>RecruitmentSource</th>
+      <th>PerformanceScore</th>
+      <th>EngagementSurvey</th>
+      <th>EmpSatisfaction</th>
+      <th>SpecialProjectsCount</th>
+      <th>LastPerformanceReview_Date</th>
+      <th>DaysLateLast30</th>
+      <th>Absences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adinolfi, Wilson  K</td>
+      <td>10026</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>62506</td>
+      <td>...</td>
+      <td>Michael Albert</td>
+      <td>22.0</td>
+      <td>LinkedIn</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/17/2019</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ait Sidi, Karthikeyan</td>
+      <td>10084</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>104437</td>
+      <td>...</td>
+      <td>Simon Roup</td>
+      <td>4.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>4.96</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2/24/2016</td>
+      <td>0</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Akinkuolie, Sarah</td>
+      <td>10196</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64955</td>
+      <td>...</td>
+      <td>Kissy Sullivan</td>
+      <td>20.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>3.02</td>
+      <td>3</td>
+      <td>0</td>
+      <td>5/15/2012</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alagbe,Trina</td>
+      <td>10088</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64991</td>
+      <td>...</td>
+      <td>Elijiah Gray</td>
+      <td>16.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>4.84</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/3/2019</td>
+      <td>0</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anderson, Carol</td>
+      <td>10069</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>50825</td>
+      <td>...</td>
+      <td>Webster Butler</td>
+      <td>39.0</td>
+      <td>Google Search</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/1/2016</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>Woodson, Jason</td>
+      <td>10135</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>65893</td>
+      <td>...</td>
+      <td>Kissy Sullivan</td>
+      <td>20.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.07</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/28/2019</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>307</th>
+      <td>Ybarra, Catherine</td>
+      <td>10301</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>48513</td>
+      <td>...</td>
+      <td>Brannon Miller</td>
+      <td>12.0</td>
+      <td>Google Search</td>
+      <td>PIP</td>
+      <td>3.20</td>
+      <td>2</td>
+      <td>0</td>
+      <td>9/2/2015</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Zamora, Jennifer</td>
+      <td>10010</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>0</td>
+      <td>220450</td>
+      <td>...</td>
+      <td>Janet King</td>
+      <td>2.0</td>
+      <td>Employee Referral</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>6</td>
+      <td>2/21/2019</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>Zhou, Julia</td>
+      <td>10043</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>89292</td>
+      <td>...</td>
+      <td>Simon Roup</td>
+      <td>4.0</td>
+      <td>Employee Referral</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2/1/2019</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Zima, Colleen</td>
+      <td>10271</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>45046</td>
+      <td>...</td>
+      <td>David Stanley</td>
+      <td>14.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.50</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/30/2019</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>311 rows × 36 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Employee_Name                  object
+EmpID                           int64
+MarriedID                       int64
+MaritalStatusID                 int64
+GenderID                        int64
+EmpStatusID                     int64
+DeptID                          int64
+PerfScoreID                     int64
+FromDiversityJobFairID          int64
+Salary                          int64
+Termd                           int64
+PositionID                      int64
+Position                       object
+State                          object
+Zip                             int64
+DOB                            object
+Sex                            object
+MaritalDesc                    object
+CitizenDesc                    object
+HispanicLatino                 object
+RaceDesc                       object
+DateofHire                     object
+DateofTermination              object
+TermReason                     object
+EmploymentStatus               object
+Department                     object
+ManagerName                    object
+ManagerID                     float64
+RecruitmentSource              object
+PerformanceScore               object
+EngagementSurvey              float64
+EmpSatisfaction                 int64
+SpecialProjectsCount            int64
+LastPerformanceReview_Date     object
+DaysLateLast30                  int64
+Absences                        int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Employee_Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>311
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ManagerName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Department&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Employee_Name                 311
+EmpID                         311
+MarriedID                       2
+MaritalStatusID                 5
+GenderID                        2
+EmpStatusID                     5
+DeptID                          6
+PerfScoreID                     4
+FromDiversityJobFairID          2
+Salary                        308
+Termd                           2
+PositionID                     30
+Position                       32
+State                          28
+Zip                           158
+DOB                           307
+Sex                             2
+MaritalDesc                     5
+CitizenDesc                     3
+HispanicLatino                  4
+RaceDesc                        6
+DateofHire                    101
+DateofTermination              96
+TermReason                     18
+EmploymentStatus                3
+Department                      6
+ManagerName                    21
+ManagerID                      23
+RecruitmentSource               9
+PerformanceScore                4
+EngagementSurvey              119
+EmpSatisfaction                 5
+SpecialProjectsCount            9
+LastPerformanceReview_Date    137
+DaysLateLast30                  7
+Absences                       20
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Employee_Name&quot;</span><span class="p">,</span><span class="s2">&quot;Department&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Department&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+    </tr>
+    <tr>
+      <th>Department</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Admin Offices</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Executive Office</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>IT/IS</th>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>Production</th>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>Sales</th>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>Software Engineering</th>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Department&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Admin Offices&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+      <th>EmpID</th>
+      <th>MarriedID</th>
+      <th>MaritalStatusID</th>
+      <th>GenderID</th>
+      <th>EmpStatusID</th>
+      <th>DeptID</th>
+      <th>PerfScoreID</th>
+      <th>FromDiversityJobFairID</th>
+      <th>Salary</th>
+      <th>...</th>
+      <th>ManagerName</th>
+      <th>ManagerID</th>
+      <th>RecruitmentSource</th>
+      <th>PerformanceScore</th>
+      <th>EngagementSurvey</th>
+      <th>EmpSatisfaction</th>
+      <th>SpecialProjectsCount</th>
+      <th>LastPerformanceReview_Date</th>
+      <th>DaysLateLast30</th>
+      <th>Absences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>26</th>
+      <td>Boutwell, Bonalyn</td>
+      <td>10081</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>106367</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>3.0</td>
+      <td>Diversity Job Fair</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2/18/2019</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Brown, Mia</td>
+      <td>10238</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>63000</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Diversity Job Fair</td>
+      <td>Fully Meets</td>
+      <td>4.50</td>
+      <td>2</td>
+      <td>6</td>
+      <td>1/15/2019</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Foster-Baker, Amy</td>
+      <td>10080</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>99351</td>
+      <td>...</td>
+      <td>Board of Directors</td>
+      <td>9.0</td>
+      <td>Other</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2/8/2019</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>Howard, Estelle</td>
+      <td>10182</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>49920</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>3.24</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4/15/2015</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>LaRotonda, William</td>
+      <td>10038</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64520</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Website</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1/17/2019</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>LeBlanc, Brandon  R</td>
+      <td>10134</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>93046</td>
+      <td>...</td>
+      <td>Janet King</td>
+      <td>2.0</td>
+      <td>CareerBuilder</td>
+      <td>Fully Meets</td>
+      <td>4.10</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1/28/2019</td>
+      <td>0</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>255</th>
+      <td>Singh, Nan</td>
+      <td>10039</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>51920</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Website</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>5</td>
+      <td>1/15/2019</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>Smith, Leigh Ann</td>
+      <td>10153</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>55000</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Diversity Job Fair</td>
+      <td>Fully Meets</td>
+      <td>3.80</td>
+      <td>4</td>
+      <td>4</td>
+      <td>8/15/2013</td>
+      <td>0</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>268</th>
+      <td>Steans, Tyrone</td>
+      <td>10147</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>63003</td>
+      <td>...</td>
+      <td>Brandon R. LeBlanc</td>
+      <td>1.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>3.90</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1/18/2019</td>
+      <td>0</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+<p>9 rows × 36 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;DateofHire&quot;</span><span class="p">,</span> <span class="s2">&quot;DateofTermination&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;DateofHire&quot;</span><span class="p">,</span> <span class="s2">&quot;DateofTermination&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%Y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;DOB&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DOB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;19&#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DOB&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Employee_Name                         object
+EmpID                                  int64
+MarriedID                              int64
+MaritalStatusID                        int64
+GenderID                               int64
+EmpStatusID                            int64
+DeptID                                 int64
+PerfScoreID                            int64
+FromDiversityJobFairID                 int64
+Salary                                 int64
+Termd                                  int64
+PositionID                             int64
+Position                              object
+State                                 object
+Zip                                    int64
+DOB                           datetime64[ns]
+Sex                                   object
+MaritalDesc                           object
+CitizenDesc                           object
+HispanicLatino                        object
+RaceDesc                              object
+DateofHire                            object
+DateofTermination                     object
+TermReason                            object
+EmploymentStatus                      object
+Department                            object
+ManagerName                           object
+ManagerID                            float64
+RecruitmentSource                     object
+PerformanceScore                      object
+EngagementSurvey                     float64
+EmpSatisfaction                        int64
+SpecialProjectsCount                   int64
+LastPerformanceReview_Date            object
+DaysLateLast30                         int64
+Absences                               int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;DOB&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;DOB&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/draft-hrdataset_17_1.png" src="../_images/draft-hrdataset_17_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df[[&quot;DOB&quot;]].sort_values(by=[&#39;DOB&#39;])</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;DateofHire&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;DateofHire&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/draft-hrdataset_18_1.png" src="../_images/draft-hrdataset_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;DateofTermination&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;DateofTermination&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/draft-hrdataset_19_1.png" src="../_images/draft-hrdataset_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DOB&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      36
+1      44
+2      31
+3      31
+4      30
+       ..
+306    34
+307    37
+308    40
+309    40
+310    41
+Name: Age, Length: 311, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Employee_Name&quot;</span><span class="p">,</span><span class="s2">&quot;DateofTermination&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+      <th>DateofTermination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adinolfi, Wilson  K</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ait Sidi, Karthikeyan</td>
+      <td>6/16/2016</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Akinkuolie, Sarah</td>
+      <td>9/24/2012</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alagbe,Trina</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anderson, Carol</td>
+      <td>9/6/2016</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>Woodson, Jason</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>307</th>
+      <td>Ybarra, Catherine</td>
+      <td>9/29/2015</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Zamora, Jennifer</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>Zhou, Julia</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Zima, Colleen</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>311 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Employee_Name&quot;</span><span class="p">]][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofTermination&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adinolfi, Wilson  K</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alagbe,Trina</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Anderson, Linda</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Andreola, Colby</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Athwal, Sam</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>305</th>
+      <td>Wolk, Hang  T</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>Woodson, Jason</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Zamora, Jennifer</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>Zhou, Julia</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Zima, Colleen</td>
+    </tr>
+  </tbody>
+</table>
+<p>207 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofTermination&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employee_Name</th>
+      <th>EmpID</th>
+      <th>MarriedID</th>
+      <th>MaritalStatusID</th>
+      <th>GenderID</th>
+      <th>EmpStatusID</th>
+      <th>DeptID</th>
+      <th>PerfScoreID</th>
+      <th>FromDiversityJobFairID</th>
+      <th>Salary</th>
+      <th>...</th>
+      <th>ManagerID</th>
+      <th>RecruitmentSource</th>
+      <th>PerformanceScore</th>
+      <th>EngagementSurvey</th>
+      <th>EmpSatisfaction</th>
+      <th>SpecialProjectsCount</th>
+      <th>LastPerformanceReview_Date</th>
+      <th>DaysLateLast30</th>
+      <th>Absences</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adinolfi, Wilson  K</td>
+      <td>10026</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>62506</td>
+      <td>...</td>
+      <td>22.0</td>
+      <td>LinkedIn</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/17/2019</td>
+      <td>0</td>
+      <td>1</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alagbe,Trina</td>
+      <td>10088</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64991</td>
+      <td>...</td>
+      <td>16.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>4.84</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/3/2019</td>
+      <td>0</td>
+      <td>15</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Anderson, Linda</td>
+      <td>10002</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>57568</td>
+      <td>...</td>
+      <td>11.0</td>
+      <td>LinkedIn</td>
+      <td>Exceeds</td>
+      <td>5.00</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/7/2019</td>
+      <td>0</td>
+      <td>15</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Andreola, Colby</td>
+      <td>10194</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>0</td>
+      <td>95660</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>3.04</td>
+      <td>3</td>
+      <td>4</td>
+      <td>1/2/2019</td>
+      <td>0</td>
+      <td>19</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Athwal, Sam</td>
+      <td>10062</td>
+      <td>0</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>59365</td>
+      <td>...</td>
+      <td>19.0</td>
+      <td>Employee Referral</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/25/2019</td>
+      <td>0</td>
+      <td>19</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>305</th>
+      <td>Wolk, Hang  T</td>
+      <td>10174</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>60446</td>
+      <td>...</td>
+      <td>14.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>3.40</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/21/2019</td>
+      <td>0</td>
+      <td>14</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>Woodson, Jason</td>
+      <td>10135</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>65893</td>
+      <td>...</td>
+      <td>20.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.07</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/28/2019</td>
+      <td>0</td>
+      <td>13</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Zamora, Jennifer</td>
+      <td>10010</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>0</td>
+      <td>220450</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>Employee Referral</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>6</td>
+      <td>2/21/2019</td>
+      <td>0</td>
+      <td>16</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>Zhou, Julia</td>
+      <td>10043</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>89292</td>
+      <td>...</td>
+      <td>4.0</td>
+      <td>Employee Referral</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2/1/2019</td>
+      <td>0</td>
+      <td>11</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Zima, Colleen</td>
+      <td>10271</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>45046</td>
+      <td>...</td>
+      <td>14.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.50</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/30/2019</td>
+      <td>0</td>
+      <td>2</td>
+      <td>41</td>
+    </tr>
+  </tbody>
+</table>
+<p>207 rows × 37 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1 if resigned, 0 if still employee</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Resigned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofTermination&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;DateofHire&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofHire&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;DateofTermination&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofTermination&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#first condition checks if resigned, then service is resign-hire</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLength&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Resigned&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofTermination&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofHire&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;DateofHire&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLength&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     3102 days
+1      444 days
+2      447 days
+3     4377 days
+4     1884 days
+         ...   
+306   2004 days
+307   2583 days
+308   3553 days
+309   1738 days
+310   1920 days
+Name: ServiceLength, Length: 311, dtype: timedelta64[ns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLengthYrs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLength&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mi">365</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLengthYrs&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       8.498630
+1       1.216438
+2       1.224658
+3      11.991781
+4       5.161644
+         ...    
+306     5.490411
+307     7.076712
+308     9.734247
+309     4.761644
+310     5.260274
+Name: ServiceLengthYrs, Length: 311, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ServiceLengthYrs&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       8.50
+1       1.22
+2       1.22
+3      11.99
+4       5.16
+       ...  
+306     5.49
+307     7.08
+308     9.73
+309     4.76
+310     5.26
+Name: ServiceLengthYrs, Length: 311, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "env-jupyterbook"
+        },
+        kernelOptions: {
+            kernelName: "env-jupyterbook",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'env-jupyterbook'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Emmanuel Decena<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-175171081-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

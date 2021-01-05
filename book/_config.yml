@@ -1,6 +1,6 @@
 #######################################################################################
 # Book settings
-title : Data Scientist | Energy
+title : Analytics and Insights
 author: Emmanuel Decena
 logo: 'images/neural.png'
 
@@ -14,7 +14,7 @@ execute:
   execute_notebooks           : cache
   timeout                     : -1
   exclude_patterns:
-    - "docs/draft-*.ipynb"
+    - 'docs/draft*'
 #######################################################################################
 # HTML-specific settings
 html:

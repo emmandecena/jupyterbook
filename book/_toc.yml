@@ -4,15 +4,25 @@
   chapters:
   - file: docs/energymarket
   - file: docs/london
+  - file: docs/hrdatasetv14
 
-- part: Machine Learning
+- part: Data Science Tools
   chapters:
-  - file: docs/cifar10
+  - file: docs/numpy
 
 - part: Optimization
   chapters:
   - file: docs/opti
 
-- part: Statistics
+- part: Statistical Analysis
   chapters:
   - file: docs/stat
+
+- part: Data Visualization
+  chapters:
+  - file: docs/visualization/tableau
+  - file: docs/visualization/datastudio
+
+- part: Mathematics
+  chapters:
+  - file: docs/bayes

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Residential load profile analysis &#8212; Data Scientist | Energy</title>
+    <title>Residential Electricity Consumption &#8212; Analytics and Insights</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -48,8 +48,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -60,8 +60,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Classifier on CIFAR10" href="cifar10.html" />
-    <link rel="prev" title="Philippine electricity market" href="energymarket.html" />
+    <link rel="next" title="Human Resources Analytics" href="hrdatasetv14.html" />
+    <link rel="prev" title="Energy Industry Overview" href="energymarket.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -83,7 +83,7 @@
   <img src="../_static/neural.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Data Scientist | Energy</h1>
+  <h1 class="site-logo" id="site-title">Analytics and Insights</h1>
   
 </a>
 </div>
@@ -102,24 +102,34 @@
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="energymarket.html">
-   Philippine electricity market
+   Energy Industry Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energymarket.html#geocoding-an-address">
+   Geocoding an address
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Residential load profile analysis
+   Residential Electricity Consumption
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hrdatasetv14.html">
+   Human Resources Analytics
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Machine Learning
+  Data Science Tools
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="cifar10.html">
-   Classifier on CIFAR10
+  <a class="reference internal" href="numpy.html">
+   Numpy exercise
   </a>
  </li>
 </ul>
@@ -137,13 +147,42 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Statistics
+  Statistical Analysis
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="stat.html">
    Iris
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data Visualization
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualization/tableau.html">
+   Tableau Dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualization/datastudio.html">
+   Google Data Studio
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Mathematics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bayes.html">
+   Probability Theory
   </a>
  </li>
 </ul>
@@ -252,8 +291,8 @@
         
               <div>
                 
-  <div class="section" id="residential-load-profile-analysis">
-<h1>Residential load profile analysis<a class="headerlink" href="#residential-load-profile-analysis" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="residential-electricity-consumption">
+<h1>Residential Electricity Consumption<a class="headerlink" href="#residential-electricity-consumption" title="Permalink to this headline">¶</a></h1>
 <p><span class="sphinx-bs badge badge-success">python3</span> <span class="sphinx-bs badge badge-secondary">case study</span> <span class="sphinx-bs badge badge-warning">load profiles</span></p>
 <p>In this article we explore the electricity load profiles of residential households in the London area. The data comes from the public data release of the UK’s dynamic time-of-use electricity pricing trial <a class="bibtex reference internal" href="#schofield2015low" id="id1">[1]</a>. It was a part of the Low Carbon London project which involved subjecting 5,478 anonymised households in the London area to an experimental dynamic time-of-use tariff for 2013.</p>
 <div class="section" id="exploratory-data-analysis">
@@ -680,8 +719,8 @@ if (outputEl) {{
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="energymarket.html" title="previous page">Philippine electricity market</a>
-    <a class='right-next' id="next-link" href="cifar10.html" title="next page">Classifier on CIFAR10</a>
+    <a class='left-prev' id="prev-link" href="energymarket.html" title="previous page">Energy Industry Overview</a>
+    <a class='right-next' id="next-link" href="hrdatasetv14.html" title="next page">Human Resources Analytics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

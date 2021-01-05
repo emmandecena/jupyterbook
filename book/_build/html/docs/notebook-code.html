@@ -1,0 +1,2811 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Journal - Exam &#8212; Data Scientist | Energy</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/neural.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Scientist | Energy</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Case Studies
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="energymarket.html">
+   Philippine electricity market
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="london.html">
+   Residential load profile analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hrdatasetv14.html">
+   HR Dataset
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   Numpy exercise
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="opti.html">
+   Simple Optimization
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Statistics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat.html">
+   Iris
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualisations.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/notebook-code.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/emmandecena/jupyterbook/master?urlpath=tree/book/docs/notebook-code.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-selection">
+   Dataset selection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#executive-summary">
+   Executive Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hardware-and-packages">
+     Hardware and packages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-import">
+   1. Data Import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   2. Exploratory data analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-cleaning">
+     2.1 Data Cleaning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualisation">
+     2.2 Visualisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Visualisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predictive-modelling">
+   3. Predictive Modelling
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Summary
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#task">
+       Task
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#factor-encoding">
+         Factor encoding
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tuning">
+       Tuning
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#evaluation">
+       Evaluation
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#resampling">
+       Resampling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#measure">
+       Measure
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#learners">
+       Learners
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benchmarking">
+     Benchmarking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementing-the-chosen-model-on-full-data">
+     Implementing the chosen model on full data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-forest">
+     Random Forest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuned-xgboost-for-comparison">
+     Tuned XGBoost for comparison
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-model-for-comparison">
+     Linear Model for comparison
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#results">
+   4. Results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#according-to-property-type">
+     According to property type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Summary
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="project-journal-exam">
+<h1>Project Journal - Exam<a class="headerlink" href="#project-journal-exam" title="Permalink to this headline">¶</a></h1>
+<p>Emmanuel Decena - Machine Learning Researcher Applicant</p>
+<div class="section" id="dataset-selection">
+<h2>Dataset selection<a class="headerlink" href="#dataset-selection" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Brazil Real Estate Listings</p></li>
+</ul>
+</div>
+<div class="section" id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Data import</p></li>
+<li><p>Exploratory data analysis</p></li>
+<li><p>Predictive modelling</p></li>
+<li><p>Results</p></li>
+</ol>
+</div>
+<div class="section" id="executive-summary">
+<h2>Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">¶</a></h2>
+<p>The general theme is to model the valuation of assets among ten municipalities in São Paolo, looking for undervalued assets that may present good investment opportunities for real estate clients. According to the model, it was found that rental assets are usually undervalued except in Centro, where prices have a higher range of values. This indicates a relatively healthy economic activity. Moema has high price differences between apartments, perhaps an indication of the wealth gap in the neighborhood, while Cotia has relatively stable valuation. For commercial assets, Praia Grande offers a good selection for value due to high market competition.</p>
+<hr class="docutils" />
+<div class="section" id="hardware-and-packages">
+<h3>Hardware and packages<a class="headerlink" href="#hardware-and-packages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>R 3.6</p></li>
+<li><p>Jupyterlab Notebook</p></li>
+<li><p>Google Compute Engine</p></li>
+<li><p>n1-standard-4 (4 vCPUs, 15 GB memory)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">packages</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;dplyr&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;parallel&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;mlr3&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;DBI&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;bigrquery&quot;</span><span class="p">,</span> 
+              <span class="s">&quot;tidyverse&quot;</span><span class="p">,</span>
+              <span class="s">&quot;data.table&quot;</span><span class="p">,</span>
+              <span class="s">&quot;ggmap&quot;</span><span class="p">,</span>
+              <span class="s">&quot;mlr3learners&quot;</span><span class="p">,</span>
+              <span class="s">&quot;mlr3filters&quot;</span><span class="p">,</span>
+              <span class="s">&quot;mlr3viz&quot;</span><span class="p">,</span>
+              <span class="s">&quot;mlr3pipelines&quot;</span><span class="p">,</span>
+               <span class="s">&quot;mlr3tuning&quot;</span><span class="p">,</span>
+              <span class="s">&quot;glmnet&quot;</span><span class="p">,</span>
+              <span class="s">&quot;paradox&quot;</span><span class="p">,</span>
+              <span class="s">&quot;ranger&quot;</span><span class="p">,</span>
+              <span class="s">&quot;kknn&quot;</span><span class="p">,</span>
+             <span class="s">&quot;ggExtra&quot;</span>
+             <span class="p">,</span><span class="s">&quot;GGally&quot;</span><span class="p">)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="nf">setdiff</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="nf">rownames</span><span class="p">(</span><span class="nf">installed.packages</span><span class="p">())))</span>
+<span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="n">require</span><span class="p">,</span> <span class="n">character.only</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘dplyr’
+
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+── <span class=" -Color -Color-Bold">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.0 ──
+
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble </span> 3.0.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr  </span> 0.3.4
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tidyr  </span> 1.1.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr</span> 1.4.0
+<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">readr  </span> 1.3.1     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats</span> 0.5.0
+
+── <span class=" -Color -Color-Bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
+<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
+
+
+Attaching package: ‘data.table’
+
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Google&#39;s Terms of Service: https://cloud.google.com/maps-platform/terms/.
+
+Please cite ggmap if you use it! See citation(&quot;ggmap&quot;) for details.
+
+
+Attaching package: ‘Matrix’
+
+
+The following objects are masked from ‘package:tidyr’:
+
+    expand, pack, unpack
+
+
+Loaded glmnet 4.0-2
+
+Registered S3 method overwritten by &#39;GGally&#39;:
+  method from   
+  +.gg   ggplot2
+</pre></div>
+</div>
+<div class="output text_html"><ol>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+	<li>TRUE</li>
+</ol>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="data-import">
+<h2>1. Data Import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Connected to the BigQuery server using Google account credentials</p></li>
+<li><p>Queried all the tables in the database using forking parallel functionality of R.</p></li>
+<li><p>Took 5 mins on a 4-core machine.</p></li>
+<li><p>Tried the socketing approach but the process took 3 mins longer.</p></li>
+<li><p>Commented out since data was exported to csv</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># billing &lt;- &quot;ml-vm-290912&quot; #project ID </span>
+
+<span class="c1"># con &lt;- dbConnect(</span>
+<span class="c1">#   bigrquery::bigquery(),</span>
+<span class="c1">#   project = &quot;properati-data-public&quot;,</span>
+<span class="c1">#   dataset = &quot;properties_br&quot;,</span>
+<span class="c1">#   billing = billing</span>
+<span class="c1"># )</span>
+<span class="c1"># options(scipen=20) #prevent integer error in R</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ptm &lt;- proc.time()</span>
+<span class="c1"># datalist = list()</span>
+<span class="c1">#     sqlstr1 = &quot;SELECT id, </span>
+<span class="c1">#                 created_on, </span>
+<span class="c1">#                 operation, </span>
+<span class="c1">#                 property_type, </span>
+<span class="c1">#                 place_name, </span>
+<span class="c1">#                 state_name, </span>
+<span class="c1">#                 lat, </span>
+<span class="c1">#                 lon, </span>
+<span class="c1">#                 price_aprox_usd, </span>
+<span class="c1">#                 surface_total_in_m2, </span>
+<span class="c1">#                 surface_covered_in_m2, </span>
+<span class="c1">#                 price_usd_per_m2, </span>
+<span class="c1">#                 floor, </span>
+<span class="c1">#                 rooms </span>
+<span class="c1">#                 FROM `properati-data-public.properties_br.&quot;</span>
+<span class="c1">#     sqlstr2 = &quot;` WHERE NOT (lat IS NULL OR </span>
+<span class="c1">#                             lon IS NULL OR</span>
+<span class="c1">#                             place_name IS NULL OR</span>
+<span class="c1">#                             state_name IS NULL OR</span>
+<span class="c1">#                             price_aprox_usd IS NULL)&quot;</span>
+<span class="c1"># paster &lt;- function(i) {  </span>
+<span class="c1">#             sql &lt;- paste0(sqlstr1,dbListTables(con)[i],sqlstr2)</span>
+<span class="c1">#             tb &lt;- bq_project_query(billing, sql)</span>
+<span class="c1">#             dat = bq_table_download(tb)</span>
+<span class="c1">#             return(dat)  </span>
+<span class="c1"># }</span>
+<span class="c1"># numCores &lt;- detectCores()</span>
+<span class="c1"># numTbl &lt;- length(dbListTables(con))</span>
+<span class="c1"># datalist &lt;- mclapply(1:numTbl, paster, mc.cores=numCores)</span>
+<span class="c1"># df &lt;- bind_rows(datalist)</span>
+<span class="c1"># proc.time() - ptm</span>
+<span class="c1"># write.csv(df,&quot;brazil.csv&quot;, row.names = FALSE)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Exported the data to a csv file for easy loading.</p></li>
+<li><p>Loaded using <code class="docutils literal notranslate"><span class="pre">fread</span></code> for speed</p></li>
+<li><p>Converted to tibble for ease of use</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="nf">fread</span><span class="p">(</span><span class="s">&quot;brazil.csv&quot;</span><span class="p">,</span><span class="n">drop</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="nf">as_tibble</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df_orig</span> <span class="o">=</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-data-analysis">
+<h2>2. Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Data cleaning</p></li>
+<li><p>Visualisation</p></li>
+<li><p>Preprocessing for model input</p></li>
+</ul>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Column description not available from source</p></li>
+<li><p>Messy data with several missing values and duplicated records</p></li>
+<li><p>Imbalanced classes for location data</p></li>
+</ul>
+</div>
+<div class="section" id="data-cleaning">
+<h3>2.1 Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Initial inspection shows a lot of NA values.</p></li>
+<li><p>Data source does not indicate column descriptions</p></li>
+<li><p>Columns:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operation</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">property_type</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">place_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lon</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">price_aprox_usd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">surface_total_in_m2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">surface_covered_in_m2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">price_usd_per_m2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">floor</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rooms</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 5 × 14</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>created_on</th><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>state_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_aprox_usd</th><th scope=col>surface_total_in_m2</th><th scope=col>surface_covered_in_m2</th><th scope=col>price_usd_per_m2</th><th scope=col>floor</th><th scope=col>rooms</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>d6d377927ab49671acdd38aa6f661a460601a88b</td><td>2015-01-20</td><td>rent</td><td>apartment</td><td>Pernambuco</td><td>Pernambuco</td><td> -8.126271</td><td>-34.90379</td><td> 383.55</td><td>NA</td><td>  63</td><td>6.088095</td><td> 1</td><td> 2</td></tr>
+	<tr><td>c6826a9508436920fd59b46a202354f3e4823d22</td><td>2014-10-29</td><td>rent</td><td>store    </td><td>São Paulo </td><td>São Paulo </td><td>-23.154625</td><td>-45.79062</td><td>   0.00</td><td>NA</td><td>3800</td><td>      NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>ba957ad3cb2d12d55d1f0466eeffe788a35a6f4f</td><td>2014-08-04</td><td>rent</td><td>house    </td><td>São Paulo </td><td>São Paulo </td><td>-20.778009</td><td>-49.34506</td><td> 243.25</td><td>NA</td><td>  NA</td><td>      NA</td><td>NA</td><td> 1</td></tr>
+	<tr><td>011d5618639ce229b012022a32b22eff9abd213e</td><td>2014-11-19</td><td>rent</td><td>apartment</td><td>São Paulo </td><td>São Paulo </td><td>-23.964803</td><td>-46.38557</td><td> 428.50</td><td>NA</td><td>  60</td><td>7.141667</td><td> 4</td><td> 1</td></tr>
+	<tr><td>6f274a2d23ffa89cb0301f3277585beda7723ce8</td><td>2014-09-01</td><td>rent</td><td>store    </td><td>São Paulo </td><td>São Paulo </td><td>-20.834309</td><td>-49.38056</td><td>1280.31</td><td>NA</td><td>  NA</td><td>      NA</td><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>Created a histogram to investigate if <strong>id</strong> is unique.</p></li>
+<li><p>Turns out its not.</p></li>
+<li><p>Some records have over 20 duplicate ‘id’ entries.</p></li>
+<li><p>Highest occurences around 6-7 instances.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">n</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_13_0.png" src="../_images/notebook-code_13_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Investigated a record with 6 id instances.</p></li>
+<li><p>Turns out the instances are just duplicates.</p></li>
+<li><p>Need to remove these.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="m">6</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>6</td></tr>
+	<tr><td>00007850291aca4be146e3a7e8279f5c58dc2807</td><td>6</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">id</span><span class="o">==</span><span class="s">&quot;000059ce72528af3a35e956b9217f444c3a67a8f&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 14</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>created_on</th><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>state_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_aprox_usd</th><th scope=col>surface_total_in_m2</th><th scope=col>surface_covered_in_m2</th><th scope=col>price_usd_per_m2</th><th scope=col>floor</th><th scope=col>rooms</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+	<tr><td>000059ce72528af3a35e956b9217f444c3a67a8f</td><td>2014-12-05</td><td>sell</td><td>house</td><td>Santo André</td><td>São Paulo</td><td>-23.65093</td><td>-46.56502</td><td>198608.1</td><td>268</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>Removed duplicates</p></li>
+<li><p>Over half of the records were removed, from 7M to 3M</p></li>
+<li><p>Very messy data.</p></li>
+<li><p>On hindsight we couldve used SELECT DISTINCT</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">distinct</span><span class="p">()</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>7004898</li><li>14</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3745039</li><li>14</li></ol>
+</div></div>
+</div>
+<hr class="docutils" />
+<p><strong>After initial data inspection, I developed the modelling formulation.</strong></p>
+<p>Predict the price of a property based on:</p>
+<ul class="simple">
+<li><p>coordinates,</p></li>
+<li><p>operation,</p></li>
+<li><p>property type</p></li>
+<li><p>place</p></li>
+</ul>
+<p>Compare the predicted price with the listed price:</p>
+<ul class="simple">
+<li><p>identify undervalued and overvalued assets</p></li>
+<li><p>location trends of these assets</p></li>
+</ul>
+<p>Assuming we are working for a client in real estate:</p>
+<ul class="simple">
+<li><p>useful information in investment decision-making</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Data exploration strategy</strong></p>
+<p>Dropping columns which are not needed such as:</p>
+<ul class="simple">
+<li><p>all the price related column since they exhibit multicollinearity</p></li>
+<li><p>leaving only the ‘price_usd_per_m2’ as this is will be used as the dependent variable.</p></li>
+<li><p>surface area, floors and rooms are also removed since dependent variable is defined on a per unit basis.</p></li>
+<li><p>records with missing values are also dropped, approx 0.7M records.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#select only columns predictors and drop with nas</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span>  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">price_aprox_usd</span><span class="o">:</span><span class="n">surface_covered_in_m2</span><span class="p">))</span> <span class="o">%&gt;%</span>  
+        <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">floor</span><span class="o">:</span><span class="n">rooms</span><span class="p">))</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">drop_na</span><span class="p">()</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3745039</li><li>9</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3055844</li><li>9</li></ol>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>Rechecked the ‘id’ column if there are still duplicates by drawing a histogram.</p></li>
+<li><p>(Spoiler alert: A lot)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">n</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_23_0.png" src="../_images/notebook-code_23_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Inspected a duplicated id record.</p></li>
+<li><p>Turns out that although the duplicated records are now removed,</p></li>
+<li><p>the ones left contain different prices, even on the same dates.</p></li>
+<li><p>Indeed very messy data.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="m">6</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 2 × 2</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>00000290f4e7f9c00eaf10fd74648d2b85a8ff38</td><td>6</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>6</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">id</span><span class="o">==</span><span class="s">&quot;0000800755b8cda73539b32ad25cfd9c96adacc8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>created_on</th><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>state_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1680.267</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1698.140</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1778.532</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1766.016</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1703.280</td></tr>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1693.804</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<ul class="simple">
+<li><p>I decided to keep the lowest listed price per id</p></li>
+<li><p>since the lowest price indicates the last price the seller/renter is willing to accept.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span> 
+        <span class="nf">group_by</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span>
+        <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">==</span> <span class="nf">min</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+        <span class="nf">ungroup</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">id</span><span class="o">==</span><span class="s">&quot;0000800755b8cda73539b32ad25cfd9c96adacc8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 1 × 9</caption>
+<thead>
+	<tr><th scope=col>id</th><th scope=col>created_on</th><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>state_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0000800755b8cda73539b32ad25cfd9c96adacc8</td><td>2017-05-23</td><td>sell</td><td>apartment</td><td>Santo André</td><td>São Paulo</td><td>-23.6283</td><td>-46.52361</td><td>1680.267</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Checking frequency counts. Now each record is unique according to the histogram.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">n</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_31_0.png" src="../_images/notebook-code_31_0.png" />
+</div>
+</div>
+<p><strong>After ensuring ID is unique, we turn to STATE_NAME variable</strong></p>
+<ul class="simple">
+<li><p>Highly imbalanced</p></li>
+<li><p>Decide to model only São Paulo</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">state_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 27 × 2</caption>
+<thead>
+	<tr><th scope=col>state_name</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>São Paulo          </td><td>775748</td></tr>
+	<tr><td>Rio de Janeiro     </td><td> 98692</td></tr>
+	<tr><td>Rio Grande do Sul  </td><td> 83501</td></tr>
+	<tr><td>Santa Catarina     </td><td> 16060</td></tr>
+	<tr><td>Minas Gerais       </td><td> 15790</td></tr>
+	<tr><td>Paraná             </td><td> 15597</td></tr>
+	<tr><td>Ceará              </td><td> 12741</td></tr>
+	<tr><td>Espírito Santo     </td><td> 10573</td></tr>
+	<tr><td>Bahia              </td><td> 10535</td></tr>
+	<tr><td>Pernambuco         </td><td>  5228</td></tr>
+	<tr><td>Distrito Federal   </td><td>  4072</td></tr>
+	<tr><td>Paraíba            </td><td>  3268</td></tr>
+	<tr><td>Goiás              </td><td>  3261</td></tr>
+	<tr><td>Rio Grande do Norte</td><td>  2452</td></tr>
+	<tr><td>Pará               </td><td>  1758</td></tr>
+	<tr><td>Tocantins          </td><td>  1099</td></tr>
+	<tr><td>Maranhão           </td><td>   516</td></tr>
+	<tr><td>Alagoas            </td><td>   437</td></tr>
+	<tr><td>Mato Grosso do Sul </td><td>   411</td></tr>
+	<tr><td>Mato Grosso        </td><td>   330</td></tr>
+	<tr><td>Amazonas           </td><td>   291</td></tr>
+	<tr><td>Sergipe            </td><td>   245</td></tr>
+	<tr><td>Piauí              </td><td>   221</td></tr>
+	<tr><td>Rondônia           </td><td>    34</td></tr>
+	<tr><td>Amapá              </td><td>    23</td></tr>
+	<tr><td>Outros países      </td><td>    10</td></tr>
+	<tr><td>Roraima            </td><td>     1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">state_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">state_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">n</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s">&quot;steelblue&quot;</span><span class="p">)</span> <span class="o">+</span> 
+<span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_34_0.png" src="../_images/notebook-code_34_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">state_name</span> <span class="o">==</span><span class="s">&quot;São Paulo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>After STATE_NAME, we look at PLACE_NAME</strong></p>
+<ul class="simple">
+<li><p>Select only top 10 places in São Paolo</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">place_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="n">place_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 20 × 1</caption>
+<thead>
+	<tr><th scope=col>place_name</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Santo André          </td></tr>
+	<tr><td>Centro               </td></tr>
+	<tr><td>Praia Grande         </td></tr>
+	<tr><td>Moema                </td></tr>
+	<tr><td>Campo Belo           </td></tr>
+	<tr><td>Cotia                </td></tr>
+	<tr><td>Brooklin             </td></tr>
+	<tr><td>Vila Mariana         </td></tr>
+	<tr><td>Morumbi              </td></tr>
+	<tr><td>Perdizes             </td></tr>
+	<tr><td>São Bernardo do Campo</td></tr>
+	<tr><td>Tatuapé              </td></tr>
+	<tr><td>Jardim Paulista      </td></tr>
+	<tr><td>Itaim Bibi           </td></tr>
+	<tr><td>Pinheiros            </td></tr>
+	<tr><td>Vila Olímpia         </td></tr>
+	<tr><td>Vila Nova Conceição  </td></tr>
+	<tr><td>Saúde                </td></tr>
+	<tr><td>Sorocaba             </td></tr>
+	<tr><td>Higienópolis         </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">places</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">count</span><span class="p">(</span><span class="n">place_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="n">place_name</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+<span class="n">places</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Santo André'</li><li>'Centro'</li><li>'Praia Grande'</li><li>'Moema'</li><li>'Campo Belo'</li><li>'Cotia'</li><li>'Brooklin'</li><li>'Vila Mariana'</li><li>'Morumbi'</li><li>'Perdizes'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">place_name</span> <span class="o">%in%</span> <span class="n">places</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Misc cleaning</strong></p>
+<ul class="simple">
+<li><p>Dropping ID variable as this is not needed for modelling</p></li>
+<li><p>converting character to factor columns.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">%&gt;%</span> 
+    <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">state_name</span><span class="p">))</span> <span class="o">%&gt;%</span>  
+    <span class="nf">mutate</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="nf">where</span><span class="p">(</span><span class="n">is.character</span><span class="p">),</span> <span class="n">as.factor</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 3 × 7</caption>
+<thead>
+	<tr><th scope=col>created_on</th><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2014-09-23</td><td>rent</td><td>apartment</td><td>Cotia</td><td>-23.59349</td><td>-46.83228</td><td>13.36585</td></tr>
+	<tr><td>2014-09-23</td><td>rent</td><td>apartment</td><td>Cotia</td><td>-23.59349</td><td>-46.83228</td><td>13.36585</td></tr>
+	<tr><td>2014-09-23</td><td>rent</td><td>apartment</td><td>Cotia</td><td>-23.59349</td><td>-46.83228</td><td>13.36585</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="visualisation">
+<h3>2.2 Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We now investigate the dependent variable</p></li>
+<li><p>Extreme outliers present</p></li>
+<li><p>Introduced cut-off values</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">price_usd_per_m2</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_43_0.png" src="../_images/notebook-code_43_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Provide cut-off values</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span> <span class="o">%&gt;%</span> 
+       <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">&lt;</span> <span class="m">10000</span> <span class="o">&amp;</span> <span class="n">price_usd_per_m2</span> <span class="o">&gt;</span> <span class="m">40</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">select</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">price_usd_per_m2</span><span class="p">))</span> <span class="o">+</span> 
+    <span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_45_0.png" src="../_images/notebook-code_45_0.png" />
+</div>
+</div>
+<p><strong>Grouped by Property Type</strong></p>
+<ul class="simple">
+<li><p>Lower cut-off values for rent operations</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_density1</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;rent&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">&lt;</span> <span class="m">100</span> <span class="o">&amp;</span> <span class="n">price_usd_per_m2</span> <span class="o">&gt;</span> <span class="m">40</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">select</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">,</span><span class="n">property_type</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span> <span class="n">fill</span><span class="o">=</span><span class="n">property_type</span><span class="p">))</span> <span class="o">+</span> 
+    <span class="nf">geom_density</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_density1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_48_0.png" src="../_images/notebook-code_48_0.png" />
+</div>
+</div>
+<p><strong>Grouped by Property Type</strong></p>
+<ul class="simple">
+<li><p>Logged the price for selling operations</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_density2</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">&lt;</span> <span class="m">10000</span> <span class="o">&amp;</span> <span class="n">price_usd_per_m2</span> <span class="o">&gt;</span> <span class="m">40</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">select</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">,</span><span class="n">property_type</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span> <span class="n">fill</span><span class="o">=</span><span class="n">property_type</span><span class="p">))</span> <span class="o">+</span> 
+    <span class="nf">geom_density</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_density2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_51_0.png" src="../_images/notebook-code_51_0.png" />
+</div>
+</div>
+<p><strong>Contingency Tables and Plots for operations against property_type</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">operation</span><span class="p">,</span><span class="n">df</span><span class="o">$</span><span class="n">property_type</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      
+       apartment  house     PH  store
+  rent     19648   5523     38   5545
+  sell    113534  34995   1051   2612
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_bar1</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">&lt;</span> <span class="m">10000</span> <span class="o">&amp;</span> <span class="n">price_usd_per_m2</span> <span class="o">&gt;</span> <span class="m">40</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="nf">select</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">,</span><span class="n">property_type</span><span class="p">,</span> <span class="n">operation</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">operation</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">price_usd_per_m2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">property_type</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="nf">position_dodge</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_bar1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_55_0.png" src="../_images/notebook-code_55_0.png" />
+</div>
+</div>
+<p><strong>Cut-off values</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">price_usd_per_m2</span> <span class="o">&lt;</span> <span class="m">10000</span> <span class="o">&amp;</span> <span class="n">price_usd_per_m2</span> <span class="o">&gt;</span> <span class="m">40</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="o">-</span><span class="nf">desc</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">))</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>182946</li><li>7</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>152106</li><li>7</li></ol>
+</div></div>
+</div>
+<hr class="docutils" />
+<p><strong>Now looking at lat and lon</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">lat</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">lon</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">)))</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="nf">ggMarginal</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_61_0.png" src="../_images/notebook-code_61_0.png" />
+</div>
+</div>
+<p><strong>Limited to state border of São Paulo</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df_border</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="nf">between</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="m">-53.2</span><span class="p">,</span><span class="m">-44.01</span><span class="p">)</span> <span class="o">&amp;</span> 
+                              <span class="nf">between</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="m">-25.45</span><span class="p">,</span><span class="m">-19.67</span><span class="p">))</span>
+
+<span class="n">p</span> <span class="o">=</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_border</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">lat</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">lon</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">)))</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="nf">ggMarginal</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+<span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_63_0.png" src="../_images/notebook-code_63_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df_border</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Visualisation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Plotting the log dependent variable to check relationships.</p></li>
+<li><p>Visual inspection indicates that created_on date is not a good predictor.</p></li>
+<li><p>Perhaps we could have factored months, year, date to become predictors.</p></li>
+<li><p>Operation and property type show different pricing levels.</p></li>
+<li><p>Price separation can also be seen from the different places.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_viz1</span> <span class="o">=</span> <span class="nf">ggpairs</span><span class="p">(</span><span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">created_on</span><span class="p">,</span><span class="n">operation</span><span class="p">,</span><span class="n">place_name</span><span class="p">,</span><span class="n">property_type</span><span class="p">)),</span> <span class="n">title</span><span class="o">=</span><span class="s">&quot;Correlogram&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_viz1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_67_0.png" src="../_images/notebook-code_67_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#date</span>
+<span class="n">plot_viz2</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">created_on</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">)))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">()</span><span class="o">+</span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">lm</span><span class="p">)</span><span class="o">+</span> 
+  <span class="nf">facet_grid</span><span class="p">(</span><span class="n">property_type</span> <span class="o">~</span> <span class="n">operation</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_viz2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/notebook-code_69_1.png" src="../_images/notebook-code_69_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#operation</span>
+<span class="n">plot_viz3</span> <span class="o">=</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">operation</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;boxplot&quot;</span><span class="p">))</span><span class="o">+</span> 
+  <span class="nf">facet_grid</span><span class="p">(</span><span class="n">.</span> <span class="o">~</span> <span class="n">property_type</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_viz3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_71_0.png" src="../_images/notebook-code_71_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#states</span>
+<span class="n">plot_viz4</span> <span class="o">=</span> <span class="nf">qplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;boxplot&quot;</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="n">hjust</span><span class="o">=</span><span class="m">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_viz4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_73_0.png" src="../_images/notebook-code_73_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>Removing date as predictor</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df_task</span> <span class="o">=</span> <span class="n">df</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">created_on</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#write.csv(df_task,&quot;df_task.csv&quot;, row.names = FALSE)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#df_task = as_tibble(read.csv(&quot;df_task.csv&quot;))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">df_task</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 6</caption>
+<thead>
+	<tr><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>rent</td><td>store    </td><td>Moema      </td><td>-23.60940</td><td>-46.66784</td><td>40.15649</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65414</td><td>-46.52468</td><td>40.25133</td></tr>
+	<tr><td>rent</td><td>apartment</td><td>Brooklin   </td><td>-23.55874</td><td>-46.69859</td><td>40.50969</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="predictive-modelling">
+<h2>3. Predictive Modelling<a class="headerlink" href="#predictive-modelling" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">mlr3</span></code> package</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code> - input data with defined target variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">learner</span></code> - regression models</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hyperparameters</span></code> - 1 to 2 per learner</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tuning</span></code> - hyperparameter optimization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluation</span></code> - stopping criteria</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resampling</span></code> - inner and outer cross-validation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> - rmse</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">benchmark</span></code> - model comparison</p></li>
+<li><p>minimal search space due to resource constraint</p></li>
+</ul>
+<div class="section" id="id2">
+<h3>Summary<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Compared 7 models based on rsme:</p></li>
+<li><p>Linear</p></li>
+<li><p>CART</p></li>
+<li><p>Tuned CART</p></li>
+<li><p>XGBoost</p></li>
+<li><p>Tuned XGBoost</p></li>
+<li><p><strong>Random Forest</strong></p></li>
+<li><p>Tuned Random Forest</p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="task">
+<h4>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">price_predict</span> <span class="o">=</span> <span class="n">TaskRegr</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;price_predict&quot;</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">df_task</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="s">&quot;price_usd_per_m2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="factor-encoding">
+<h5>Factor encoding<a class="headerlink" href="#factor-encoding" title="Permalink to this headline">¶</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#factor encoder</span>
+<span class="n">fencoder</span> <span class="o">=</span> <span class="nf">po</span><span class="p">(</span><span class="s">&quot;encode&quot;</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;treatment&quot;</span><span class="p">,</span>
+  <span class="n">affect_columns</span> <span class="o">=</span> <span class="nf">selector_type</span><span class="p">(</span><span class="s">&quot;factor&quot;</span><span class="p">))</span>
+<span class="n">fencoder</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">price_predict</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$output
+&lt;TaskRegr:price_predict&gt; (152106 x 16)
+* Target: price_usd_per_m2
+* Properties: -
+* Features (15):
+  - dbl (15): lat, lon, operation.sell, place_name.Campo.Belo,
+    place_name.Centro, place_name.Cotia, place_name.Moema,
+    place_name.Morumbi, place_name.Perdizes, place_name.Praia.Grande,
+    place_name.Santo.André, place_name.Vila.Mariana, property_type.PH,
+    property_type.house, property_type.store
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TaskRegr:price_predict&gt; (152106 x 6)
+* Target: price_usd_per_m2
+* Properties: -
+* Features (5):
+  - fct (3): operation, place_name, property_type
+  - dbl (2): lat, lon
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuning">
+<h4>Tuning<a class="headerlink" href="#tuning" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">tuner_grid</span> <span class="o">=</span> <span class="n">mlr3tuning</span><span class="o">::</span><span class="nf">tnr</span><span class="p">(</span><span class="s">&quot;grid_search&quot;</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="m">2L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="evaluation">
+<h4>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">term_evals</span> <span class="o">=</span> <span class="nf">trm</span><span class="p">(</span><span class="s">&quot;evals&quot;</span><span class="p">,</span> <span class="n">n_evals</span> <span class="o">=</span> <span class="m">2L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resampling">
+<h4>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">resampling_cv</span> <span class="o">=</span> <span class="nf">rsmp</span><span class="p">(</span><span class="s">&quot;cv&quot;</span><span class="p">,</span> <span class="n">folds</span> <span class="o">=</span> <span class="m">2L</span><span class="p">)</span>
+<span class="n">resampling_outer</span> <span class="o">=</span> <span class="nf">rsmp</span><span class="p">(</span><span class="s">&quot;cv&quot;</span><span class="p">,</span> <span class="n">folds</span> <span class="o">=</span> <span class="m">3L</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="measure">
+<h4>Measure<a class="headerlink" href="#measure" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">measure</span> <span class="o">=</span> <span class="nf">msr</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="learners">
+<h4>Learners<a class="headerlink" href="#learners" title="Permalink to this headline">¶</a></h4>
+<p><strong>1. Cart</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">rpart_learner</span> <span class="o">=</span> <span class="nf">lrn</span><span class="p">(</span><span class="s">&quot;regr.rpart&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>2. Tuned Cart</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">rpart_learner</span><span class="o">$</span><span class="n">param_set</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ParamSet&gt;
+                id    class lower upper      levels        default value
+ 1:       minsplit ParamInt     1   Inf                         20      
+ 2:      minbucket ParamInt     1   Inf             &lt;NoDefault[3]&gt;      
+ 3:             cp ParamDbl     0     1                       0.01      
+ 4:     maxcompete ParamInt     0   Inf                          4      
+ 5:   maxsurrogate ParamInt     0   Inf                          5      
+ 6:       maxdepth ParamInt     1    30                         30      
+ 7:   usesurrogate ParamInt     0     2                          2      
+ 8: surrogatestyle ParamInt     0     1                          0      
+ 9:           xval ParamInt     0   Inf                         10     0
+10:     keep_model ParamLgl    NA    NA  TRUE,FALSE          FALSE      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># hyperparameter</span>
+<span class="n">param_set_cart</span> <span class="o">=</span> <span class="n">ParamSet</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span>
+    <span class="n">ParamInt</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;minsplit&quot;</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="m">1L</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="m">5L</span><span class="p">),</span>
+    <span class="n">ParamDbl</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;cp&quot;</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="m">0.01</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">123456</span><span class="p">)</span>
+<span class="n">at_rpart</span> <span class="o">=</span> <span class="n">AutoTuner</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">rpart_learner</span><span class="p">,</span>
+  <span class="n">resampling</span> <span class="o">=</span> <span class="n">resampling_cv</span><span class="p">,</span>
+  <span class="n">measure</span> <span class="o">=</span> <span class="n">measure</span><span class="p">,</span>
+  <span class="n">search_space</span> <span class="o">=</span> <span class="n">param_set_cart</span><span class="p">,</span>
+  <span class="n">terminator</span> <span class="o">=</span> <span class="n">term_evals</span><span class="p">,</span>
+  <span class="n">tuner</span> <span class="o">=</span> <span class="n">tuner_grid</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">at_rpart</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+<span class="n">archive_rpart</span> <span class="o">=</span> <span class="n">at_rpart</span><span class="o">$</span><span class="n">archive</span><span class="o">$</span><span class="nf">data</span><span class="p">()[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">,</span>
+                                            <span class="s">&quot;minsplit&quot;</span><span class="p">,</span>
+                                            <span class="s">&quot;cp&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO  [09:29:35.691] Starting to optimize 2 parameter(s) with &#39;&lt;OptimizerGridSearch&gt;&#39; and &#39;&lt;TerminatorEvals&gt;&#39; 
+INFO  [09:29:35.885] Evaluating 1 configuration(s) 
+INFO  [09:29:35.954] Benchmark with 2 resampling iterations 
+INFO  [09:29:36.119] Applying learner &#39;regr.rpart&#39; on task &#39;price_predict&#39; (iter 1/2) 
+INFO  [09:29:36.857] Applying learner &#39;regr.rpart&#39; on task &#39;price_predict&#39; (iter 2/2) 
+INFO  [09:29:37.468] Finished benchmark 
+INFO  [09:29:38.077] Result of batch 1: 
+INFO  [09:29:38.081]  minsplit  cp regr.rmse                                uhash 
+INFO  [09:29:38.081]         5 0.1  717.6381 f7709112-40ae-4f69-9c41-61587e7f3d48 
+INFO  [09:29:38.086] Evaluating 1 configuration(s) 
+INFO  [09:29:38.166] Benchmark with 2 resampling iterations 
+INFO  [09:29:38.186] Applying learner &#39;regr.rpart&#39; on task &#39;price_predict&#39; (iter 1/2) 
+INFO  [09:29:38.655] Applying learner &#39;regr.rpart&#39; on task &#39;price_predict&#39; (iter 2/2) 
+INFO  [09:29:39.228] Finished benchmark 
+INFO  [09:29:39.364] Result of batch 2: 
+INFO  [09:29:39.368]  minsplit  cp regr.rmse                                uhash 
+INFO  [09:29:39.368]         1 0.1  1083.122 85ded50b-b92f-4ffb-ab7d-d4ff27feb7ba 
+INFO  [09:29:39.414] Finished optimizing after 2 evaluation(s) 
+INFO  [09:29:39.416] Result: 
+INFO  [09:29:39.435]  minsplit  cp learner_param_vals  x_domain regr.rmse 
+INFO  [09:29:39.435]         5 0.1          &lt;list[3]&gt; &lt;list[2]&gt;  717.6381 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">archive_rpart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   regr.rmse minsplit  cp
+1:  717.6381        5 0.1
+2: 1083.1219        1 0.1
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>3. Linear Model</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lm_learner</span> <span class="o">=</span> <span class="nf">lrn</span><span class="p">(</span><span class="s">&quot;regr.lm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>4. XGBoost</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pipe_xgb</span> <span class="o">=</span> <span class="n">fencoder</span> <span class="o">%&gt;&gt;%</span> <span class="nf">lrn</span><span class="p">(</span><span class="s">&quot;regr.xgboost&quot;</span><span class="p">)</span>
+<span class="n">xgb_learner</span> <span class="o">=</span> <span class="n">GraphLearner</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">pipe_xgb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>5. Tuned XGBoost</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">xgb_learner</span><span class="o">$</span><span class="n">param_set</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ParamSetCollection&gt;
+                                      id    class lower upper
+ 1:                        encode.method ParamFct    NA    NA
+ 2:                encode.affect_columns ParamUty    NA    NA
+ 3:                 regr.xgboost.booster ParamFct    NA    NA
+ 4:               regr.xgboost.watchlist ParamUty    NA    NA
+ 5:                     regr.xgboost.eta ParamDbl     0     1
+ 6:                   regr.xgboost.gamma ParamDbl     0   Inf
+ 7:               regr.xgboost.max_depth ParamInt     0   Inf
+ 8:        regr.xgboost.min_child_weight ParamDbl     0   Inf
+ 9:               regr.xgboost.subsample ParamDbl     0     1
+10:        regr.xgboost.colsample_bytree ParamDbl     0     1
+11:       regr.xgboost.colsample_bylevel ParamDbl     0     1
+12:        regr.xgboost.colsample_bynode ParamDbl     0     1
+13:       regr.xgboost.num_parallel_tree ParamInt     1   Inf
+14:                  regr.xgboost.lambda ParamDbl     0   Inf
+15:             regr.xgboost.lambda_bias ParamDbl     0   Inf
+16:                   regr.xgboost.alpha ParamDbl     0   Inf
+17:               regr.xgboost.objective ParamUty    NA    NA
+18:             regr.xgboost.eval_metric ParamUty    NA    NA
+19:              regr.xgboost.base_score ParamDbl  -Inf   Inf
+20:          regr.xgboost.max_delta_step ParamDbl     0   Inf
+21:                 regr.xgboost.missing ParamDbl  -Inf   Inf
+22:    regr.xgboost.monotone_constraints ParamInt    -1     1
+23:  regr.xgboost.tweedie_variance_power ParamDbl     1     2
+24:                 regr.xgboost.nthread ParamInt     1   Inf
+25:                 regr.xgboost.nrounds ParamInt     1   Inf
+26:                   regr.xgboost.feval ParamUty    NA    NA
+27:                 regr.xgboost.verbose ParamInt     0     2
+28:           regr.xgboost.print_every_n ParamInt     1   Inf
+29:   regr.xgboost.early_stopping_rounds ParamInt     1   Inf
+30:                regr.xgboost.maximize ParamLgl    NA    NA
+31:             regr.xgboost.sample_type ParamFct    NA    NA
+32:          regr.xgboost.normalize_type ParamFct    NA    NA
+33:               regr.xgboost.rate_drop ParamDbl     0     1
+34:               regr.xgboost.skip_drop ParamDbl     0     1
+35:                regr.xgboost.one_drop ParamLgl    NA    NA
+36:             regr.xgboost.tree_method ParamFct    NA    NA
+37:             regr.xgboost.grow_policy ParamFct    NA    NA
+38:              regr.xgboost.max_leaves ParamInt     0   Inf
+39:                 regr.xgboost.max_bin ParamInt     2   Inf
+40:               regr.xgboost.callbacks ParamUty    NA    NA
+41:              regr.xgboost.sketch_eps ParamDbl     0     1
+42:        regr.xgboost.scale_pos_weight ParamDbl  -Inf   Inf
+43:                 regr.xgboost.updater ParamUty    NA    NA
+44:            regr.xgboost.refresh_leaf ParamLgl    NA    NA
+45:        regr.xgboost.feature_selector ParamFct    NA    NA
+46:                   regr.xgboost.top_k ParamInt     0   Inf
+47:               regr.xgboost.predictor ParamFct    NA    NA
+48:             regr.xgboost.save_period ParamInt     0   Inf
+49:               regr.xgboost.save_name ParamUty    NA    NA
+50:               regr.xgboost.xgb_model ParamUty    NA    NA
+51: regr.xgboost.interaction_constraints ParamUty    NA    NA
+52:            regr.xgboost.outputmargin ParamLgl    NA    NA
+53:              regr.xgboost.ntreelimit ParamInt     1   Inf
+54:                regr.xgboost.predleaf ParamLgl    NA    NA
+55:             regr.xgboost.predcontrib ParamLgl    NA    NA
+56:           regr.xgboost.approxcontrib ParamLgl    NA    NA
+57:         regr.xgboost.predinteraction ParamLgl    NA    NA
+58:                 regr.xgboost.reshape ParamLgl    NA    NA
+59:                regr.xgboost.training ParamLgl    NA    NA
+                                      id    class lower upper
+                                  levels        default         value
+ 1:   one-hot,treatment,helmert,poly,sum &lt;NoDefault[3]&gt;     treatment
+ 2:                                       &lt;Selector[1]&gt; &lt;Selector[1]&gt;
+ 3:                 gbtree,gblinear,dart         gbtree              
+ 4:                                                                  
+ 5:                                                 0.3              
+ 6:                                                   0              
+ 7:                                                   6              
+ 8:                                                   1              
+ 9:                                                   1              
+10:                                                   1              
+11:                                                   1              
+12:                                                   1              
+13:                                                   1              
+14:                                                   1              
+15:                                                   0              
+16:                                                   0              
+17:                                          reg:linear              
+18:                                                rmse              
+19:                                                 0.5              
+20:                                                   0              
+21:                                                  NA              
+22:                                                   0              
+23:                                                 1.5              
+24:                                      &lt;NoDefault[3]&gt;              
+25:                                      &lt;NoDefault[3]&gt;             1
+26:                                                                  
+27:                                                   1             0
+28:                                                   1              
+29:                                                                  
+30:                           TRUE,FALSE                             
+31:                     uniform,weighted        uniform              
+32:                          tree,forest           tree              
+33:                                                   0              
+34:                                                   0              
+35:                           TRUE,FALSE          FALSE              
+36:      auto,exact,approx,hist,gpu_hist           auto              
+37:                  depthwise,lossguide      depthwise              
+38:                                                   0              
+39:                                                 256              
+40:                                           &lt;list[0]&gt;              
+41:                                                0.03              
+42:                                                   1              
+43:                                      &lt;NoDefault[3]&gt;              
+44:                           TRUE,FALSE           TRUE              
+45: cyclic,shuffle,random,greedy,thrifty         cyclic              
+46:                                                   0              
+47:          cpu_predictor,gpu_predictor  cpu_predictor              
+48:                                                                  
+49:                                                                  
+50:                                                                  
+51:                                      &lt;NoDefault[3]&gt;              
+52:                           TRUE,FALSE          FALSE              
+53:                                                                  
+54:                           TRUE,FALSE          FALSE              
+55:                           TRUE,FALSE          FALSE              
+56:                           TRUE,FALSE          FALSE              
+57:                           TRUE,FALSE          FALSE              
+58:                           TRUE,FALSE          FALSE              
+59:                           TRUE,FALSE          FALSE              
+                                  levels        default         value
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">param_set_xgb</span> <span class="o">=</span> <span class="n">ParamSet</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span>
+    <span class="n">ParamInt</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;regr.xgboost.eta&quot;</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="m">0L</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="m">1L</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">123456</span><span class="p">)</span>
+<span class="n">at_xgb</span> <span class="o">=</span> <span class="n">AutoTuner</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">xgb_learner</span><span class="p">,</span>
+  <span class="n">resampling</span> <span class="o">=</span> <span class="n">resampling_cv</span><span class="p">,</span>
+  <span class="n">measure</span> <span class="o">=</span> <span class="n">measure</span><span class="p">,</span>
+  <span class="n">search_space</span> <span class="o">=</span> <span class="n">param_set_xgb</span><span class="p">,</span>
+  <span class="n">terminator</span> <span class="o">=</span> <span class="n">term_evals</span><span class="p">,</span>
+  <span class="n">tuner</span> <span class="o">=</span> <span class="n">tuner_grid</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">at_xgb</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO  [09:29:44.464] Starting to optimize 1 parameter(s) with &#39;&lt;OptimizerGridSearch&gt;&#39; and &#39;&lt;TerminatorEvals&gt;&#39; 
+INFO  [09:29:44.471] Evaluating 1 configuration(s) 
+INFO  [09:29:46.131] Benchmark with 2 resampling iterations 
+INFO  [09:29:46.135] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 1/2) 
+[09:29:48] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:29:50.507] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 2/2) 
+[09:29:51] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:29:54.922] Finished benchmark 
+INFO  [09:29:54.982] Result of batch 1: 
+INFO  [09:29:54.986]  regr.xgboost.eta regr.rmse                                uhash 
+INFO  [09:29:54.986]                 0  2322.514 df7ea5b8-7c2e-49db-9b80-840d924b52ba 
+INFO  [09:29:55.003] Evaluating 1 configuration(s) 
+INFO  [09:29:56.048] Benchmark with 2 resampling iterations 
+INFO  [09:29:56.051] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 1/2) 
+[09:29:56] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:29:57.597] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 2/2) 
+[09:29:58] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:30:01.293] Finished benchmark 
+INFO  [09:30:01.400] Result of batch 2: 
+INFO  [09:30:01.404]  regr.xgboost.eta regr.rmse                                uhash 
+INFO  [09:30:01.404]                 1  634.7535 10435512-199a-4d84-b609-d2fe7715f7ac 
+INFO  [09:30:01.547] Finished optimizing after 2 evaluation(s) 
+INFO  [09:30:01.561] Result: 
+INFO  [09:30:01.564]  regr.xgboost.eta learner_param_vals  x_domain regr.rmse 
+INFO  [09:30:01.564]                 1          &lt;list[5]&gt; &lt;list[1]&gt;  634.7535 
+[09:30:06] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">archive_at_xgb</span> <span class="o">=</span> <span class="n">at_xgb</span><span class="o">$</span><span class="n">archive</span><span class="o">$</span><span class="nf">data</span><span class="p">()[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">,</span>
+                                          <span class="s">&quot;regr.xgboost.eta&quot;</span><span class="p">)]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">archive_at_xgb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   regr.rmse regr.xgboost.eta
+1: 2322.5139                0
+2:  634.7535                1
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>6. Random Forest</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#pipe_ranger = fencoder %&gt;&gt;% lrn(&quot;regr.ranger&quot;, importance = &quot;impurity&quot;)</span>
+<span class="c1">#ranger_learner_encoded = GraphLearner$new(pipe_ranger)</span>
+
+
+<span class="n">ranger_learner</span> <span class="o">=</span> <span class="nf">lrn</span><span class="p">(</span><span class="s">&quot;regr.ranger&quot;</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="s">&quot;impurity&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">filter_ranger</span> <span class="o">=</span> <span class="nf">flt</span><span class="p">(</span><span class="s">&quot;importance&quot;</span><span class="p">,</span> <span class="n">learner</span> <span class="o">=</span> <span class="n">ranger_learner</span><span class="p">)</span>
+<span class="n">filter_ranger</span><span class="o">$</span><span class="nf">calculate</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+<span class="n">feature_importance</span> <span class="o">=</span> <span class="nf">as.data.table</span><span class="p">(</span><span class="n">filter_ranger</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Growing trees.. Progress: 30%. Estimated remaining time: 1 minute, 12 seconds.
+Growing trees.. Progress: 62%. Estimated remaining time: 38 seconds.
+Growing trees.. Progress: 92%. Estimated remaining time: 8 seconds.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">feature_importance</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A data.table: 5 × 2</caption>
+<thead>
+	<tr><th scope=col>feature</th><th scope=col>score</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>lon          </td><td>61794297911</td></tr>
+	<tr><td>lat          </td><td>34518185571</td></tr>
+	<tr><td>place_name   </td><td>15128225927</td></tr>
+	<tr><td>property_type</td><td>15038748344</td></tr>
+	<tr><td>operation    </td><td> 1022568807</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p><strong>7. Tuned Random Forest</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ranger_learner</span><span class="o">$</span><span class="n">param_set</span>
+<span class="c1">#ranger_learner_encoded$param_set</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ParamSet&gt;
+                              id    class lower upper
+ 1:                        alpha ParamDbl  -Inf   Inf
+ 2:       always.split.variables ParamUty    NA    NA
+ 3:                      holdout ParamLgl    NA    NA
+ 4:                   importance ParamFct    NA    NA
+ 5:                   keep.inbag ParamLgl    NA    NA
+ 6:                    max.depth ParamInt  -Inf   Inf
+ 7:                min.node.size ParamInt     1   Inf
+ 8:                     min.prop ParamDbl  -Inf   Inf
+ 9:                      minprop ParamDbl  -Inf   Inf
+10:                         mtry ParamInt     1   Inf
+11:            num.random.splits ParamInt     1   Inf
+12:                  num.threads ParamInt     1   Inf
+13:                    num.trees ParamInt     1   Inf
+14:                    oob.error ParamLgl    NA    NA
+15:                  predict.all ParamLgl    NA    NA
+16:                     quantreg ParamLgl    NA    NA
+17:        regularization.factor ParamUty    NA    NA
+18:      regularization.usedepth ParamLgl    NA    NA
+19:                      replace ParamLgl    NA    NA
+20:    respect.unordered.factors ParamFct    NA    NA
+21:              sample.fraction ParamDbl     0     1
+22:                  save.memory ParamLgl    NA    NA
+23: scale.permutation.importance ParamLgl    NA    NA
+24:                    se.method ParamFct    NA    NA
+25:                         seed ParamInt  -Inf   Inf
+26:         split.select.weights ParamDbl     0     1
+27:                    splitrule ParamFct    NA    NA
+28:                      verbose ParamLgl    NA    NA
+29:                 write.forest ParamLgl    NA    NA
+                              id    class lower upper
+                                          levels        default    parents
+ 1:                                                         0.5  splitrule
+ 2:                                              &lt;NoDefault[3]&gt;           
+ 3:                                   TRUE,FALSE          FALSE           
+ 4: none,impurity,impurity_corrected,permutation &lt;NoDefault[3]&gt;           
+ 5:                                   TRUE,FALSE          FALSE           
+ 6:                                                                       
+ 7:                                                           5           
+ 8:                                                         0.1           
+ 9:                                                         0.1  splitrule
+10:                                              &lt;NoDefault[3]&gt;           
+11:                                                           1  splitrule
+12:                                              &lt;NoDefault[3]&gt;           
+13:                                                         500           
+14:                                   TRUE,FALSE           TRUE           
+15:                                   TRUE,FALSE          FALSE           
+16:                                   TRUE,FALSE          FALSE           
+17:                                                           1           
+18:                                   TRUE,FALSE          FALSE           
+19:                                   TRUE,FALSE           TRUE           
+20:                       ignore,order,partition         ignore           
+21:                                              &lt;NoDefault[3]&gt;           
+22:                                   TRUE,FALSE          FALSE           
+23:                                   TRUE,FALSE          FALSE importance
+24:                                 jack,infjack        infjack           
+25:                                                                       
+26:                                              &lt;NoDefault[3]&gt;           
+27:                  variance,extratrees,maxstat       variance           
+28:                                   TRUE,FALSE           TRUE           
+29:                                   TRUE,FALSE           TRUE           
+                                          levels        default    parents
+       value
+ 1:         
+ 2:         
+ 3:         
+ 4: impurity
+ 5:         
+ 6:         
+ 7:         
+ 8:         
+ 9:         
+10:         
+11:         
+12:         
+13:         
+14:         
+15:         
+16:         
+17:         
+18:         
+19:         
+20:         
+21:         
+22:         
+23:         
+24:         
+25:         
+26:         
+27:         
+28:         
+29:         
+       value
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">param_set_ranger</span> <span class="o">=</span> <span class="n">ParamSet</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span>
+    <span class="n">ParamInt</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;regr.ranger.mtry&quot;</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="m">1L</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="m">5L</span><span class="p">),</span>
+    <span class="n">ParamInt</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="s">&quot;importance.filter.nfeat&quot;</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="m">1L</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="m">5L</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">po_flt</span> <span class="o">=</span> <span class="nf">po</span><span class="p">(</span><span class="s">&quot;filter&quot;</span><span class="p">,</span> <span class="n">filter_ranger</span><span class="p">,</span> <span class="n">param_vals</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">filter.nfeat</span> <span class="o">=</span> <span class="m">5L</span><span class="p">))</span> <span class="o">%&gt;&gt;%</span>
+  <span class="nf">po</span><span class="p">(</span><span class="s">&quot;learner&quot;</span><span class="p">,</span> <span class="n">ranger_learner</span><span class="o">$</span><span class="nf">clone</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="nf">generate_design_grid</span><span class="p">(</span><span class="n">param_set_ranger</span><span class="p">,</span> <span class="n">resolution</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">$</span><span class="n">data</span> <span class="o">=</span> <span class="n">grid</span><span class="o">$</span><span class="n">data</span><span class="p">[</span><span class="n">regr.ranger.mtry</span> <span class="o">&lt;=</span> <span class="n">importance.filter.nfeat</span><span class="p">]</span>
+<span class="n">grid</span><span class="o">$</span><span class="n">data</span> <span class="o">=</span> <span class="n">grid</span><span class="o">$</span><span class="n">data</span><span class="p">[</span><span class="n">importance.filter.nfeat</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">123456</span><span class="p">)</span>
+
+<span class="n">ranger_learner_graph</span> <span class="o">=</span> <span class="n">GraphLearner</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">po_flt</span><span class="p">)</span>
+
+<span class="n">at_ranger</span> <span class="o">=</span> <span class="n">AutoTuner</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">ranger_learner_graph</span><span class="p">,</span>
+  <span class="n">resampling</span> <span class="o">=</span> <span class="n">resampling_cv</span><span class="p">,</span>
+  <span class="n">measure</span> <span class="o">=</span> <span class="n">measure</span><span class="p">,</span>
+  <span class="n">search_space</span> <span class="o">=</span> <span class="n">param_set_ranger</span><span class="p">,</span>
+  <span class="n">terminator</span> <span class="o">=</span> <span class="n">term_evals</span><span class="p">,</span>
+  <span class="n">tuner</span> <span class="o">=</span> <span class="n">mlr3tuning</span><span class="o">::</span><span class="nf">tnr</span><span class="p">(</span><span class="s">&quot;design_points&quot;</span><span class="p">,</span> <span class="n">design</span> <span class="o">=</span> <span class="n">grid</span><span class="o">$</span><span class="n">data</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># at_ranger$store_tuning_instance = FALSE</span>
+<span class="n">at_ranger</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO  [09:32:05.060] Starting to optimize 2 parameter(s) with &#39;&lt;OptimizerDesignPoints&gt;&#39; and &#39;&lt;TerminatorEvals&gt;&#39; 
+INFO  [09:32:05.082] Evaluating 1 configuration(s) 
+INFO  [09:32:06.529] Benchmark with 2 resampling iterations 
+INFO  [09:32:06.532] Applying learner &#39;importance.regr.ranger&#39; on task &#39;price_predict&#39; (iter 1/2) 
+Growing trees.. Progress: 84%. Estimated remaining time: 5 seconds.
+Growing trees.. Progress: 56%. Estimated remaining time: 24 seconds.
+INFO  [09:34:09.225] Applying learner &#39;importance.regr.ranger&#39; on task &#39;price_predict&#39; (iter 2/2) 
+Growing trees.. Progress: 73%. Estimated remaining time: 11 seconds.
+Growing trees.. Progress: 62%. Estimated remaining time: 19 seconds.
+INFO  [09:36:14.478] Finished benchmark 
+INFO  [09:36:14.601] Result of batch 1: 
+INFO  [09:36:14.605]  regr.ranger.mtry importance.filter.nfeat regr.rmse 
+INFO  [09:36:14.605]                 1                       1  603.7768 
+INFO  [09:36:14.605]                                 uhash 
+INFO  [09:36:14.605]  f46ad5a2-7cd5-4104-90ce-9a788295e90c 
+INFO  [09:36:14.622] Evaluating 1 configuration(s) 
+INFO  [09:36:17.284] Benchmark with 2 resampling iterations 
+INFO  [09:36:17.304] Applying learner &#39;importance.regr.ranger&#39; on task &#39;price_predict&#39; (iter 1/2) 
+Growing trees.. Progress: 75%. Estimated remaining time: 10 seconds.
+Growing trees.. Progress: 59%. Estimated remaining time: 21 seconds.
+INFO  [09:38:14.727] Applying learner &#39;importance.regr.ranger&#39; on task &#39;price_predict&#39; (iter 2/2) 
+Growing trees.. Progress: 94%. Estimated remaining time: 1 seconds.
+Growing trees.. Progress: 90%. Estimated remaining time: 3 seconds.
+INFO  [09:39:44.432] Finished benchmark 
+INFO  [09:39:44.471] Result of batch 2: 
+INFO  [09:39:44.474]  regr.ranger.mtry importance.filter.nfeat regr.rmse 
+INFO  [09:39:44.474]                 1                       2  555.7104 
+INFO  [09:39:44.474]                                 uhash 
+INFO  [09:39:44.474]  6633facc-3f5a-4245-9531-62580c7931ff 
+INFO  [09:39:44.578] Finished optimizing after 2 evaluation(s) 
+INFO  [09:39:44.581] Result: 
+INFO  [09:39:44.583]  regr.ranger.mtry importance.filter.nfeat learner_param_vals  x_domain 
+INFO  [09:39:44.583]                 1                       2          &lt;list[4]&gt; &lt;list[2]&gt; 
+INFO  [09:39:44.583]  regr.rmse 
+INFO  [09:39:44.583]   555.7104 
+Growing trees.. Progress: 66%. Estimated remaining time: 16 seconds.
+Growing trees.. Progress: 40%. Estimated remaining time: 46 seconds.
+Growing trees.. Progress: 79%. Estimated remaining time: 16 seconds.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">archive_ranger</span> <span class="o">=</span> <span class="n">at_ranger</span><span class="o">$</span><span class="n">archive</span><span class="o">$</span><span class="nf">data</span><span class="p">()[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">,</span><span class="s">&quot;importance.filter.nfeat&quot;</span><span class="p">,</span><span class="s">&quot;regr.ranger.mtry&quot;</span><span class="p">)]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">archive_ranger</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   regr.rmse importance.filter.nfeat regr.ranger.mtry
+1:  603.7768                       1                1
+2:  555.7104                       2                1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="benchmarking">
+<h3>Benchmarking<a class="headerlink" href="#benchmarking" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lrns</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">rpart_learner</span><span class="p">,</span>
+            <span class="n">lm_learner</span><span class="p">,</span>
+            <span class="n">xgb_learner</span><span class="p">,</span>
+            <span class="n">ranger_learner</span><span class="p">,</span>
+            <span class="n">at_rpart</span><span class="p">,</span>
+            <span class="n">at_xgb</span><span class="p">,</span>
+            <span class="n">at_ranger</span>
+<span class="p">)</span>
+<span class="n">design</span> <span class="o">=</span> <span class="nf">benchmark_grid</span><span class="p">(</span>
+  <span class="n">tasks</span> <span class="o">=</span> <span class="n">price_predict</span><span class="p">,</span>
+  <span class="n">learners</span> <span class="o">=</span> <span class="n">lrns</span><span class="p">,</span>
+  <span class="n">resamplings</span> <span class="o">=</span> <span class="n">resampling_outer</span>
+<span class="p">)</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">123456</span><span class="p">)</span>
+<span class="n">bmr</span> <span class="o">=</span> <span class="nf">benchmark</span><span class="p">(</span><span class="n">design</span><span class="p">)</span>
+<span class="n">bmr_table</span> <span class="o">=</span> <span class="n">bmr</span><span class="o">$</span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">msr</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span> <span class="n">resample_result</span><span class="p">,</span> <span class="n">task_id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_bmr</span> <span class="o">=</span> <span class="nf">autoplot</span><span class="p">(</span><span class="n">bmr</span><span class="p">,</span> <span class="n">measure</span> <span class="o">=</span> <span class="nf">msr</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">theme_bw</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s">&quot;RMSE&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">9</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_bmr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_127_0.png" src="../_images/notebook-code_127_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">bmr_table</span> <span class="o">=</span> <span class="n">bmr</span><span class="o">$</span><span class="nf">aggregate</span><span class="p">(</span><span class="nf">msr</span><span class="p">(</span><span class="s">&quot;regr.rmse&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span> <span class="n">resample_result</span><span class="p">,</span> <span class="n">task_id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">bmr_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A data.table: 7 × 4</caption>
+<thead>
+	<tr><th scope=col>learner_id</th><th scope=col>resampling_id</th><th scope=col>iters</th><th scope=col>regr.rmse</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>regr.rpart                  </td><td>cv</td><td>3</td><td> 662.7119</td></tr>
+	<tr><td>regr.lm                     </td><td>cv</td><td>3</td><td> 655.6044</td></tr>
+	<tr><td>encode.regr.xgboost         </td><td>cv</td><td>3</td><td>1687.7107</td></tr>
+	<tr><td>regr.ranger                 </td><td>cv</td><td>3</td><td> 567.1635</td></tr>
+	<tr><td>regr.rpart.tuned            </td><td>cv</td><td>3</td><td> 802.2880</td></tr>
+	<tr><td>encode.regr.xgboost.tuned   </td><td>cv</td><td>3</td><td> 634.7254</td></tr>
+	<tr><td>importance.regr.ranger.tuned</td><td>cv</td><td>3</td><td> 549.3394</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="implementing-the-chosen-model-on-full-data">
+<h3>Implementing the chosen model on full data<a class="headerlink" href="#implementing-the-chosen-model-on-full-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trained</span> <span class="o">=</span> <span class="n">ranger_learner</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">prediction</span> <span class="o">=</span> <span class="n">trained</span><span class="o">$</span><span class="nf">predict</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Defining differences variable</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dt_prediction</span> <span class="o">=</span> <span class="nf">as.data.table</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+<span class="n">dt_prediction</span><span class="p">[,</span> <span class="n">differences</span> <span class="o">:=</span> <span class="n">truth</span> <span class="o">-</span> <span class="n">response</span><span class="p">]</span>
+<span class="n">dt_prediction</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">differences</span> <span class="o">&lt;</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;under&quot;</span><span class="p">,</span> <span class="s">&quot;over&quot;</span><span class="p">)]</span>
+<span class="n">dt_prediction</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">model_valuation</span><span class="p">)]</span>
+<span class="nf">setnames</span><span class="p">(</span><span class="n">dt_prediction</span><span class="p">,</span> <span class="s">&quot;response&quot;</span><span class="p">,</span> <span class="s">&quot;predict_price&quot;</span><span class="p">)</span>
+
+<span class="n">dt_prediction</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;row_id&quot;</span><span class="p">,</span><span class="s">&quot;truth&quot;</span><span class="p">)</span> <span class="o">:=</span> <span class="kc">NULL</span><span class="p">]</span>
+
+<span class="n">tb_prediction</span> <span class="o">=</span> <span class="nf">as_tibble</span><span class="p">(</span><span class="n">dt_prediction</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">tb_prediction</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>predict_price</th><th scope=col>differences</th><th scope=col>model_valuation</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>139.5672</td><td> -99.41068</td><td>under</td></tr>
+	<tr><td>502.5181</td><td>-462.26674</td><td>under</td></tr>
+	<tr><td>276.3784</td><td>-235.86872</td><td>under</td></tr>
+	<tr><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+	<tr><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+	<tr><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span> <span class="o">=</span> <span class="n">df_task</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="nf">bind_cols</span><span class="p">(</span><span class="n">df_final</span><span class="p">,</span> <span class="n">tb_prediction</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th><th scope=col>predict_price</th><th scope=col>differences</th><th scope=col>model_valuation</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>sell</td><td>apartment</td><td>Campo Belo  </td><td>-23.62064</td><td>-46.67714</td><td>44.28424</td><td>3260.2373</td><td>-3215.9530</td><td>under</td></tr>
+	<tr><td>sell</td><td>apartment</td><td>Brooklin    </td><td>-23.62648</td><td>-46.67448</td><td>48.84330</td><td>3277.2092</td><td>-3228.3659</td><td>under</td></tr>
+	<tr><td>sell</td><td>apartment</td><td>Vila Mariana</td><td>-23.58087</td><td>-46.63510</td><td>53.27452</td><td>3085.7016</td><td>-3032.4271</td><td>under</td></tr>
+	<tr><td>sell</td><td>apartment</td><td>Moema       </td><td>-23.60427</td><td>-46.65564</td><td>55.56490</td><td>3697.1178</td><td>-3641.5529</td><td>under</td></tr>
+	<tr><td>sell</td><td>apartment</td><td>Morumbi     </td><td>-23.62682</td><td>-46.74100</td><td>69.25044</td><td>1928.9564</td><td>-1859.7059</td><td>under</td></tr>
+	<tr><td>sell</td><td>apartment</td><td>Centro      </td><td>-23.93731</td><td>-47.09724</td><td>72.40732</td><td> 733.3136</td><td> -660.9063</td><td>under</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="random-forest">
+<h3>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">price_usd_per_m2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">predict_price</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">differences</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="nf">ggMarginal</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_137_0.png" src="../_images/notebook-code_137_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_138_0.png" src="../_images/notebook-code_138_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="tuned-xgboost-for-comparison">
+<h3>Tuned XGBoost for comparison<a class="headerlink" href="#tuned-xgboost-for-comparison" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># for comparison</span>
+<span class="n">trained2</span> <span class="o">=</span> <span class="n">at_xgb</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+<span class="n">prediction2</span> <span class="o">=</span> <span class="n">trained2</span><span class="o">$</span><span class="nf">predict</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+
+<span class="n">dt_prediction2</span> <span class="o">=</span> <span class="nf">as.data.table</span><span class="p">(</span><span class="n">prediction2</span><span class="p">)</span>
+<span class="n">dt_prediction2</span><span class="p">[,</span> <span class="n">differences</span> <span class="o">:=</span> <span class="n">truth</span> <span class="o">-</span> <span class="n">response</span><span class="p">]</span>
+<span class="n">dt_prediction2</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">differences</span> <span class="o">&lt;</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;under&quot;</span><span class="p">,</span> <span class="s">&quot;over&quot;</span><span class="p">)]</span>
+<span class="n">dt_prediction2</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">model_valuation</span><span class="p">)]</span>
+<span class="nf">setnames</span><span class="p">(</span><span class="n">dt_prediction2</span><span class="p">,</span> <span class="s">&quot;response&quot;</span><span class="p">,</span> <span class="s">&quot;predict_price&quot;</span><span class="p">)</span>
+<span class="n">dt_prediction2</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;row_id&quot;</span><span class="p">,</span><span class="s">&quot;truth&quot;</span><span class="p">)</span> <span class="o">:=</span> <span class="kc">NULL</span><span class="p">]</span>
+<span class="n">tb_prediction2</span> <span class="o">=</span> <span class="nf">as_tibble</span><span class="p">(</span><span class="n">dt_prediction2</span><span class="p">)</span>
+
+<span class="n">df_final2</span> <span class="o">=</span> <span class="n">df_task</span>
+<span class="n">df_final2</span> <span class="o">=</span> <span class="nf">bind_cols</span><span class="p">(</span><span class="n">df_final2</span><span class="p">,</span> <span class="n">tb_prediction2</span><span class="p">)</span>
+
+<span class="n">q</span> <span class="o">=</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final2</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">price_usd_per_m2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">predict_price</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">differences</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO  [09:59:22.944] Starting to optimize 1 parameter(s) with &#39;&lt;OptimizerGridSearch&gt;&#39; and &#39;&lt;TerminatorEvals&gt;&#39; 
+INFO  [09:59:22.949] Evaluating 1 configuration(s) 
+INFO  [09:59:23.368] Benchmark with 2 resampling iterations 
+INFO  [09:59:23.370] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 1/2) 
+[09:59:23] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:59:23.977] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 2/2) 
+[09:59:24] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:59:24.597] Finished benchmark 
+INFO  [09:59:24.623] Result of batch 1: 
+INFO  [09:59:24.626]  regr.xgboost.eta regr.rmse                                uhash 
+INFO  [09:59:24.626]                 0  2322.514 55321751-03a6-4fec-869a-eb8997bd6dee 
+INFO  [09:59:24.628] Evaluating 1 configuration(s) 
+INFO  [09:59:25.034] Benchmark with 2 resampling iterations 
+INFO  [09:59:25.036] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 1/2) 
+[09:59:25] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:59:25.632] Applying learner &#39;encode.regr.xgboost&#39; on task &#39;price_predict&#39; (iter 2/2) 
+[09:59:25] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+INFO  [09:59:26.258] Finished benchmark 
+INFO  [09:59:26.288] Result of batch 2: 
+INFO  [09:59:26.291]  regr.xgboost.eta regr.rmse                                uhash 
+INFO  [09:59:26.291]                 1  634.7535 1a0df4af-dc40-472c-848f-f11e5babb1c2 
+INFO  [09:59:26.332] Finished optimizing after 2 evaluation(s) 
+INFO  [09:59:26.334] Result: 
+INFO  [09:59:26.336]  regr.xgboost.eta learner_param_vals  x_domain regr.rmse 
+INFO  [09:59:26.336]                 1          &lt;list[5]&gt; &lt;list[1]&gt;  634.7535 
+[09:59:27] WARNING: amalgamation/../src/objective/regression_obj.cu:174: reg:linear is now deprecated in favor of reg:squarederror.
+</pre></div>
+</div>
+<img alt="../_images/notebook-code_140_1.png" src="../_images/notebook-code_140_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">q1</span> <span class="o">=</span> <span class="nf">ggMarginal</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+<span class="n">q1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_141_0.png" src="../_images/notebook-code_141_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="linear-model-for-comparison">
+<h3>Linear Model for comparison<a class="headerlink" href="#linear-model-for-comparison" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">trained3</span> <span class="o">=</span> <span class="n">lm_learner</span><span class="o">$</span><span class="nf">train</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+<span class="n">prediction3</span> <span class="o">=</span> <span class="n">trained3</span><span class="o">$</span><span class="nf">predict</span><span class="p">(</span><span class="n">price_predict</span><span class="p">)</span>
+
+<span class="n">dt_prediction3</span> <span class="o">=</span> <span class="nf">as.data.table</span><span class="p">(</span><span class="n">prediction3</span><span class="p">)</span>
+<span class="n">dt_prediction3</span><span class="p">[,</span> <span class="n">differences</span> <span class="o">:=</span> <span class="n">truth</span> <span class="o">-</span> <span class="n">response</span><span class="p">]</span>
+<span class="n">dt_prediction3</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">differences</span> <span class="o">&lt;</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;under&quot;</span><span class="p">,</span> <span class="s">&quot;over&quot;</span><span class="p">)]</span>
+<span class="n">dt_prediction3</span><span class="p">[,</span> <span class="n">model_valuation</span> <span class="o">:=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">model_valuation</span><span class="p">)]</span>
+<span class="nf">setnames</span><span class="p">(</span><span class="n">dt_prediction3</span><span class="p">,</span> <span class="s">&quot;response&quot;</span><span class="p">,</span> <span class="s">&quot;predict_price&quot;</span><span class="p">)</span>
+<span class="n">dt_prediction3</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;row_id&quot;</span><span class="p">,</span><span class="s">&quot;truth&quot;</span><span class="p">)</span> <span class="o">:=</span> <span class="kc">NULL</span><span class="p">]</span>
+<span class="n">tb_prediction3</span> <span class="o">=</span> <span class="nf">as_tibble</span><span class="p">(</span><span class="n">dt_prediction3</span><span class="p">)</span>
+
+<span class="n">df_final3</span> <span class="o">=</span> <span class="n">df_task</span>
+<span class="n">df_final3</span> <span class="o">=</span> <span class="nf">bind_cols</span><span class="p">(</span><span class="n">df_final3</span><span class="p">,</span> <span class="n">tb_prediction3</span><span class="p">)</span>
+
+<span class="n">r</span> <span class="o">=</span>  <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final3</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">price_usd_per_m2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">predict_price</span><span class="p">))</span> <span class="o">+</span> 
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">differences</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="nf">ggMarginal</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;histogram&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_143_0.png" src="../_images/notebook-code_143_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_144_0.png" src="../_images/notebook-code_144_0.png" />
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="results">
+<h2>4. Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We take a look at over- and under-valued assets</p></li>
+<li><p>Advise client for best value</p></li>
+<li><p>Undervalued assets maybe a good opportunity</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">df_final</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>operation</th><th scope=col>property_type</th><th scope=col>place_name</th><th scope=col>lat</th><th scope=col>lon</th><th scope=col>price_usd_per_m2</th><th scope=col>predict_price</th><th scope=col>differences</th><th scope=col>model_valuation</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>rent</td><td>store    </td><td>Moema      </td><td>-23.60940</td><td>-46.66784</td><td>40.15649</td><td>139.5672</td><td> -99.41068</td><td>under</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65414</td><td>-46.52468</td><td>40.25133</td><td>502.5181</td><td>-462.26674</td><td>under</td></tr>
+	<tr><td>rent</td><td>apartment</td><td>Brooklin   </td><td>-23.55874</td><td>-46.69859</td><td>40.50969</td><td>276.3784</td><td>-235.86872</td><td>under</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+	<tr><td>rent</td><td>store    </td><td>Santo André</td><td>-23.65014</td><td>-46.53653</td><td>40.53500</td><td>381.1582</td><td>-340.62319</td><td>under</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot_model1 = </span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span><span class="o">+</span><span class="nf">facet_wrap</span><span class="p">(</span><span class="n">.</span><span class="o">~</span><span class="n">property_type</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_148_0.png" src="../_images/notebook-code_148_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Initially we can see that almost equal under and over value</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;sell&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_151_0.png" src="../_images/notebook-code_151_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_centro</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;rent&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Looking at Rentals, usually undervalued</strong></p></li>
+<li><p>Except for in Centro</p></li>
+<li><p>Wide range of supply and demand</p></li>
+<li><p>Indication of strong activity in the center</p></li>
+<li><p>Other places undervalue their assets</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_centro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_154_0.png" src="../_images/notebook-code_154_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span> <span class="n">map_centro</span> <span class="o">=</span> <span class="nf">qmplot</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maptype</span> <span class="o">=</span> <span class="s">&quot;watercolor&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">differences</span><span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+   <span class="n">data</span> <span class="o">=</span> <span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">operation</span><span class="o">==</span><span class="s">&quot;rent&quot;</span> <span class="o">&amp;</span> <span class="n">place_name</span><span class="o">==</span><span class="s">&quot;Centro&quot;</span> <span class="o">&amp;</span> 
+                              <span class="nf">between</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="m">-47.1555</span><span class="p">,</span><span class="m">-46.54756</span><span class="p">)</span> <span class="o">&amp;</span> 
+                              <span class="nf">between</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="m">-23.71091</span><span class="p">,</span><span class="m">-23.14523</span><span class="p">)))</span> <span class="o">+</span> 
+                            <span class="nf">scale_colour_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;green&quot;</span><span class="p">)</span>
+ 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using zoom = 11...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">map_centro</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_156_0.png" src="../_images/notebook-code_156_0.png" />
+</div>
+</div>
+<div class="section" id="according-to-property-type">
+<h3>According to property type<a class="headerlink" href="#according-to-property-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot_model1 = </span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">property_type</span><span class="o">==</span><span class="s">&quot;PH&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_158_0.png" src="../_images/notebook-code_158_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Moema highest range of price differences;</strong></p></li>
+<li><p>wealth gap in neighborhood</p></li>
+<li><p><strong>Cotia best for buying apartment or renting for value;</strong></p></li>
+<li><p>spread is not that much</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model2</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_161_0.png" src="../_images/notebook-code_161_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">map_cotia</span> <span class="o">=</span> <span class="nf">qmplot</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maptype</span> <span class="o">=</span> <span class="s">&quot;watercolor&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">differences</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+   <span class="n">data</span> <span class="o">=</span> <span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">place_name</span><span class="o">==</span><span class="s">&quot;Cotia&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="p">))</span> <span class="o">+</span> 
+                            <span class="nf">scale_colour_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using zoom = 12...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">map_cotia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_163_0.png" src="../_images/notebook-code_163_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">map_moema</span> <span class="o">=</span> <span class="nf">qmplot</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maptype</span> <span class="o">=</span> <span class="s">&quot;watercolor&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">differences</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+   <span class="n">data</span> <span class="o">=</span> <span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">place_name</span><span class="o">==</span><span class="s">&quot;Moema&quot;</span> <span class="o">&amp;</span> <span class="n">property_type</span><span class="o">==</span><span class="s">&quot;apartment&quot;</span><span class="o">&amp;</span> 
+                              <span class="nf">between</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="m">-46.67848</span><span class="p">,</span><span class="m">-46.64879</span><span class="p">)</span> <span class="o">&amp;</span> 
+                              <span class="nf">between</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="m">-23.65011</span><span class="p">,</span><span class="m">-23.6021</span><span class="p">)))</span> <span class="o">+</span> 
+                            <span class="nf">scale_colour_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using zoom = 15...
+
+Source : http://tile.stamen.com/terrain/15/12135/18595.png
+
+Source : http://tile.stamen.com/terrain/15/12136/18595.png
+
+Source : http://tile.stamen.com/terrain/15/12137/18595.png
+
+Source : http://tile.stamen.com/terrain/15/12138/18595.png
+
+Source : http://tile.stamen.com/terrain/15/12135/18596.png
+
+Source : http://tile.stamen.com/terrain/15/12136/18596.png
+
+Source : http://tile.stamen.com/terrain/15/12137/18596.png
+
+Source : http://tile.stamen.com/terrain/15/12138/18596.png
+
+Source : http://tile.stamen.com/terrain/15/12135/18597.png
+
+Source : http://tile.stamen.com/terrain/15/12136/18597.png
+
+Source : http://tile.stamen.com/terrain/15/12137/18597.png
+
+Source : http://tile.stamen.com/terrain/15/12138/18597.png
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">map_moema</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_165_0.png" src="../_images/notebook-code_165_0.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>When looking for a store, best value is Praia Grande</strong></p></li>
+<li><p>high competition, best for buyers and sellers</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model3</span> <span class="o">=</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">property_type</span><span class="o">==</span><span class="s">&quot;store&quot;</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">place_name</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">differences</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model_valuation</span><span class="p">))</span><span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="o">+</span><span class="nf">coord_flip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_model3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_168_0.png" src="../_images/notebook-code_168_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_praia</span> <span class="o">=</span> <span class="nf">qmplot</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">maptype</span> <span class="o">=</span> <span class="s">&quot;watercolor&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="nf">log</span><span class="p">(</span><span class="n">price_usd_per_m2</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">,</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">df_final</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">place_name</span><span class="o">==</span><span class="s">&quot;Praia Grande&quot;</span> <span class="o">&amp;</span> <span class="nf">between</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="m">-46.47359</span><span class="p">,</span><span class="m">-46.41666</span><span class="p">)))</span> <span class="o">+</span> 
+<span class="nf">scale_colour_gradient</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using zoom = 14...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plot_praia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/notebook-code_170_0.png" src="../_images/notebook-code_170_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Summary<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Looking at Rentals, usually undervalued</strong></p></li>
+<li><p>except for in Centro</p></li>
+<li><p>range of supply and demand</p></li>
+<li><p>indication of strong activity in the center</p></li>
+<li><p>other places undervalue their assets</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><strong>Moema highest range of price differences;</strong></p></li>
+<li><p>wealth gap in neighborhood</p></li>
+<li><p><strong>Cotia best for buying apartment or renting for value;</strong></p></li>
+<li><p>spread is not that much</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><strong>When looking for a store, best value is Praia Grande;</strong></p></li>
+<li><p>high competition, best for buyers and sellers</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Emmanuel Decena<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-175171081-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
