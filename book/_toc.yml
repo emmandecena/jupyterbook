@@ -2,27 +2,36 @@
 
 - part: Case Studies
   chapters:
-  - file: docs/energymarket
-  - file: docs/london
-  - file: docs/hrdatasetv14
+  - file: docs/whatis
+  #  - file: docs/energymarket
+  #  - file: docs/london
+  #  - file: docs/hrdatasetv14
 
 - part: Data Science Tools
   chapters:
   - file: docs/numpy
+  - file: docs/workflow
 
-- part: Optimization
+- part: Mathematics
   chapters:
-  - file: docs/opti
+  - file: docs/math/linalg
+  - file: docs/math/bayes
+  - file: docs/math/lp
 
-- part: Statistical Analysis
-  chapters:
-  - file: docs/stat
+#- part: Optimization
+#  chapters:
+#  - file: docs/opti
+
+#- part: Statistical Analysis
+#  chapters:
+#  - file: docs/stat
 
 - part: Data Visualization
   chapters:
   - file: docs/visualization/tableau
   - file: docs/visualization/datastudio
 
-- part: Mathematics
+- part: Personal Blog
   chapters:
-  - file: docs/bayes
+    - file: docs/blog/blog
+# no need to put sections here in blog content, just put it on main blog page as list

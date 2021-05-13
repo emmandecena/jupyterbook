@@ -1,6 +1,6 @@
 #######################################################################################
 # Book settings
-title : Analytics and Insights
+title : Analytics & Insights in Electricity Markets
 author: Emmanuel Decena
 logo: 'images/neural.png'
 
@@ -13,15 +13,14 @@ logo: 'images/neural.png'
 execute:
   execute_notebooks           : cache
   timeout                     : -1
-  exclude_patterns:
-    - 'docs/draft*'
+  exclude_patterns            : [draft*]
 #######################################################################################
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
   favicon                     : 'images/favicon.png'
   extra_navbar                : ""
-  google_analytics_id       : "UA-175171081-1"
+  google_analytics_id         : "UA-175171081-1"
   #use_repository_button: true
 
 # #######################################################################################
@@ -45,3 +44,13 @@ sphinx:
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     html_extra_path: ['cv']
+#######################################################################################
+# For Images
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - html_image
+#######################################################################################
+# Do not build not in TOC
+only_build_toc_files: true
