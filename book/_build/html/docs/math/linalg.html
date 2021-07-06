@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linear Algebra &#8212; Analytics &amp; Insights in Electricity Markets</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -18,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -34,22 +32,19 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,19 +52,22 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Probability Theory" href="bayes.html" />
     <link rel="prev" title="Workflow" href="../workflow.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -78,31 +76,33 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/neural.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Analytics & Insights in Electricity Markets</h1>
-  
-</a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/neural.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Analytics & Insights in Electricity Markets</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <p class="caption">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
  <span class="caption-text">
   Case Studies
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../whatis.html">
    Loan Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electricitymarkets/iemop.html">
+   IEMOP data exporation
   </a>
  </li>
 </ul>
@@ -111,7 +111,7 @@
   Data Science Tools
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../numpy.html">
    Numpy exercise
@@ -128,7 +128,7 @@
   Mathematics
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Linear Algebra
@@ -150,7 +150,7 @@
   Data Visualization
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../visualization/tableau.html">
    Tableau Dashboards
@@ -167,7 +167,7 @@
   Personal Blog
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../blog/blog.html">
    Blog
@@ -175,9 +175,8 @@
  </li>
 </ul>
 
-</nav>
-
- <!-- To handle the deprecated key -->
+    </div>
+</nav> <!-- To handle the deprecated key -->
 
 </div>
 
@@ -188,25 +187,25 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        <div class="dropdown-buttons-trigger">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -218,29 +217,29 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
-        <!-- Source interaction buttons -->
 
+            <!-- Source interaction buttons -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Launch buttons -->
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-    </div>
+            <!-- Launch buttons -->
 
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-an-algebra">
    What is an algebra?
@@ -287,8 +286,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -300,7 +299,7 @@
 <h1>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">¶</a></h1>
 <p>Linear Algebra is perhaps the <em>most important</em> branch of mathematics to learn because of its applications in several engineering disciplines.</p>
 <p><strong>This article assumes some background in abstract algebra and set theory</strong></p>
-<img alt="ID" class="bg-primary mb-1 align-center" src="../../_images/620by5001.jpg" />
+<img alt="ID" class="bg-primary mb-1 align-center" src="../../_images/620by500.jpg" />
 <div class="section" id="what-is-an-algebra">
 <h2>What is an algebra?<a class="headerlink" href="#what-is-an-algebra" title="Permalink to this headline">¶</a></h2>
 <p><strong>Algebra</strong> is the study of mathematical <strong>objects</strong> and the <strong>rules</strong> to manipulate those objects.</p>
@@ -327,17 +326,17 @@
 </div>
 <p><strong>We take a look of some examples of sets and operations that fit the definition of vector spaces.</strong></p>
 <ol class="simple">
-<li><p>The set of Real Numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></li>
+<li><p>The set of Real Numbers $\mathbb{R}$</p></li>
 </ol>
-<p>Let <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>.</p>
+<p>Let $a, b \in \mathbb{R}$.</p>
 <ol class="simple">
 <li><p>The set of Complex Numbers</p></li>
 </ol>
-<p>denoted by  <span class="math notranslate nohighlight">\(\mathbb{F}^{2}\)</span></p>
+<p>denoted by  $\mathbb{F}^{2}$</p>
 <ol class="simple">
 <li><p>The set of n-tuples of real numbers</p></li>
 </ol>
-<p>denoted by <span class="math notranslate nohighlight">\(\mathbb{F}^{n}\)</span></p>
+<p>denoted by $\mathbb{F}^{n}$</p>
 </div>
 <div class="section" id="finite-dimensional-vector-spaces">
 <h2>Finite-Dimensional Vector Spaces<a class="headerlink" href="#finite-dimensional-vector-spaces" title="Permalink to this headline">¶</a></h2>
@@ -355,7 +354,7 @@ dimension</p>
 <h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
-<p>An <strong>m-by-n matrix</strong> is a rectangular array of elements of the field <span class="math notranslate nohighlight">\(F\)</span> with <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns:</p>
+<p>An <strong>m-by-n matrix</strong> is a rectangular array of elements of the field $F$ with $m$ rows and $n$ columns:</p>
 <div class="math notranslate nohighlight" id="equation-matrix">
 <span class="eqno">(1)<a class="headerlink" href="#equation-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{bmatrix} A_{1,1} &amp; \ldots &amp; A_{1,n} \\ \vdots &amp;  &amp; \vdots \\ A_{m,1} &amp; \ldots &amp; A_{m,n} \end{bmatrix}\end{split}\]</div>
 </div>
@@ -364,33 +363,29 @@ dimension</p>
 <h3>Matrix of a Linear Map<a class="headerlink" href="#matrix-of-a-linear-map" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
-<p>Given a linear map <span class="math notranslate nohighlight">\(T \in \mathcal{L} \left( V, W \right)\)</span> where <span class="math notranslate nohighlight">\(v_{1},\ldots,v_{n}\)</span> is a basis of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(w_{1}, \ldots ,v_{m}\)</span> is a basis of <span class="math notranslate nohighlight">\(W\)</span>, then the <strong>matrix of T</strong> consists of the scalars <span class="math notranslate nohighlight">\(A_{1,k}, \ldots  ,A_{m,k}\)</span> needed to write the <span class="math notranslate nohighlight">\(k\)</span>th basis of <span class="math notranslate nohighlight">\(V\)</span> as a linear combination of the basis vectors in <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p>Given a linear map $T \in \mathcal{L} \left( V, W \right)$ where $v_{1},\ldots,v_{n}$ is a basis of $V$ and $w_{1}, \ldots ,v_{m}$ is a basis of $W$, then the <strong>matrix of T</strong> consists of the scalars $A_{1,k}, \ldots  ,A_{m,k}$ needed to write the $k$th basis of $V$ as a linear combination of the basis vectors in $W$.</p>
 <div class="math notranslate nohighlight" id="equation-matrixoflinearmap">
 <span class="eqno">(2)<a class="headerlink" href="#equation-matrixoflinearmap" title="Permalink to this equation">¶</a></span>\[Tv_{k} = A_{1,k}w_{1} + \ldots + A_{m,k}w_{m}\]</div>
 </div>
 <div class="section" id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
-<p>Suppose <span class="math notranslate nohighlight">\(T \in \mathcal{L}(\mathbf{F^{2},F^{3}}) \)</span> is defined by:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Suppose $T \in \mathcal{L}(\mathbf{F^{2},F^{3}}) $ is defined by:</p>
+<p>$$
 T(x, y) = (x+2y, 3x+4y, 5x+6y)
-\]</div>
-<p>This is a linear map that takes a 2-dimensional vector <span class="math notranslate nohighlight">\(v \in V\)</span> into 3-dimensional space <span class="math notranslate nohighlight">\(w \in W\)</span>. The basis vectors of <span class="math notranslate nohighlight">\(V\)</span> are <span class="math notranslate nohighlight">\( \left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] \)</span> and <span class="math notranslate nohighlight">\( \left[ \begin{smallmatrix} 0 \\ 1 \end{smallmatrix} \right] \)</span> while basis vectors of <span class="math notranslate nohighlight">\(W\)</span> are <span class="math notranslate nohighlight">\( \left[ \begin{smallmatrix} 1 \\ 0 \\ 0 \end{smallmatrix} \right] \)</span> , <span class="math notranslate nohighlight">\( \left[ \begin{smallmatrix} 0 \\ 1 \\ 0\end{smallmatrix} \right] \)</span> and <span class="math notranslate nohighlight">\( \left[ \begin{smallmatrix} 0 \\ 0 \\ 1\end{smallmatrix} \right] \)</span>.</p>
-<p>Applying the map to the first basis vector in <span class="math notranslate nohighlight">\(V:\)</span></p>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>This is a linear map that takes a 2-dimensional vector $v \in V$ into 3-dimensional space $w \in W$. The basis vectors of $V$ are $ \left[ \begin{smallmatrix} 1 \ 0 \end{smallmatrix} \right] $ and $ \left[ \begin{smallmatrix} 0 \ 1 \end{smallmatrix} \right] $ while basis vectors of $W$ are $ \left[ \begin{smallmatrix} 1 \ 0 \ 0 \end{smallmatrix} \right] $ , $ \left[ \begin{smallmatrix} 0 \ 1 \ 0\end{smallmatrix} \right] $ and $ \left[ \begin{smallmatrix} 0 \ 0 \ 1\end{smallmatrix} \right] $.</p>
+<p>Applying the map to the first basis vector in $V:$</p>
+<p>$$
 T(1, 0) = (1+0, 3+0, 5+0)
-\]</div>
-<p>Which can be written as a <strong>linear combination</strong> of the basis vectors in <span class="math notranslate nohighlight">\(W\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-T\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] = 1\left[ \begin{smallmatrix} 1 \\ 0 \\ 0\end{smallmatrix} \right] + 3\left[ \begin{smallmatrix} 0 \\ 1 \\ 0\end{smallmatrix} \right] + 5\left[ \begin{smallmatrix} 0 \\ 0 \\ 1\end{smallmatrix} \right]
-\end{split}\]</div>
-<p>Thus the matrix of this linear map <span class="math notranslate nohighlight">\(T\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\mathcal{M}(T) = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\ 5 &amp; 6\end{bmatrix}
-\end{split}\]</div>
+$$</p>
+<p>Which can be written as a <strong>linear combination</strong> of the basis vectors in $W$:</p>
+<p>$$
+T\left[ \begin{smallmatrix} 1 \ 0 \end{smallmatrix} \right] = 1\left[ \begin{smallmatrix} 1 \ 0 \ 0\end{smallmatrix} \right] + 3\left[ \begin{smallmatrix} 0 \ 1 \ 0\end{smallmatrix} \right] + 5\left[ \begin{smallmatrix} 0 \ 0 \ 1\end{smallmatrix} \right]
+$$</p>
+<p>Thus the matrix of this linear map $T$ is:</p>
+<p>$$
+\mathcal{M}(T) = \begin{bmatrix} 1 &amp; 2 \ 3 &amp; 4 \ 5 &amp; 6\end{bmatrix}
+$$</p>
 <p>A link to an equation directive: <a class="reference internal" href="#equation-matrixoflinearmap">(2)</a></p>
 </div>
 </div>
@@ -398,7 +393,6 @@ T\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] = 1\left[ \begin{sm
 <hr class="docutils" />
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-bibliography-docs/math/linalg-0"></p>
 </div>
 </div>
 
@@ -424,15 +418,15 @@ T\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] = 1\left[ \begin{sm
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="../workflow.html" title="previous page">Workflow</a>
     <a class='right-next' id="next-link" href="bayes.html" title="next page">Probability Theory</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -440,7 +434,7 @@ T\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] = 1\left[ \begin{sm
         
           By Emmanuel Decena<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -449,9 +443,8 @@ T\left[ \begin{smallmatrix} 1 \\ 0 \end{smallmatrix} \right] = 1\left[ \begin{sm
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     

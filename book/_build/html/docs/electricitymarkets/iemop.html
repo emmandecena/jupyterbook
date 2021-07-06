@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Data Studio &#8212; Analytics &amp; Insights in Electricity Markets</title>
+    <title>IEMOP data exporation &#8212; Analytics &amp; Insights in Electricity Markets</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,8 +56,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Blog" href="../blog/blog.html" />
-    <link rel="prev" title="Tableau Dashboards" href="tableau.html" />
+    <link rel="next" title="Numpy exercise" href="../numpy.html" />
+    <link rel="prev" title="Loan Analysis" href="../whatis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,14 +92,14 @@
   Case Studies
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../whatis.html">
    Loan Analysis
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../electricitymarkets/iemop.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    IEMOP data exporation
   </a>
  </li>
@@ -148,14 +148,14 @@
   Data Visualization
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="tableau.html">
+  <a class="reference internal" href="../visualization/tableau.html">
    Tableau Dashboards
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualization/datastudio.html">
    Google Data Studio
   </a>
  </li>
@@ -208,9 +208,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/visualization/datastudio.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/electricitymarkets/iemop.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -228,6 +228,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/emmandecena/jupyterbook/master?urlpath=tree/book/docs/electricitymarkets/iemop.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -241,12 +258,16 @@
         
               <div>
                 
-  <div class="section" id="google-data-studio">
-<h1>Google Data Studio<a class="headerlink" href="#google-data-studio" title="Permalink to this headline">¶</a></h1>
-<p>Jupyter Book is an open source project for building beautiful,
-publication-quality books and documents from computational material.</p>
-<div class="full-width docutils">
-<iframe width="950" height="550" src="https://datastudio.google.com/embed/reporting/6ef32ff5-f13b-4a91-814c-52b0e0461282/page/ngnnB" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div class="section" id="iemop-data-exporation">
+<h1>IEMOP data exporation<a class="headerlink" href="#iemop-data-exporation" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -263,7 +284,7 @@ publication-quality books and documents from computational material.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/visualization"
+            path: "./docs/electricitymarkets"
         },
         predefinedOutput: true
     }
@@ -275,8 +296,8 @@ publication-quality books and documents from computational material.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="tableau.html" title="previous page">Tableau Dashboards</a>
-    <a class='right-next' id="next-link" href="../blog/blog.html" title="next page">Blog</a>
+    <a class='left-prev' id="prev-link" href="../whatis.html" title="previous page">Loan Analysis</a>
+    <a class='right-next' id="next-link" href="../numpy.html" title="next page">Numpy exercise</a>
 
         </div>
         

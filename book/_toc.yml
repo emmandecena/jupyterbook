@@ -1,37 +1,23 @@
-- file: docs/index
-
-- part: Case Studies
-  chapters:
+format: jb-book
+root: docs/index
+parts:
+- caption: Case Studies
+  chapters: 
   - file: docs/whatis
-  #  - file: docs/energymarket
-  #  - file: docs/london
-  #  - file: docs/hrdatasetv14
-
-- part: Data Science Tools
+  - file: docs/electricitymarkets/iemop 
+- caption: Data Science Tools
   chapters:
   - file: docs/numpy
   - file: docs/workflow
-
-- part: Mathematics
+- caption: Mathematics
   chapters:
   - file: docs/math/linalg
   - file: docs/math/bayes
   - file: docs/math/lp
-
-#- part: Optimization
-#  chapters:
-#  - file: docs/opti
-
-#- part: Statistical Analysis
-#  chapters:
-#  - file: docs/stat
-
-- part: Data Visualization
+- caption: Data Visualization
   chapters:
   - file: docs/visualization/tableau
   - file: docs/visualization/datastudio
-
-- part: Personal Blog
+- caption: Personal Blog
   chapters:
-    - file: docs/blog/blog
-# no need to put sections here in blog content, just put it on main blog page as list
+  - file: docs/blog/blog
